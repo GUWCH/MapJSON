@@ -1,0 +1,240 @@
+@import "../common/css/define.scss";
+
+:global(.react-html){
+  :global(#center){
+      height: 100%;
+  }    
+}
+
+@keyframes flash {
+	0% {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: $red;
+	}
+
+	100% {
+		border-color: transparent;
+	}
+}
+
+$NO_NAME_SIZE: 10;
+$NAME_SIZE: 125;
+$ITEM_TOP_PAD: 10;
+$ITEM_BOTTOM_MARGIN: 15;
+$ITEM_BORDER: 1;
+$GLUTTER_TOP_SIZE: 10;
+$GLUTTER_BOTTOM_SIZE: 10;
+$GROUP_BORDER_BOTTOM_SIZE: 1;
+$FLASH_BORDER: 2;
+
+:global(#center){
+  @include contentBox();
+}
+
+.container{
+  @include borderBox(true);
+
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  position: relative; // for loading
+
+  .noData{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: $envWhiteTransparent6;
+  }
+
+  .item{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding-left: #{$NO_NAME_SIZE}px;
+    
+    &.group{
+      padding-left: 0;
+      border: solid #{$ITEM_BORDER}px $envBorderColor;
+      border-radius: 3px;
+      background: #072e33;
+    }
+
+    >div{
+      display: flex;
+      border-bottom: solid #{$GROUP_BORDER_BOTTOM_SIZE}px $envWhiteTransparent1;
+
+      &:last-child{
+        border-bottom: none;
+      }
+
+      .aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: #{$NAME_SIZE}px;
+        word-break: break-all;
+        padding: 0 5px;
+        flex-direction: column;
+      }
+
+      .fac{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: #{$NAME_SIZE}px;
+        word-break: break-all;
+        padding: 0 5px;
+  
+        &.facRotate{
+          writing-mode: lr-tb;
+          writing-mode: vertical-lr;
+          
+          .facNum{
+            display: inline-block;
+            margin-top: 2px;
+            transform: rotateZ(-90deg);
+          }
+        }
+      }
+    
+      .child{
+        padding-top: #{$ITEM_TOP_PAD}px;
+        
+        &.part{
+          width: calc(100% - #{$NAME_SIZE}px);
+        }
+      }
+    }
+  }
+
+  .flash{
+    position: relative;
+    border: #{$FLASH_BORDER}px solid $red;
+    animation: flash 2s infinite;
+
+    &:hover{
+      .flashConfirm{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .flashConfirm{
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 100%;
+      background: $envBlackTransparent5;
+      padding: 5px 0;
+      text-align: center;
+      transition: all .5s ease-in-out;
+
+      span{
+        display: inline-block;
+        cursor: pointer;
+        color: $black;
+        background-color: $envLightBlue;
+        white-space: nowrap;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.alarm{
+  @include borderBox();
+
+  min-width: 350px;
+  min-height: 160px;
+  z-index: 99999;
+  opacity: 0.9;
+  background-image: linear-gradient(#01404a, #0b2730);
+  padding: 8px;
+  border-radius: 5px;
+
+  &.alarmLoad{
+    height: 100%;
+  }
+
+  >div:first-child{
+    height: 100%;
+
+    .alarmHead{
+      height: 25px;
+      white-space: nowrap;
+      padding: 3px 0;
+
+      >span{
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-weight: bold;
+
+        &:first-child{
+          width: 180px;
+        }
+
+        &:last-child{
+          width: calc(100% - 180px);
+        }
+      }
+    }
+  
+    .alarmContent{
+      position: relative; // for loading
+      height: calc(100% - 25px);
+
+      &.alarmNoContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $envWhiteTransparent6;
+      }
+
+      >div{
+        white-space: nowrap;
+        padding: 3px 0;
+
+        >span{
+          display: inline-block;
+          vertical-align: top;
+  
+          &:first-child{
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow{
+    border-style: solid;
+    border-width: 0px 10px 10px;
+    border-color: transparent transparent rgb(1, 64, 74);
+  }
+}
+
+:export {
+  cardTopSize: $GLUTTER_TOP_SIZE;
+  cardBottomSize: $GLUTTER_BOTTOM_SIZE;
+  noNameSize: $NO_NAME_SIZE;
+  nameSize: $NAME_SIZE;
+  itemTopPad: $ITEM_TOP_PAD;
+  itemBottomMargin: $ITEM_BOTTOM_MARGIN;
+  itemBorder: $ITEM_BORDER * 2;
+  groupBorderBottom: $GROUP_BORDER_BOTTOM_SIZE;
+  flashBorder: $FLASH_BORDER + 1
+}

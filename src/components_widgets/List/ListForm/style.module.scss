@@ -1,0 +1,149 @@
+@mixin labelname{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list{
+    >div{
+        display: flex;
+        margin: 10px 0;
+
+        >button{
+            margin-left: auto;
+        }
+    }
+
+    .select{
+        margin-left: auto;
+    }
+
+    .title{
+        margin: 20px 0;
+    }
+
+    .icon{
+        margin: 20px 0;
+
+        >div:first-child{
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .source{
+        margin: 20px 0 0 0;
+
+        >div{
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .object{
+            >div{
+                width: 100% !important;
+    
+                >div{
+                    >div:first-child{
+                        background-color: transparent;
+                        padding: 0;
+                    }
+    
+                    >div:last-child{
+                        padding-top: 10px !important;
+                        >div{
+                            >div{
+                                padding: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        background-color: #b6c8d854;
+        padding: 5px;
+
+        .shortname{
+            width: 30%;
+            @include labelname;
+        }
+
+        .longname{
+            width: 80%;
+            @include labelname;
+        }
+
+        .delete{
+            margin-left: auto;
+        }
+    }
+
+    .alarm{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+        background-color: #b6c8d854;
+        margin-bottom: 10px;
+    }
+
+    .model{
+        .item{
+            .select{
+                margin-left: auto;
+                >div{
+                    background: transparent;
+                    border: 1px solid #8b9daa !important;
+                    color: #4361a0;
+    
+                }
+            }
+
+            .delete{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .object{
+        >div{
+            width: 100% !important;
+            margin: 8px 0 !important;
+
+            >div{
+                >div:first-child{
+                    background-color: #c6d5e2b3;
+                    padding: 10px;
+                }
+
+                >div:last-child{
+                    padding-top: 10px !important;
+                }
+            }
+        }
+    }
+
+    .set{
+        display: flex;
+
+        >button{
+            width: calc((100% - 40px)/5);
+            margin-right: 10px;
+
+            >span{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+            }
+        }
+
+        >button:last-child{
+            margin-right: 0;
+        }
+    }
+}

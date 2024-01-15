@@ -1,0 +1,258 @@
+@import "../../../../common/css/define.scss";
+
+$env-solar-transformer: "env-solar-transformer";
+$topMinHeight: 365px;
+
+@mixin yc-status {
+    &.unknown {
+        background-color: #aaa;
+    }
+    &.health {
+        background-color: rgb(7, 201, 136);
+    }
+    &.fault {
+        background-color: #fc0006;
+    }
+}
+@mixin switch-div {
+    width: 20px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.#{$env-solar-transformer} {
+    width: 100%;
+    height: 100%;
+
+    &-center {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 56%;
+        min-height: $topMinHeight;
+        &-left {
+            width: 300px;
+            min-height: $topMinHeight;
+            background: rgba(0, 0, 0, 0.5) no-repeat 50%;
+            display: flex;
+            justify-content: center;
+            &-switch {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &-line {
+                    position: relative;                    
+                    width: 120px;
+                    height: 346px;
+
+                    &-1{
+                        background: url(../../../common/images/single_line.png) no-repeat 50%;
+                    }
+                    &-2{
+                        background: url("~@/common/image/connect_line.png") no-repeat 50%;
+                    }
+                }
+                &-top {
+                    margin-top: 40px;
+                    margin-left: calc(50% - 10px);
+                    @include switch-div();
+                    @include yc-status();
+                }
+                &-center {                    
+                    &-1{
+                        position: absolute;
+                        left: 41px;
+                        top: 120px;
+                        width: 37px;
+                        height: 65px;
+                        background: url(../../../common/images/single1.png) no-repeat 50%;
+                    }
+                    &-2{
+                        position: absolute;
+                        left: 26px;
+                        top: 120px;
+                        width: 66px;
+                        height: 61px;
+                        background: url("~@/common/image/coil.png") no-repeat 50%;
+                    }
+                }
+                &-left {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 35px;
+                    @include switch-div();
+                    @include yc-status();
+
+                    &-1{
+                        left: 49px;
+                    }
+                }
+                &-right {
+                    position: absolute;
+                    bottom: 40px;
+                    right: 35px;
+                    @include switch-div();
+                    @include yc-status();
+
+                    &-1{
+                        left: 49px;
+                        right: auto;
+                    }
+                }
+            }
+        }
+        &-right {
+            min-height: $topMinHeight;
+            width: calc(100% - 10px - 300px);
+            &-header {
+                display: flex;
+                height: 44px;
+                &-yc {
+                    flex: 1;
+                    display: flex;
+                    &-text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100px;
+                        background-color: $envBlackTransparent3;
+                    }
+                    &-space {
+                        flex-grow: 1;
+                        background-color: $envBlackTransparent4;
+                    }
+                }
+                &-yx {
+                    width: 300px;
+                    display: flex;
+                    &-text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100px;
+                        background-color: $envBlackTransparent3;
+                    }
+                    &-space {
+                        flex-grow: 1;
+                        background-color: $envBlackTransparent4;
+                    }
+                }
+            }
+            &-content {
+                background-color: $envBlackTransparent3;
+                height: calc(100% - 44px);
+                display: flex;
+                &-yc {
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    overflow: auto;
+                    max-height: 456px;
+                    &-column {
+                        display: flex;
+                        width: calc(100% / 3);
+                        flex-direction: column;
+                        &-item {
+                            display: flex;
+                            padding: 0 12px;
+                            flex: 1;
+                            border-bottom: solid 1px $envWhiteTransparent2;
+                            align-items: center;
+                            &.with-line {
+                                &::before {
+                                    content: "";
+                                    width: 1px;
+                                    height: 16px;
+                                    margin-right: 16px;
+                                    background-color: $envWhiteTransparent2;
+                                }
+                            }
+                            &-front {
+                                width: 60%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                            &-end {
+                                width: 40%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+                &-yx {
+                    width: 300px;
+                    padding: 6px;
+                    overflow-y: auto;
+                    max-height: 456px;
+                    &-item {
+                        display: inline-block;
+                        padding: 2px 8px;
+                        margin: 6px;
+                        background-color: #aaa;
+                        cursor: pointer;
+                        @include yc-status();
+                    }
+                }
+            }
+        }
+    }
+    &-footer {
+        position: relative;
+        height: calc(44% - 20px);
+        margin-top: 20px;
+        &-header {
+            background-color: $envBlackTransparent4;
+            height: 44px;
+            align-items: center;
+            display: flex;
+            padding: 0 20px;
+        }
+        &-content {
+            background-color: $envBlackTransparent2;
+            height: calc(100% - 44px);
+            overflow-y: auto;
+            min-height: 50px;
+            padding: 10px 20px;
+            &-alarm {
+                display: flex;
+                &-time {
+                    color: $envWhiteTransparent4;
+                    margin-right: 8px;
+                    width: 260px;
+                    flex-shrink: 0;
+                }
+                &-icon {
+                    margin-top: 10px;
+                    &-circle {
+                        width: 7px;
+                        height: 7px;
+                        background: $envWhiteTransparent3;
+                        border-radius: 50%;
+                        display: block;
+                        margin-right: 19px;
+                    }
+                    &-line {
+                        height: 36px;
+                        width: 1px;
+                        background: $white;
+                        display: block;
+                        margin-left: 3px;
+                        opacity: 0.1;
+                    }
+                }
+                &-level {
+                    margin-right: 24px;
+                    flex-shrink: 0;
+                }
+                &-content {
+                }
+            }
+        }
+    }
+}

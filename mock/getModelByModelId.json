@@ -1,0 +1,149 @@
+{
+    "code": "10000",
+    "message": "success",
+    "data": [
+        {
+            "name_cn": "风机状态",
+            "name_en": "风机状态",
+            "alias": "WTUR.TurbineListSts",
+            "type": "DI",
+            "if_standard":true,
+            "unit": "",
+            "table_no": 61,
+            "field_no": 9,
+            "const_name_list": [
+                {
+                    "value": "0",
+                    "name": "正常"
+                },
+                {
+                    "value": "1",
+                    "name": "有故障"
+                },
+                {
+                    "value": "2",
+                    "name": "有维护"
+                },
+                {
+                    "value": "3",
+                    "name": "无连接"
+                },
+                {
+                    "value": "4",
+                    "name": "测试"
+                },
+                {
+                    "value": "5",
+                    "name": "正常发电"
+                },
+                {
+                    "value": "6",
+                    "name": "遥信6"
+                },
+                {
+                    "value": "7",
+                    "name": "限功率发电"
+                }
+            ]
+        },{
+            "name_cn": "通讯状态",
+            "name_en": "通讯状态",
+            "alias": "WTUR.ConnectionSts",
+            "unit": "",
+            "table_no": 61,
+            "field_no": 9,
+            "type": "DI",
+            "if_standard":true,
+            "const_name_list": [
+                {
+                    "value": "0",
+                    "name": "通讯恢复正常"
+                },
+                {
+                    "value": "1",
+                    "name": "通讯出现中断"
+                },
+                {
+                    "value": "2",
+                    "name": "有维护"
+                },
+                {
+                    "value": "3",
+                    "name": "无连接"
+                },
+                {
+                    "value": "4",
+                    "name": "测试"
+                },
+                {
+                    "value": "5",
+                    "name": "正常发电"
+                },
+                {
+                    "value": "6",
+                    "name": "遥信6"
+                },
+                {
+                    "value": "7",
+                    "name": "限功率发电"
+                }
+            ]
+        },
+        {
+            "name_cn": "风速",
+            "name_en": "风速",
+            "alias": "WNAC.WindSpeed",
+            "unit": "m/s",
+            "table_no": 62,
+            "field_no": 9,
+            "type": "AI",
+            "if_standard":true
+        },
+        {
+            "name_cn": "有功功率",
+            "name_en": "有功功率",
+            "alias": "WGEN.GenActivePW",
+            "unit": "kW",
+            "table_no": 62,
+            "field_no": 9,
+            "type": "AI",
+            "if_standard":true
+        },{
+            "name_cn": "桨叶角度",
+            "name_en": "桨叶角度",
+            "alias": "WROT.Blade1Position",
+            "unit": "°",
+            "table_no": 435,
+            "field_no": 9,
+            "type": "AI",
+            "if_standard":true
+        },{
+            "name_cn": "主轴转速",
+            "name_en": "主轴转速",
+            "alias": "WTRM.RotorSpd",
+            "unit": "r/min",
+            "table_no": 435,
+            "field_no": 9,
+            "type": "AI",
+            "if_standard":true
+        },{
+            "name_cn": "发动机转速",
+            "name_en": "发动机转速",
+            "alias": "WGEN.GenSpd",
+            "unit": "r/min",
+            "table_no": 435,
+            "field_no": 9,
+            "type": "AI",
+            "if_standard":true
+        },{
+            "name_cn": "无功功率",
+            "name_en": "无功功率",
+            "alias": "WGEN.GenReactivePW",
+            "unit": "kVar",
+            "table_no": 62,
+            "field_no": 9,
+            "type": "AI",
+            "if_standard":true
+        }
+    ]
+}

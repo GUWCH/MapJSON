@@ -1,0 +1,169 @@
+@import "@/common/css/define.scss";
+
+.form{
+    .item{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        .action{
+            margin-left: auto;
+        }
+    }
+
+    >div{
+        div[class *= 'edit-frame-col-18']{
+            flex: none;
+            margin-left: auto;
+            width: 200px;
+        }
+    }
+}
+
+.tabcontainer{
+    height: 100%;
+
+    >div{
+        height: 100%;
+
+        div[class *= 'ant-tabs-content']{
+            height: 100%;
+        }
+    }
+}
+
+.container{
+    height: 100%;
+
+    .head{
+        display: flex;
+        align-items: center;
+        height: 48px;
+        font-size: 16px;
+
+        >button{
+            margin-left: auto;
+        }
+    }
+}
+
+.modalContainer{
+    div[class *= 'ant-modal-title']{
+        margin-top: 11px;
+        font-size: 20px;
+    }
+
+    div[class = ant-modal-footer]{
+        button{
+            @extend %button4;
+            width: 90px;
+            height: 32px;
+            font-size: 14px;
+        }
+
+        button[class *= 'ant-btn-primary']{
+            @extend %button6;
+            width: 90px;
+            height: 32px;
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+.bodyContainer{
+    // margin: 27px 68px 80px 30px;
+
+    .modalReset{
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+
+        .separate{
+            align-self: center;
+            margin-right: 8px;
+            width: 3px;
+            height: 14px;
+            background-color: $envBtnHoverBg2;
+        }
+
+        >button{
+            margin-left: auto;
+        } 
+    }
+
+    .modalInput{
+        color: $fontGray;
+        height: 58px;
+
+        >div{
+            display: flex;
+
+            >span{
+                margin-top: 6px;
+            }
+
+            >div{
+                margin-left: auto;
+
+                span[class *= 'ant-input']{
+                    background-color: transparent;
+                    border-color: $inputBorder;
+
+                    input{
+                        background-color: transparent;
+                        color: #fff;
+                    }
+                }
+            }  
+        }
+
+        .modalRequire{
+            margin-right: 3px;
+            color: $warningRed
+        }
+
+        .modalWarning{
+            color: $warningRed
+        }
+    }
+
+    .modalTip{
+        align-items: center;
+        color: $fontGray;
+        font-size: 12px;
+    }
+}
+
+.setButton{
+    @extend %button5;
+}
+
+.charttooltip{
+
+    border-radius: 10px !important;
+
+    .tooltipItems{
+
+        display: flex !important;
+        top: 140px;
+        writing-mode: vertical-lr;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        >div{
+            display: flex; 
+            flex-wrap: nowrap;
+            align-items: center;
+            writing-mode: horizontal-tb;
+            padding: 2px 0;
+            height: 25px;
+            
+            >span:first-child{
+                width: 6px !important;
+                height: 6px !important;
+            }
+        }
+    }
+}

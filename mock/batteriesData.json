@@ -1,0 +1,118 @@
+{
+    "code": "10000",
+    "message": "全部成功",
+    "success_lst": [
+        {
+            "alias": "ZZ.ESS10.RBMS101.RB.CelVolt",
+            "sub_type": "0",
+            "dataset": [
+                {
+                    "name": "Normal AI001",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI002",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI003",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI004",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI005",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI006",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI007",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI008",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI009",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "Normal AI010",
+                    "value": "0.000",
+                    "status": "0"
+                }
+            ]
+        },
+        {
+            "alias": "ZZ.ESS10.RBMS101.RB.CelTmp",
+            "sub_type": "0",
+            "dataset": [
+                {
+                    "name": "CelTmp001",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp002",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp003",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp004",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp005",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp006",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp007",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp008",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp009",
+                    "value": "0.000",
+                    "status": "0"
+                },
+                {
+                    "name": "CelTmp010",
+                    "value": "0.000",
+                    "status": "0"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,248 @@
+$title-font-size: 32px;
+$primary-color: rgb(19, 181, 177);
+$device-panel-width: 260px;
+$device-panel-height: 360px;
+$device-list-bg: #051215;
+$device-font-size: 14px;
+$header-height: 60px;
+$footer-height: 60px;
+$primary-font-color: #05fafd;
+$background: #0c5259;
+$grid-background: #072c3a;
+$enable-select-bg: #333;
+$enable-input-bg: #366;
+$disable-input-bg: #7a8789;
+$button-bg:#194853;
+$fontSize: 14px;
+$borderBottomColor: #056976;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin env-input-number-input{
+	color: #fff;
+	outline: none;
+	text-align: left;
+	padding-left: 4px;
+	background: #333;
+	&:disabled{
+		background: $disable-input-bg;
+	}
+}
+
+.control-panel {
+	display: flex;
+	overflow: auto;
+	height:  100%;
+	box-sizing: border-box;
+	.control-right-wrap {
+		float: left;
+		display: block;
+		width: 100%;
+		flex-direction: column;
+		flex: 1;
+		height: 100%;
+		.control-right-header {
+			height: 40px;
+			background: $device-list-bg;
+			margin: 0 0 10px 10px;
+			border-radius: 3px;
+			border: solid 1px $primary-color;
+			line-height: 40px;
+			padding: 0 10px;
+			display: flex;
+			line-height: 40px;
+			align-items: center;
+			.control-right-text {
+				color: $primary-font-color;
+				font-weight: bold;
+			}
+			.site-point-item-tips {
+				background: url("res/info.png") center no-repeat;
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				margin-right: 10px;
+			}
+		}
+		.control-right {
+			margin-left: 10px;
+			display: flex;
+			flex: 1;
+			height: calc(100% - 42px - 30px - 20px);
+			.control-right-title {
+				color: $primary-font-color;
+				text-align: center;
+				height: 20px;
+				line-height: 20px;
+				vertical-align: middle;
+				margin: 0 0 10px 0;
+			}
+			.env-input-number-input{
+				@include env-input-number-input();
+			}
+		}
+		.control-right-footer {
+			display: flex;
+			flex: 1;
+			align-items: center;
+			justify-content: center;
+			margin-top: 10px;
+			height: 30px;
+			.control-right-footer-button {
+				margin: 0 10px;
+				display: inline-block;
+				height: 30px;
+				line-height: 30px;
+				cursor: pointer;
+				text-align: center;
+				border: 1px solid #267173;
+				border-radius: 4px;
+				padding: 0 15px;
+				background: $button-bg;
+				color: #fff;
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+.control-modal-content-class {
+	.rc-table th,
+	.rc-table td {
+		padding: 0;
+		position: relative;
+		border: 1px solid #366;
+		border-top: 0;
+		border-left: 0;
+		transition: box-shadow 0.3s;
+		padding: 16px 8px;
+		box-sizing: border-box;
+		word-break: break-word;
+		background: #19485d;
+		color: white;
+	}
+	.rc-table-header {
+		border: solid 1px #366;
+	}
+	.rc-table-content {
+		border: 1px solid #366;
+	}
+	.rc-table-thead {
+		.rc-table-cell {
+			background-color: #03181c;
+			border: solid 1px #366;
+			padding: 4px;
+			color: #fff;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+	.rc-table-body {
+		border: none;
+		.rc-table-cell {
+			background-color: transparent;
+			border: solid 1px #366;
+			padding: 4px;
+			color: #fff;
+			font-size: 14px;
+			text-align: center;
+		}
+		.td-setting {
+			width: 24px;
+			border: 1px solid #187180;
+			height: 20px;
+			line-height: 20px;
+			cursor: pointer;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.rc-table-cell-scrollbar::after {
+		background: transparent !important;
+	}
+}
+
+.ant-modal-header {
+	border-bottom: 2px solid $background;
+}
+
+.ant-modal-footer {
+	border-top: 2px solid $background;
+}
+
+.env-control-panel-input[type="number"]:disabled {
+	background-color: $disable-input-bg!important;
+	cursor: not-allowed;
+}
+
+.env-control-panel-select:disabled {
+	background-color: $disable-input-bg!important;
+	cursor: not-allowed;
+}
+
+// Bug #156857
+.control-modal-item-title {
+	// color: #01e21c;
+	font-weight: bold;
+	font-size: 17sp;
+	margin: 10px 0;
+}
+
+// Bug #156857
+.modal-tips {
+	.modal-tips-title {
+		font-weight: bold;
+		font-size: 17px;
+		text-align: center;
+		.img {
+			background: url("res/warntip.png") no-repeat;
+			background-size: contain;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+    		display: inline-block;
+		}
+	}
+	.modal-tips-content {
+		white-space: pre-wrap;
+		color: #feac31;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.control-panel-dialog{
+	height: 90%;
+	max-width: 90% !important;
+}
+
+.tips_info_div {
+	position: absolute;
+	z-index: 999999999;
+	padding: 0;
+	background: rgb(9, 35, 40);
+	border: 1px solid rgb(4, 23, 27);
+	box-shadow: rgb(53, 206, 210) 1px 1px 10px;
+	border-radius: 4px;
+	margin: 0px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	max-width: 800px;
+	font-family: "microsoft yahei";
+	line-height: 24px;
+
+	.ant-popover-inner{
+		background-color: transparent;
+	}
+
+	.ant-popover-arrow{
+		.ant-popover-arrow-content{
+			background-color: transparent;
+		}
+	}
+}

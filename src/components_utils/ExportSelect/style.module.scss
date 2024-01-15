@@ -1,0 +1,8 @@
+@import '../../common/css/define.scss';
+
+.radioGroup{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px;
+    background: $envBlackTransparent1;
+}

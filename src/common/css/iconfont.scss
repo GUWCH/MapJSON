@@ -1,0 +1,444 @@
+@font-face {
+  font-family: 'scada_iconfont';
+  src:  url('../font/scada_iconfont.eot?tsp26m');
+  src:  url('../font/scada_iconfont.eot?tsp26m#iefix') format('embedded-opentype'),
+    url('../font/scada_iconfont.ttf?tsp26m') format('truetype'),
+    url('../font/scada_iconfont.woff?tsp26m') format('woff'),
+    url('../font/scada_iconfont.svg?tsp26m#scada_iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-moon-"], [class*=" icon-moon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'scada_iconfont' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-moon-container:before {
+  content: "\e986";
+}
+.icon-moon-aisle:before {
+  content: "\e987";
+}
+.icon-moon-physical-machine:before {
+  content: "\e988";
+}
+.icon-moon-subsystem:before {
+  content: "\e989";
+}
+
+.icon-moon-statistics:before{
+  content: "\e985";
+}
+.icon-moon-ascending:before {
+  content: "\e983";
+}
+.icon-moon-descending:before {
+  content: "\e984";
+}
+.icon-moon-zoom-in:before {
+  content: "\e981";
+}
+.icon-moon-export:before {
+  content: "\e982";
+}
+.icon-moon-expand:before {
+  content: "\e97f";
+}
+.icon-moon-collapse:before {
+  content: "\e97e";
+}
+.icon-moon-template:before {
+  content: "\e980";
+}
+.icon-moon-Environmental-power-limit:before {
+  content: "\e900";
+}
+.icon-moon-Grid-power-limit:before {
+  content: "\e901";
+}
+.icon-moon-health:before {
+  content: "\e902";
+}
+.icon-moon-alert:before {
+  content: "\e903";
+}
+.icon-moon-alertmanagement:before {
+  content: "\e904";
+}
+.icon-moon-sprinkler:before {
+  content: "\e905";
+}
+.icon-moon-ac_combiner_box:before {
+  content: "\e906";
+}
+.icon-moon-dc_combiner-box:before {
+  content: "\e907";
+}
+.icon-moon-trend_down:before {
+  content: "\e908";
+}
+.icon-moon-question_circle_l:before {
+  content: "\e909";
+}
+.icon-moon-power:before {
+  content: "\e90a";
+}
+.icon-moon-data_subscription:before {
+  content: "\e90b";
+}
+.icon-moon-refresh:before {
+  content: "\e90c";
+}
+.icon-moon-start:before {
+  content: "\e90d";
+}
+.icon-moon-stop:before {
+  content: "\e90e";
+}
+.icon-moon-config:before {
+  content: "\e90f";
+}
+.icon-moon-card:before {
+  content: "\e910";
+}
+.icon-moon-card2:before {
+  content: "\e911";
+}
+.icon-moon-table:before {
+  content: "\e912";
+}
+.icon-moon-double_down_s:before {
+  content: "\e913";
+}
+.icon-moon-double_up_s:before {
+  content: "\e914";
+}
+.icon-moon-plus:before {
+  content: "\e915";
+}
+.icon-moon-minus:before {
+  content: "\e916";
+}
+.icon-moon-mark_so:before {
+  content: "\e917";
+}
+.icon-moon-mark_line:before {
+  content: "\e918";
+}
+.icon-moon-fault_s:before {
+  content: "\e919";
+}
+.icon-moon-grounding_s:before {
+  content: "\e91a";
+}
+.icon-moon-eletricity_s:before {
+  content: "\e91b";
+}
+.icon-moon-overhaul_s:before {
+  content: "\e91c";
+}
+.icon-moon-field-work_s:before {
+  content: "\e91d";
+}
+.icon-moon-no-electricity:before {
+  content: "\e91e";
+}
+.icon-moon-air:before {
+  content: "\e91f";
+}
+.icon-moon-airflow:before {
+  content: "\e920";
+}
+.icon-moon-alarm_so:before {
+  content: "\e921";
+}
+.icon-moon-alternating-current_failure:before {
+  content: "\e922";
+}
+.icon-moon-building_so:before {
+  content: "\e923";
+}
+.icon-moon-capacity:before {
+  content: "\e924";
+}
+.icon-moon-combiner_box:before {
+  content: "\e925";
+}
+.icon-moon-communication_failure:before {
+  content: "\e926";
+}
+.icon-moon-control:before {
+  content: "\e927";
+}
+.icon-moon-curtailment:before {
+  content: "\e928";
+}
+.icon-moon-direct-current:before {
+  content: "\e929";
+}
+.icon-moon-dissipate-heat:before {
+  content: "\e92a";
+}
+.icon-moon-eletricity:before {
+  content: "\e92b";
+}
+.icon-moon-environment-stop:before {
+  content: "\e92c";
+}
+.icon-moon-Fault-stop:before {
+  content: "\e92d";
+}
+.icon-moon-file_so:before {
+  content: "\e92e";
+}
+.icon-moon-grid-Failure:before {
+  content: "\e92f";
+}
+.icon-moon-grid:before {
+  content: "\e930";
+}
+.icon-moon-grounding:before {
+  content: "\e931";
+}
+.icon-moon-Irresistible:before {
+  content: "\e932";
+}
+.icon-moon-health_so:before {
+  content: "\e933";
+}
+.icon-moon-instructions:before {
+  content: "\e934";
+}
+.icon-moon-less-light:before {
+  content: "\e935";
+}
+.icon-moon-location_so:before {
+  content: "\e936";
+}
+.icon-moon-maintain:before {
+  content: "\e937";
+}
+.icon-moon-money:before {
+  content: "\e938";
+}
+.icon-moon-no-connection:before {
+  content: "\e939";
+}
+.icon-moon-normal:before {
+  content: "\e93a";
+}
+.icon-moon-position_so:before {
+  content: "\e93b";
+}
+.icon-moon-refresh_failure:before {
+  content: "\e93c";
+}
+.icon-moon-situation_so:before {
+  content: "\e93d";
+}
+.icon-moon-situation:before {
+  content: "\e93e";
+}
+.icon-moon-uniE931:before {
+  content: "\e93f";
+}
+.icon-moon-uniE932:before {
+  content: "\e940";
+}
+.icon-moon-start1:before {
+  content: "\e941";
+}
+.icon-moon-start2:before {
+  content: "\e942";
+}
+.icon-moon-statistic_so:before {
+  content: "\e943";
+}
+.icon-moon-temperature:before {
+  content: "\e944";
+}
+.icon-moon-time:before {
+  content: "\e945";
+}
+.icon-moon-worker:before {
+  content: "\e946";
+}
+.icon-moon-administrator:before {
+  content: "\e947";
+}
+.icon-moon-down_so:before {
+  content: "\e948";
+}
+.icon-moon-up_so:before {
+  content: "\e949";
+}
+.icon-moon-transformer_so:before {
+  content: "\e94a";
+}
+.icon-moon-transformerbox:before {
+  content: "\e94b";
+}
+.icon-moon-inverter:before {
+  content: "\e94c";
+}
+.icon-moon-inverter_so:before {
+  content: "\e94d";
+}
+.icon-moon-ess_so:before {
+  content: "\e94e";
+}
+.icon-moon-ess:before {
+  content: "\e94f";
+}
+.icon-moon-meteorological:before {
+  content: "\e950";
+}
+.icon-moon-solar_so:before {
+  content: "\e951";
+}
+.icon-moon-solarfarm:before {
+  content: "\e952";
+}
+.icon-moon-solar:before {
+  content: "\e953";
+}
+.icon-moon-sunny:before {
+  content: "\e954";
+}
+.icon-moon-windfarm:before {
+  content: "\e955";
+}
+.icon-moon-wind:before {
+  content: "\e956";
+}
+.icon-moon-wrong_circle_so:before {
+  content: "\e957";
+}
+.icon-moon-info_circle_so:before {
+  content: "\e958";
+}
+.icon-moon-right_circle_so:before {
+  content: "\e959";
+}
+.icon-moon-question_circle:before {
+  content: "\e95a";
+}
+.icon-moon-delete:before {
+  content: "\e95b";
+}
+.icon-moon-editor:before {
+  content: "\e95c";
+}
+.icon-moon-back:before {
+  content: "\e95d";
+}
+.icon-moon-caret_down_s:before {
+  content: "\e95e";
+}
+.icon-moon-caret_left_s:before {
+  content: "\e95f";
+}
+.icon-moon-caret_right_s:before {
+  content: "\e960";
+}
+.icon-moon-caret_up_s:before {
+  content: "\e961";
+}
+.icon-moon-direction_down_s:before {
+  content: "\e962";
+}
+.icon-moon-direction_left_s:before {
+  content: "\e963";
+}
+.icon-moon-direction_right_s:before {
+  content: "\e964";
+}
+.icon-moon-direction_up_s:before {
+  content: "\e965";
+}
+.icon-moon-drag:before {
+  content: "\e966";
+}
+.icon-moon-ellipsis:before {
+  content: "\e967";
+}
+.icon-moon-question_circle_l1:before {
+  content: "\e968";
+}
+.icon-moon-reset:before {
+  content: "\e969";
+}
+.icon-moon-search:before {
+  content: "\e96a";
+}
+.icon-moon-Service-status:before {
+  content: "\e96b";
+}
+.icon-moon-setting:before {
+  content: "\e96c";
+}
+.icon-moon-split_line:before {
+  content: "\e96d";
+}
+.icon-moon-wrong_s:before {
+  content: "\e96e";
+}
+.icon-moon-check:before {
+  content: "\e96f";
+}
+.icon-moon-wrong:before {
+  content: "\e970";
+}
+.icon-moon-eletricity_p:before {
+  content: "\e971";
+}
+.icon-moon-uniE969:before {
+  content: "\e972";
+}
+.icon-moon-eletricity_t:before {
+  content: "\e973";
+}
+.icon-moon-evcharger:before {
+  content: "\e974";
+}
+.icon-moon-health1:before {
+  content: "\e975";
+}
+.icon-moon-plug:before {
+  content: "\e976";
+}
+.icon-moon-moon:before {
+  content: "\e977";
+}
+.icon-moon-building:before {
+  content: "\e978";
+}
+.icon-moon-ess3:before {
+  content: "\e979";
+}
+.icon-moon-fullscreen_esc:before {
+  content: "\e97a";
+}
+.icon-moon-fullscreen:before {
+  content: "\e97b";
+}
+.icon-moon-menu_fold1:before {
+  content: "\e97c";
+}
+.icon-moon-menu_fold2:before {
+  content: "\e97d";
+}
+.icon-moon-position:before {
+  content: "\eb4f";
+}

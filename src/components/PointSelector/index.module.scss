@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+
+    [class~='ant-select-selector'] {
+        height: 100%;
+
+        [class~='ant-select-selection-overflow'] {
+            display: none;
+        }
+    }
+
+    [class~='ant-select-selector']::before {
+        display: flex;
+        align-items: center;
+        content: attr(data-before);
+        position: absolute;
+        left: 12px;
+        height: 100%;
+        z-index: 1;
+        font-size: 14px;
+    }
+
+    [class~='ant-select-selection-search'] {
+        width: 100% !important;
+
+        &>input {
+            display: none;
+        }
+    }
+}

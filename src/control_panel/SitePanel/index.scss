@@ -1,0 +1,144 @@
+@import "../index.scss";
+
+.site-panel {
+	display: flex;
+	flex: 1.6;
+	background: $grid-background;
+	flex-direction: column;
+	padding: 10px 0px 0px 10px;
+	height: 100%;
+	overflow: auto;
+
+	.site-panel-main{
+		height: calc(100% - 20px - 10px);
+		overflow: auto;
+
+		& > div {
+			list-style: none;
+			padding:0 10px 20px 0;
+			margin-top: 10px;
+			font-size: 14px;
+
+			.item-header {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 0 0 5px 0;
+				border-bottom: 1px solid $borderBottomColor;
+				.site-point-item-tips {
+					background: url("../res/info.png") center no-repeat;
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+				}
+				.item-header-title {
+					color: $primary-font-color;
+					font-weight: 600;
+				}
+			}
+			
+			.item-child{
+				display: flex;
+				flex-flow: row nowrap;
+				padding: 8px 0 0;
+
+				>span{
+					display: block;
+					width: 140px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin-right: 10px;
+					white-space: nowrap;
+				}
+
+				>div{
+					display: flex;
+					flex-direction: row;
+					white-space: pre-wrap;
+					flex: 1;
+
+					.item-right{
+						&.item-right-block{
+							flex: 1;
+
+							.item-right-block-child{
+								display: flex;
+								flex-direction: row;
+								flex: 1;
+								padding: 0 0 8px 0;
+
+								>span{
+									flex: 1;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+								}
+							}
+						}
+
+						.item-right-number-classicBool{
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.env-input-number{
+								min-width: 100px;
+								margin-right: auto;
+							}
+
+							>form {
+								padding: 0;
+								margin-bottom: 4px;
+								margin-right: auto;
+							}
+						}
+
+						.env-input-number{
+							width: 100px;
+
+							@media screen and (min-width: 1480px) {
+								width: 180px!important;
+							}
+						}
+					}
+
+					.site-point-tag {
+						margin-left: 8px;
+						font-size: 8px;
+						white-space: pre-wrap;
+						color: $primary-color;
+						line-height: 1.5em;
+					}
+				}
+			}
+
+			select {
+				width: 100px;
+				height: 26px;
+				color: #fff;
+				text-align: right;
+				background: $enable-select-bg;
+				outline: none;
+				border: none;
+
+				@media screen and (min-width: 1480px) {
+					width: 180px;
+				}
+			}
+
+			input[type="number"] {
+				width: 80px;
+				height: 26px;
+				color: #fff;
+				text-align: right;
+				background: $enable-input-bg;
+				outline: none;
+				border: none;
+
+				@media screen and (min-width: 1480px) {
+					width: 160px;
+				}
+			}
+		}
+	}
+}

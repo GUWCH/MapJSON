@@ -1,0 +1,34 @@
+@import "@/common/css/define.scss";
+
+.toolbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 12px 0;
+
+    :global{
+        .ant-input-affix-wrapper, .ant-input{
+            border: 1px solid $inputBorder;
+            border-radius: 2px;
+        }
+    }
+
+    .toolitem{
+        display: flex;
+        align-items: center;
+
+        >div{
+            margin-left: 20px;
+            cursor: pointer;
+
+            &.switch{
+                cursor: default;
+                display: flex;
+
+                .impact{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

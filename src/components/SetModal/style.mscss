@@ -1,0 +1,152 @@
+@import "@/common/css/define.scss";
+
+%UniversalButton{
+    width: 76px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.tplSetContainer{
+
+    div[class *= 'ant-modal-content']{
+        background-color: $toolTipBg;
+
+        div[class *= 'ant-modal-body'] {
+            padding: 16px 12px;
+            display: flex;
+            flex-direction: column;
+
+            .head{
+                display: flex;
+                margin-bottom: 12px;
+
+                .curTplName{
+                    font-size: 16px;
+                }
+
+                .reset{
+                    color: $slider;
+                    margin-left: auto;
+                    cursor: pointer;
+
+                    >span{
+                        margin-right: 4px;
+                    }
+                }
+            }
+
+            .content{
+                height: calc(100% - 82px);
+                overflow-y: auto;
+
+                .contentContainer{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 10px 8px;
+                    background-color: $itemBg;
+                    margin-bottom: 10px;
+
+                    .contentTitle{
+                        margin-bottom: 12px;
+                    }
+
+                    .contentSelect{
+                        div[class *= 'quota-set-select-self']{
+                            display: inline;
+                            width: 164px;
+                            height: 28px;
+                            font-size: 14px;
+                            margin-left: auto;
+                            align-self: center;
+
+                            div[class *= 'ant-select-selector']{
+                                height: 28px !important;
+
+                                div[class *= 'ant-select-selection-item']{
+                                    line-height: 28px;
+                                }
+                            }
+                        }
+                    }
+
+                    >div{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .footer{
+                display: flex;
+                margin-top: auto;
+
+                .cancel{
+                    @extend %button4;
+                    @extend %UniversalButton;
+                    margin-left: auto;
+                }
+
+                .otherSave{
+                    @extend %button4;
+                    @extend %UniversalButton;
+                    margin-left: 8px;
+                }
+
+                .save{
+                    @extend %button6;
+                    @extend %UniversalButton;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+.confirmModal{
+    div[class *= 'ant-modal-content']{
+        height: 200px;
+        padding: 10px 8px 12px 6px;
+        background-color:#083F4D;
+
+        div[class *= 'ant-modal-body']{
+            padding: 24px;
+        }
+    }
+
+    button {
+        width: 90px;
+        border: 1px solid #3F6D85;
+        &:first-child{
+            background-color: transparent;
+        }
+    }
+
+    .confirmOK{
+        display: flex;
+        height: 28px;
+        font-size: 20px;
+        font-weight: 500;
+
+        >span:first-child{
+            color: #a6761a;
+            font-size: 26px;
+            line-height: 28px;
+            margin-right: 12px;
+        }
+    }
+
+    .confirmInfo{
+        height: 22px;   
+        margin-top: 22px;
+        margin-left: 40px;
+        font-size: 14px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #A1B2C2;
+        line-height: 22px;
+    }
+
+    .ant-modal-footer{
+        border: none;
+    }
+
+}

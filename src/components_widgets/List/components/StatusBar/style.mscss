@@ -1,0 +1,32 @@
+@import "@/common/css/define.scss";
+
+.statusbar{
+    padding: 0 0 10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    button{
+        display:flex;
+        align-items: center;
+        border: none;
+        background-color: $filterBtnBg;
+        border-radius: 2px;
+        padding: 3px 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover, &.hov{
+            background-color: $filterBtnHovBg;
+        }
+
+        >div{
+        }
+
+        >span{
+            // margin-left: 5px;
+        }
+    }
+}

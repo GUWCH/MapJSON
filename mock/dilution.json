@@ -1,0 +1,26 @@
+{
+    "code":"10000",
+	"message":"查询录播频率成功",
+	"period":[
+		{
+			"name_en":"1s",
+			"name_cn":"1秒钟",
+			"val":"1s"
+		},
+		{
+			"name_en":"1min",
+			"name_cn":"1分钟",
+			"val":"1min"
+		},
+		{
+			"name_en":"5min",
+			"name_cn":"5分钟",
+			"val":"5min"
+		},
+		{
+			"name_en":"10min",
+			"name_cn":"10分钟",
+			"val":"10min"
+		}
+	]
+}

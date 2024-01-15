@@ -1,0 +1,366 @@
+@import "../../common/css/define.scss";
+
+:global(.react-html){
+    :global(#center){
+        height: 100%;
+    }    
+}
+
+.red {
+    color: $envRed1;
+}
+
+.chart_tooltip{
+    .chart_tooltip_name{
+        color: $white;
+    }
+
+    .chart_tooltip_sname{
+        margin-left: 5px;
+        color: $envWhiteTransparent6;
+    }
+
+    .chart_tooltip_val{
+        margin-left: 5px;
+        color: $white;
+    }
+}
+
+.root{
+    padding: 0 15px 10px 15px;
+    height: 100%;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .view{
+        display: flex;
+        background: #09474e;
+        margin: 15px 0;
+        height: 60px;
+        font-size: $envFontSize16;
+    
+        .site{
+            width: 180px;
+            background: linear-gradient(90deg, #076262, #0b5960);
+
+            >div{
+                height: 100%;
+                background: url(./image/health_green.svg) 10px center no-repeat;
+                background-size: 45px;
+                padding: 0 0 0 65px;
+                display: flex;
+                align-items: center;
+
+                >span{
+                    cursor: pointer;
+                }
+            }
+
+            &.token{
+                >div{
+                    background: url(./image/site.svg) 10px center no-repeat;
+                }
+            }
+        }
+    
+        .device{
+            flex: 1;
+            display: flex;
+
+            >div{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $envGray1;
+
+                >span:first-child{
+                    cursor: pointer;
+
+                    >span:first-child{
+                        margin-right: 5px;
+                    }
+                }
+
+                /* >span:last-child{
+                    font-size: $envFontSize12;
+                    color: $envBtnHoverBg2;
+                    cursor: pointer;
+                    margin-left: 10px;
+                } */
+            }
+        }
+    }
+    
+    .datetime{
+        padding: 5px 0;
+
+        .date_type{
+            display: inline-block;
+            height: 30px;
+            width: 250px;
+            border: 1px solid $envBlue;
+            margin: 0 25px 0 0;
+
+            section{
+                display: flex;
+                height: 100%;
+
+                >div{
+                    flex: 1;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-right: 1px solid $envBlue;
+                    background-color: $envBlackTransparent1;
+    
+                    &.date_active{
+                        background-color: $envBtnHoverBg2;
+                    }
+                }
+    
+                >div:last-child{
+                    border-right: none;
+                }
+            }
+        }
+
+        :global{
+            .ant-picker{
+                background-color: $envBlackTransparent2;
+            }
+        }        
+    }
+
+    .charts_container{
+        margin-top: 15px;
+        height: calc(50% - 72.5px);
+        min-height: 295px;
+
+        .charts{
+            position: relative; // for loading
+            height: 100%;
+    
+            .charts_header{
+                height: 45px;
+                line-height: 45px;
+                background-color: $envBlackTransparent4;
+                display: flex;
+                padding: 0 10px;
+                overflow: auto;
+    
+                .stat{
+                    margin-right: 25px;
+                    white-space: nowrap;
+    
+                    .statname{
+                        color: $envWhiteTransparent6;
+                        margin-right: 5px;
+                    }
+    
+                    .statval{
+                        margin-right: 5px;
+                    }
+                }
+            }
+    
+            .charts_main{
+                display: flex;
+                height: calc(100% - 45px);
+                background: $envBlackTransparent2;
+                
+                >div{
+                    flex: 1;
+                    height: 100%;
+                    overflow: hidden;
+                }
+    
+                >span{
+                    display: inline-block;
+                    height: 100%;
+                    padding: 30px;
+    
+                    >i{
+                        display: inline-block;
+                        border-left: 1px solid $envWhiteTransparent1;
+                        height: 100%;
+                        margin-right: -5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .other{
+        display: flex;
+        height: calc(50% - 72.5px);
+        min-height: 300px;
+
+        header {
+            padding: 15px 0 15px 0;
+            font-size: $envFontSize16;
+            position: relative;
+
+            >span:last-child{
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: $envFontSize12;
+                color: $envBtnHoverBg2;
+                cursor: pointer;
+            }
+        }
+
+        >div:first-child{
+            width: calc(100% - 450px);
+            display: flex;
+            flex-flow: column nowrap;
+
+            >div{
+                position: relative; // for loading
+                flex: 1;
+                background-color: $envBlackTransparent2;
+                overflow: hidden;
+
+                .rank_grid{
+                    height: 100%;
+                }
+            }
+        }
+
+        >div:last-child{
+            width: 450px;
+            margin-left: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+
+            >div{
+                flex: 1;
+                background-color: $envBlueBlack2;
+                overflow: hidden;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                font-size: $envFontSize16;
+
+                >div{
+                    display: flex;
+                    width: 100%;
+                    padding: 25px 0;
+
+                    >span{
+                        flex: 1;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                    }
+
+                    >span:first-child{
+                        padding: 5px 25px 5px 10px;
+                        background: url(./image/revenue.png) right center no-repeat;
+                        background-size: 10%;
+                        color: $envWhiteTransparent6
+                    }
+
+                    >span:last-child{
+                        >span:first-child{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                >div:last-child{
+                    >span:first-child{
+                        padding: 5px 25px 5px 10px;
+                        background: url(./image/CO2.png) right -5px center no-repeat;
+                        background-size: 15%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.antd_tooltip{
+    :global{
+        .ant-tooltip-inner{
+            background-color: $envBlackTransparent;
+            border: 1px solid $envBorderLightColor;
+            
+            .ant-tooltip-inner-content{
+                >div{
+                    margin: 10px 0;
+                    padding: 0 10px;
+
+                    i{
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 5px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .ant-tooltip-content{
+            >.ant-tooltip-arrow{
+                width: 8px;
+                height: 8px;
+                background: none;
+                border-style: solid;
+                border-width: 1px;
+                border-color: $envBorderLightColor;
+                border-bottom: none;
+                border-right: none;
+                z-index: 2;
+                top: -2px;
+                transform: translate(-3px, 6px) rotate(45deg);
+
+                .ant-tooltip-arrow-content{
+                    display: block;
+                    width: 8px; 
+                    height: 8px;  
+                    border-style: solid; 
+                    border-width: 4px;
+                    border-top-color: $black;
+                    border-left-color: $black;
+                    border-right-color: $transparent;
+                    border-bottom-color: $transparent;
+                    box-shadow: none;
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+.site_token_pop{
+
+    :global{
+        .ant-popover-inner{
+            background: $envBlackTransparent;
+        }
+
+        .ant-popover-content{
+            >.ant-popover-arrow{
+                border-color: $envBlackTransparent;
+            }
+        }
+    }
+
+    .site_token_main{
+        cursor: pointer;
+
+        &.site_token_tag{
+            padding-left: 20px;
+            background: url("./image/second_mark.png") left center no-repeat;
+        }
+    }    
+}

@@ -1,0 +1,18 @@
+.container {
+    [class*='ant-radio-inner'] {
+        border-color: #537C94;
+        background-color: transparent;
+    }
+
+    [class*='ant-radio-checked'] {
+
+        [class*='ant-radio-inner'] {
+            border-color: #00A7DB;
+            border-width: 5px;
+        }
+    }
+
+    [class*='ant-radio-inner']::after {
+        display: none;
+    }
+}

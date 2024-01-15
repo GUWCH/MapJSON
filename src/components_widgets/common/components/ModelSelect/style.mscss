@@ -1,0 +1,11 @@
+.modelContainer{
+    width: 100%;
+    .item{
+        display: flex;
+        margin-bottom: 10px;
+
+        .action{
+            margin-left: auto;
+        }
+    }
+}

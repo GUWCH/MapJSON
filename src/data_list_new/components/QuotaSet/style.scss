@@ -1,0 +1,178 @@
+@import "@/common/css/define.scss";
+
+$quotaSet: env-quota-set;
+
+$containerBg: #083F4D;
+$itemBg: #011D24;
+$button: #00A7DB;
+$border: #3F6D85;
+$modelBg: #122a31;
+
+.ant-popover {
+
+
+    &-inner {
+        background-color: $containerBg !important;
+
+        &-content{
+            padding: 12px 8px;
+            width: auto;
+            max-width: 326px;
+        }
+    }
+}
+
+.#{$quotaSet} {
+    position: fixed;
+    border-radius: 5px;
+    background-color: #1d4a52;
+
+    &-container{
+        width: 310px;
+        background-color: $containerBg;
+    }
+
+    &-model{
+        height: 220px;
+        @media screen and (min-height: 800px) {
+            height: 530px;
+        }
+        
+        overflow-y: overlay;
+
+        .ant-collapse {
+            // background-color: $unitBg;
+
+            &-header{
+                background-color: $modelBg;
+            }
+
+            &-content-box{
+                padding: 0px;
+            }
+        }
+    }
+
+    &-header{
+        display: flex;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        padding: 10px 0; 
+
+        &-title{
+            margin-left: 8px;
+        }
+
+        &-reset{
+            align-self: center;
+            font-size: 10px;
+            margin-left: auto;
+            margin-right: 5px;
+            color: $envBlue3;
+            cursor: pointer;
+            padding-left: 20px;
+
+            &:hover{
+                color: $envBlue;
+            }
+
+            &-describe{
+                margin-left: 5px;
+            }
+        } 
+    } 
+
+    &-column{
+        display: flex;
+        margin: 10px 0;
+
+        >span{
+            margin-left: 8px
+        }
+
+        >div{
+            height: 28px;
+            margin-left: auto !important;
+            width: 100px;
+            border: 1px solid #3F6D85;
+            border-radius: 2px;
+            background: transparent;
+            color: #fff;
+            margin: 0 10px 0 10px;
+
+            .ant-input-number{
+                border: 1px solid #616c74;
+                background-color: transparent;
+                margin-left: 10px;
+                box-shadow: none !important;
+        
+                &-handler{
+                    border-color: #616c74;
+        
+                    &-up-inner{
+                        color: #fff;
+                    }
+        
+                    &-down-inner{
+                        color: #fff;
+                    }
+                }
+        
+                &-handler-wrap{
+                    background: #083F4D;
+
+                    >input{
+                        color: #fff
+                    };
+                }
+
+                &-input-wrap{
+                    height: 28px;
+                    background: none;
+
+                    >input{
+                        height: 28px;
+                        color: #fff
+                    };
+                }
+        
+                &-focused{
+                    box-shadow: none !important;
+                }
+            }
+
+        }
+    }
+
+    &-panel{
+        margin-bottom: 15px;
+    }
+
+    &-content{
+
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        button {
+            width: 76px;
+            height: 32px;
+            border-radius: 2px;
+        }
+
+        &-cancel{
+            background-color: transparent;
+            border: 1px solid $border;
+        }
+
+        &-save{
+            background-color: $button;
+            border: none;
+            margin-left: 8px;
+        }
+    }
+}

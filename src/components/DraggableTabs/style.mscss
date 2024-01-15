@@ -1,0 +1,11 @@
+.dropping {
+    transition: all 0.3s;
+}
+  
+.dragnode {
+    margin-inline-end: 24px;
+}
+
+.tabs{
+    color: #fff !important;
+}

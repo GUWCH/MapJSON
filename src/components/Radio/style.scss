@@ -1,0 +1,130 @@
+$checkboxWarpPrefixCls: env-rc-radio;
+$group: #{$checkboxWarpPrefixCls}-group;
+$checkboxInnerPrefixCls: #{$checkboxWarpPrefixCls}-inner;
+$duration:0.3s;
+$ease-in-out-circ:cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$ease-out-back:cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+.#{$group}{
+    display: inline-block;
+    background: #000;
+    border-radius: 15px;
+    padding: 2px 8px!important;
+
+    >label:first-child{
+        margin: 0 15px 0 0;
+    }
+
+    >label{
+        >span:first-child{
+            margin: 0 5px 0 0;
+        }
+    }
+}
+
+.#{$group}.#{$group}-disabled{
+    background: #7a7f80;
+    color: #b8c2c4;
+}
+
+/* 一般状态 */
+.#{$checkboxWarpPrefixCls} {
+    white-space: nowrap;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    &:hover {
+        .#{$checkboxInnerPrefixCls} {
+            border-color: #bcbcbc;
+        }
+    }
+
+    &-inner {
+        &:after {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 2px;
+            top: 2px;
+            border-radius: 8px;
+            display: table;
+            border-top: 0;
+            border-left: 0;
+            content: ' ';
+            background-color: #26a0d8;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            opacity: 0;
+            transition: transform $duration $ease-in-out-circ, opacity $duration $ease-in-out-circ, background-color $duration $ease-in-out-circ;
+            -webkit-transition: -webkit-transform $duration $ease-in-out-circ, opacity $duration $ease-in-out-circ, background-color $duration $ease-in-out-circ;
+        }
+
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 14px;
+        border-color: #d9d9d9;
+        background-color: #ffffff;
+        transition: border-color $duration $ease-in-out-circ,
+        background-color $duration $ease-in-out-circ;
+    }
+
+    &-input {
+        position: absolute;
+        left: 0;
+        z-index: 9999;
+        cursor: pointer;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    input:disabled{
+        cursor: default;
+    }
+}
+
+/* 选中状态 */
+.#{$checkboxWarpPrefixCls}.#{$checkboxWarpPrefixCls}-checked {
+
+    .#{$checkboxInnerPrefixCls} {
+        border-color: #d9d9d9;
+
+        &:after {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            opacity: 1;
+            transition: transform $duration $ease-out-back, opacity $duration $ease-in-out-circ, background-color $duration $ease-in-out-circ;
+            -webkit-transition: -webkit-transform $duration $ease-out-back, opacity $duration $ease-in-out-circ, background-color $duration $ease-in-out-circ;
+        }
+    }
+}
+
+.#{$checkboxWarpPrefixCls}.#{$checkboxWarpPrefixCls}-disabled {
+    &:hover {
+        .#{$checkboxInnerPrefixCls} {
+            border-color: #d9d9d9;
+        }
+    }
+
+    .#{$checkboxInnerPrefixCls} {
+        border-color: #d9d9d9;
+        background-color: #949191;
+
+        &:after {
+            background-color: #cccccc;
+        }
+    }
+
+    .#{$checkboxInnerPrefixCls}-input {
+        cursor: default;
+    }
+}

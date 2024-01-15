@@ -1,0 +1,26 @@
+<svg preserveAspectRatio="none" width="3552px" height="2504px" viewBox="0 0 3552 2504" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M1528.5 2084.79C2372.67 2084.79 3057 1611.46 3057 1038.12C3057 464.784 2372.67 0 1528.5 0C684.333 0 0 464.784 0 1038.12C0 1611.46 684.333 2084.79 1528.5 2084.79Z" transform="translate(4220 747.1299)" id="path_1" />
+    <rect width="7680" height="3240" id="artboard_1" />
+    <rect width="3552" height="2504" id="slice_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#slice_1" clip-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_3">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Slice" clip-path="url(#clip_1)">
+    <use xlink:href="#slice_1" stroke="none" fill="none" />
+    <g id="河南龙源" clip-path="url(#clip_2)" transform="translate(-3994 -460)">
+      <g id="椭圆形">
+        <g clip-path="url(#clip_3)">
+          <use xlink:href="#path_1" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="200" stroke-dasharray="1600 100" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

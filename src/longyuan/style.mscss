@@ -1,0 +1,1174 @@
+@import "../common/css/define.scss";
+
+$status_run: #10ffc4;
+$status_standby: #10d2ff;
+$status_fault: #f52962;
+$status_maintain: #ffb002;
+$status_noconnect: #d0d4d7;
+$common: #00E1FF;
+$blue: #80E7FF;
+$title: #10D2FF;
+$statColor: #10ffc4;
+$statColor1: #FFB002;
+
+:root{
+  --scale: 1;
+  --barheight: 0px;
+
+  @media screen and (min-width: 5760px) {
+    --scale: 4;
+  }
+
+  @media screen and (min-width: 3840px) and (max-width: 5760px) {
+    --scale: 3;
+  }
+
+  @media screen and (min-width: 2880px) and (max-width: 3840px) {
+    --scale: 2;
+  }
+
+  @media screen and (min-width: 1920px) and (max-width: 2880px) {
+    --scale: 1.2;
+  }
+
+  @media screen and (min-width: 1536px) and (max-width: 1920px) {
+    --scale: 1.2;
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1536px) {
+    --scale: 1;
+  }
+
+  @media screen and (max-width: 1280px) {
+    --scale: 0.8;
+  }
+}
+
+@function scaleSize($scale: 0px, $percent: 0) {
+  @if $percent == 1{
+    @return calc(100% + (#{$scale} * (var(--scale) / 4))); 
+  }
+  @if $percent == -1{
+    @return calc(100% - (#{$scale} * (var(--scale) / 4))); 
+  }
+  @return calc(#{$scale} * (var(--scale) / 4)); 
+}
+
+@mixin flagStyle($domain: wind, $g1: #03C2AB, $g2: #029060, $animatename: waterfade, $animatecolor: #D0D4D7){
+  .flag{
+    @include flag($domain, $g1, $g2);
+  }
+  
+  .waterWave{
+    //background: url(./images/wave.svg) center center no-repeat;
+    //background-size: cover;
+    @include ripple($animatename, $animatecolor);
+  }
+}
+
+@mixin flag($domain: wind, $g1: #03C2AB, $g2: #029060) {
+  position: relative;
+  z-index: 1;
+  width: scaleSize(172px);
+  height: scaleSize(172px);
+  &::before{
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    border-radius: scaleSize(48px);
+    background: #0a2d66;
+    box-shadow: 0px scaleSize(10px) scaleSize(30px) rgba(0,0,0,0.3);
+  }
+
+  >div{
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    z-index: 0;
+    width: 70%;
+    height: 70%;
+    border-radius: scaleSize(30px);
+    background: linear-gradient(225deg, $g1, $g2);
+    box-shadow: 
+      0px 0px scaleSize(32px) rgba(117,235,176,0.24), 
+      inset 0px scaleSize(-9px) scaleSize(12px) rgba(255,255,255,0.12);
+  }
+
+  &::after{
+    display: block;
+    content: '';
+    position: absolute;
+    left: 27%;
+    top: 27%;
+    z-index: 1;
+    width: 46%;
+    height: 46%;
+    @if $domain == solar{
+      background-image: url(./images/solar.svg);
+    }@else{
+      background-image: url(./images/wind.svg);
+    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  >i{
+    position: absolute;
+    left: 50%;
+    bottom: scaleSize(-9px);
+    display: block;
+    border-color: transparent #0a2d66 #0a2d66 transparent;
+    border-style: solid;
+    border-width: scaleSize(18px);
+    transform: translateX(-50%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+@mixin ripple($animatename: waterfade, $animatecolor: #D0D4D7) {
+  width: scaleSize(312px);
+  height: scaleSize(208px);
+  border-radius: scaleSize(156px) / scaleSize(103px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: scaleSize(4px);
+    height: scaleSize(2px);
+    border: scaleSize(4px) solid $animatecolor;
+    border-radius: 50%;
+    animation: ripple 2s infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: scaleSize(120px);
+    height: scaleSize(68px);
+    border: scaleSize(4px) solid rgba(208,212,215,0.2);
+    border-radius: 50%;
+    animation: ripple-2 2s infinite;
+  }
+
+  >div:first-child{
+    box-sizing: content-box!important;
+    width: scaleSize(20px);
+    height: scaleSize(10px);
+    background:rgba(255,255,255,.95);
+    border: scaleSize(6px) solid $animatecolor;
+    border-radius: 50%;
+    transform: rotateX(45deg);
+    animation: $animatename 2s linear infinite;
+  }
+
+  >div:last-child{
+    content: "";
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: scaleSize(120px);
+    height: scaleSize(138px);
+    border-radius: 0 0 scaleSize(100px) scaleSize(100px) / 0 0 scaleSize(60px) scaleSize(60px);
+    background-image: linear-gradient(0deg, $animatecolor, rgba(255, 255, 255, 0));
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+  }
+  to {
+    border-width: 1px;
+    width: scaleSize(120px);
+    height: scaleSize(68px);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    width: scaleSize(294px);
+    height: scaleSize(166px);
+    border-width: 1px;
+  }
+}
+
+@mixin waterFade($name: waterfade, $color: rgba(208,212,215,0.29)) {
+  @keyframes #{$name} {
+    0% {
+        box-shadow: 
+        0 0 0 0 $color, 
+        0 0 0 scaleSize(25px) $color, 
+        0 0 0 scaleSize(50px) $color, 
+        0 0 0 scaleSize(75px) $color;
+    }
+    100% {
+        box-shadow: 
+        0 0 0 scaleSize(25px) $color, 
+        0 0 0 scaleSize(50px) $color, 
+        0 0 0 scaleSize(75px) $color, 
+        0 0 0 scaleSize(100px) #00ff0000;
+    }
+  }
+}
+
+// ripple animate
+$waterFadeName: (waterfaderun, waterfadeby, waterfadefault, waterfademain, waterfadeno);
+@each $name in $waterFadeName {
+  $color: rgba(208,212,215,0.29);
+  @if $name == waterfaderun {
+    $color:rgba($status_run, .29);
+  } @else if $name == waterfadeby{
+    $color:rgba($status_standby, .29);
+  } @else if $name == waterfadefault{
+    $color:rgba($status_fault, .29);
+  } @else if $name == waterfademain{
+    $color:rgba($status_maintain, .29);
+  }
+  @include waterFade($name, $color);
+}
+
+@keyframes waterfade {
+  0% {
+      box-shadow: 
+      0 0 0 0 rgba(208,212,215,0.29), 
+      0 0 0 scaleSize(25px) rgba($common, 0.29), 
+      0 0 0 scaleSize(50px) rgba($common,0.29), 
+      0 0 0 scaleSize(75px) rgba($common,0.29);
+  }
+  100% {
+      box-shadow: 
+      0 0 0 scaleSize(25px) rgba($common,0.29), 
+      0 0 0 scaleSize(50px) rgba($common,0.29), 
+      0 0 0 scaleSize(75px) rgba($common,0.29), 
+      0 0 0 scaleSize(100px) #00ff0000;
+  }
+}
+
+// 地图下方状态style
+@mixin statusStat($hg1, $hg2, $vg1, $vg2, $textColor) {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  &::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, $vg1, $vg2);
+    opacity: .7;
+  }
+
+  .statusCount{
+    height: 50%;
+    color: $textColor;
+    display: flex;
+    align-items: center;
+    font-size: scaleSize(100px);
+    padding-left: scaleSize(24px);
+
+    >div:first-child{
+      width: scaleSize(70px);
+      height: scaleSize(70px);
+      margin-right: scaleSize(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    >div:last-child{
+      width: scaleSize(70px, -1);
+      font-family: 'Rajdhani-Medium';
+    }
+  }
+
+  .statusDesc{
+    height: 40%;
+    border-radius: scaleSize(8px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: scaleSize(48px);
+
+    &::before{
+      display: block;
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 3.33%;
+      background: linear-gradient(225deg, $hg1, $hg2);
+      box-shadow: 0px 0px scaleSize(32px) rgba(209,222,253,0.24);
+      opacity: .6;
+    }
+
+    >span{
+      z-index: 1;
+    }
+  }
+}
+
+@mixin status(){  
+  &.statusRun{
+    @include statusStat(#03C2AB, #029060,#03C2AB, rgba(2, 144, 96, 0), $status_run);
+  }
+  &.statusStandby{
+    @include statusStat(#007CFF, #00AFFF,#007CFF, rgba(0, 175, 255, 0), $status_standby);
+  }
+  &.statusFault{
+    @include statusStat(#F50A22, #F5459B,#F50A22, rgba(245, 69, 155, 0), $status_fault);
+  }
+  &.statusMaintain{
+    @include statusStat(#FD851A, #FFB500,#FD851A, rgba(255, 181, 0, 0), $status_maintain);
+  }
+  &.statusNoconnect{
+    @include statusStat(#A8B0C3, #6E778B,#A8B0C3, rgba(110, 119, 139, 0), $status_noconnect);
+  }
+}
+
+@mixin paralRect() {  
+  background: linear-gradient(46deg, #0AAFFF, #51DFFF);
+  transform: skew(0, 45deg);
+}
+
+:global(.react-html){
+  :global(#center){
+      height: 100%;
+  }
+}
+
+:global(#center){
+  font-size: scaleSize(48px);
+  font-family: PingFangSC-Medium;
+}
+
+:global(.fade-enter){
+  opacity: 0;
+}
+:global(.fade-exit){
+  opacity: 1;
+}
+:global(.fade-enter-active){
+  opacity: 1;
+}
+:global(.fade-exit-active){
+  opacity: 0;
+}
+:global(.fade-enter-active),
+:global(.fade-exit-active){
+  transition: opacity 500ms;
+}
+
+.hLine{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0 scaleSize(28px);
+ 
+  em{
+    display: block;
+    width: 100%;
+    border-bottom: scaleSize(2px) solid #2FC8FF;
+  }
+
+  &::before, &::after{
+    position: absolute;
+    bottom: scaleSize(-7px);
+    display: block;
+    content: '';
+    width: scaleSize(14px);
+    height: scaleSize(14px);
+    background-image: linear-gradient(46deg, #0AAFFF 0%, #51DFFF 100%);
+  }
+
+  &::before{
+    left: 0;
+  }
+
+  &::after{
+    right: 0;
+  }
+}
+
+.mainContainer{
+  height: 100%;
+  position: relative;
+
+  .container{
+    display: flex;
+    height: 100%;  
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    background: #071E3F url(./images/bg.png) left top no-repeat;
+    background-size: 100% 100%;
+  
+    >section{
+      flex: 0 0 50%;
+      overflow: hidden;
+  
+      &:first-child{
+        display: flex;
+        padding: 0 0 0 scaleSize(80px);
+        //padding: scaleSize(75px) 0 scaleSize(75px) scaleSize(80px);
+        flex-flow: column nowrap;
+  
+        >div{
+          height: 33.333%;
+          display: flex;
+
+          >div{
+            position: relative;
+            display: flex;
+            width: 100%;            
+            flex-direction: row;
+            overflow: hidden;
+    
+            >div{
+              &:first-child{
+                width: calc(50% - (52px * (var(--scale) / 4)));
+                margin-right: scaleSize(30px);
+              }
+
+              &:last-child{
+                flex: 1;
+              }
+            }
+          }
+
+          &:first-child{
+            height: calc(33.333% - (var(--barheight) * 2 / 3));
+            >div{
+              height: scaleSize(75px, -1);
+              padding: scaleSize(50px) 0;
+            }
+          }
+
+          &:nth-child(2){
+            height: calc(33.333% + (var(--barheight) / 3));
+            >div{
+              height: 100%;
+              padding: 0 0 scaleSize(50px) 0;
+            }
+          }
+
+          &:last-child{
+            height: calc(33.333% + (var(--barheight) / 3));
+            >div{
+              height: scaleSize(75px, -1);
+              padding: 0 0 scaleSize(50px) 0;
+            }
+          }
+        }
+      }
+    }
+  
+    .chart{
+      flex: 1;
+      overflow: hidden;
+  
+      >div:first-child{
+        height: scaleSize(80px);
+        font-size: scaleSize(64px);
+        display: flex;
+        align-items: center;
+  
+        &::before{
+          display: inline-block;
+          content: '';
+          width: scaleSize(10px);
+          height: scaleSize(70px);
+          margin-right: scaleSize(40px);
+          @include paralRect();
+        }
+      }
+  
+      >div:last-child{
+        width: 100%;
+        height: scaleSize(80px, -1);
+      }
+    }
+  
+    .stat{      
+      background: rgba(0,168,255,0.04);
+      box-shadow: inset 0px 0px 60px rgba(121,183,255,0.1);
+      border-radius: 8px;
+      font-size: scaleSize(60px);
+  
+      >div:first-child{
+        display: flex;
+        align-items: center;
+        padding-left: scaleSize(75px);
+        height: 30%;
+        background: linear-gradient(90deg, 
+          rgba(0, 211, 255, 0.02) 0%, 
+          rgba(0, 190, 255, 0.14) 50%, 
+          rgba(0, 168, 255, 0.02) 100%
+        );
+        box-shadow: 0px 0px 60px 0px rgba(121, 183, 255, 0.04);
+        border-radius: 8px;
+  
+        >span:first-child{
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-size: scaleSize(64px);
+          font-weight: 500;
+          color: #FFFFFF;
+          margin-right: scaleSize(60px);
+          text-shadow: 
+            0px 0px 60px rgba(16, 210, 255, 0.7),
+            0px 0px 80px rgba(16, 210, 255, 0.7);
+        }
+  
+        .digit{
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: scaleSize(20px);
+          text-align: center;
+          width: scaleSize(120px);
+          height: 68%;
+          font-size: scaleSize(140px);
+          font-family: DS-Digital, DS;
+          font-weight: normal;
+          color: #10D2FF;
+          text-shadow: 0px 8px 24px rgba(121, 183, 255, 0.6);
+          background: linear-gradient(180deg, rgba(0, 168, 255, 0.4) 0%, rgba(0, 168, 255, 0.2) 100%);
+          box-shadow: 0px 20px 25px 0px rgba(30, 189, 255, 0.08);
+        }
+  
+        >span:last-child{
+          margin-left: scaleSize(40px);
+        }
+      }
+  
+      .statDetail{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 70%;
+        padding: scaleSize(75px) 0 scaleSize(75px) scaleSize(75px);
+  
+        >div{
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+  
+          >div{
+            flex: 1;
+            display: flex;
+            flex-flow: column nowrap;
+            padding: scaleSize(6px) 0;
+  
+            >div{
+              flex: 1;
+              display: flex;
+              align-items: center;
+              color: rgba($blue, .8);
+              text-shadow: 0px scaleSize(8px) scaleSize(60px) rgba(121,183,255,0.5);
+  
+              &:last-child{
+                >span:first-child{
+                  font-size: scaleSize(104px);
+                  font-family: 'Rajdhani-Medium';
+                  color: $white;
+                }
+  
+                >span:last-child{
+                  color: rgba($white, .4);
+                  margin-left: scaleSize(28px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .grid{
+      flex: 1;
+      &:first-child{
+        flex: 0 0 auto;
+      }
+      
+      .gridHead{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 24.5%;
+        background: linear-gradient(
+          90deg, 
+          rgba(0, 168, 255, 0.06) 0%, 
+          rgba(0, 168, 255, 0.12) 72%, 
+          rgba(0, 168, 255, 0.08) 100%
+        );
+        color: rgba($white, .6);
+  
+        .headline{
+          font-size: scaleSize(64px);
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;        
+        }
+      }
+  
+      .gridTitle{
+        flex: 1;
+        display: flex;
+        flex-flow: row nowrap;
+  
+        >div{
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:first-child{
+            flex: none;
+            width: scaleSize(300px);
+          }
+        }
+      }
+  
+      .gridBody{
+        height: 75.5%;
+        overflow: auto;
+  
+        .gridBodyData{
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+  
+          >div{
+            flex: 1;
+            display: flex;
+            flex-flow: row nowrap;
+  
+            >div{
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              &:first-child{
+                flex: none;
+                width: scaleSize(300px);
+              }
+  
+              .gridName{
+                font-family: 'PingFangSC-Medium';
+              }
+  
+              .gridDigit{
+                font-family: 'Rajdhani-Medium';
+                font-size: scaleSize(56px);
+              }
+  
+              .gridUnit{
+                font-family: 'PingFangSC-Medium';
+                font-size: scaleSize(32px);
+                color: rgba($white, .4);
+                margin-left: scaleSize(12px);
+              }
+  
+              .gridVal{
+                width: 40%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: right;
+              }
+  
+              .gridBar{
+                width: 60%;
+                padding-left: scaleSize(12px);
+                
+                i{                
+                  display: block;
+                  height: scaleSize(16px);
+                  border-radius: scaleSize(8px);
+                  background: linear-gradient(90deg, #04516B, #31FFD4);
+                  box-shadow: 
+                    0px scaleSize(30px) scaleSize(50px) rgba(4,19,36,0.6), 
+                    scaleSize(4px) 0px scaleSize(12px) rgba(9,194,200,0.6);
+  
+                  &.yellow{
+                    background: linear-gradient(90deg, #563D2D, #FFB500);
+                    box-shadow: 
+                      0px scaleSize(30px) scaleSize(50px) rgba(4,19,36,0.6),
+                      scaleSize(4px) 0px scaleSize(12px) rgba(255,181,0,0.6);
+                  }
+                }
+              }
+            }
+            
+            &.gridStat1, &.gridStat2{
+              color: $statColor;
+              background: linear-gradient(90deg, rgba(#00A8FF, .06), rgba(#00A8FF, .12));
+  
+              .gridName{
+                color: rgba($white, .6);
+              }
+            }
+  
+            &.gridStat2{
+              color: $statColor1;
+            }
+          }
+        }
+      }
+    }
+  
+    .mapContainer{
+      height: 100%;
+  
+      .mapHead{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: scaleSize(160px);
+        height: 14.5%;
+        color: $title;
+        background: url(./images/headline.svg) center center no-repeat;
+        background-size: 100% 100%;
+        text-shadow: 
+          0px 0px scaleSize(36px) rgba(16,210,255,0.5),
+          0px 0px scaleSize(40px) rgba(0,0,0,0.1);
+      }
+      
+      .mapMain{
+        position: relative;
+        height: 85.5%;
+        padding: 0 0 0 4%;
+      }
+  
+      .map{
+        position: relative;
+        width: 92%;
+        height: 88%;
+        padding: 2.6% 2%;
+  
+        &::before{
+          //display: block;
+          display: none; // 不需要了
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: url(./images/mapbg.svg) left top no-repeat;
+          background-size: 100% 100%;
+          opacity: .15;
+        }
+  
+        .mapImg{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: url(./images/map.svg) left top no-repeat;
+          background-size: 100% 100%;
+          transition: background-image 1s ease;
+
+          &.mapImgInit{
+            background: 
+              url(./images/map.png) left top no-repeat, 
+              url(./images/map.svg) left top no-repeat;
+            background-size: 100% 100%;
+          }
+  
+          >div, &::before, &::after{
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+  
+          &::before{
+            background: url(./images/mask.svg) left top no-repeat;
+            background-size: 100% 100%;
+            mix-blend-mode: color;
+          }
+  
+          &::after{
+            background: url(./images/yellowriver.svg) left top no-repeat;
+            background-size: 100% 100%;
+            //mix-blend-mode: color;
+          }
+  
+          >div{
+            background: url(./images/mapBoundary.svg) left top no-repeat;
+            background-size: 100% 100%;
+            mix-blend-mode: overlay;
+            opacity: .2;
+          }
+        }
+  
+        .mapData{
+          width: 100%;
+          height: 100%;
+          position: relative;
+  
+          >div{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            //margin-left: scaleSize(-74px);
+            //margin-top: scaleSize(-92px);
+            z-index: 3;
+
+            &.mapOtherFlag{
+              z-index: 2;
+            }
+          }
+        }      
+      }    
+  
+      .mapTop{
+        position: absolute;
+        left: 4%;
+        top: 4%;
+        z-index: 1;
+        display: inline-flex;
+        font-size: scaleSize(60px);
+  
+        >div{
+          display: flex;
+          margin-right: scaleSize(100px);
+          flex-flow: column nowrap;
+  
+          >div{
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+  
+            >span:first-child{
+              margin-right: scaleSize(50px);
+              color: rgba($blue, .8);
+              text-shadow: 0px scaleSize(8px) scaleSize(60px) rgba(121,183,255,0.5);
+            }
+  
+            >span:nth-child(2){
+              font-size: scaleSize(100px);
+              flex: 1;
+              text-align: right;
+              font-family: 'Rajdhani-Medium';
+            }
+  
+            >span:last-child{
+              margin-left: scaleSize(10px);
+              color: rgba($white, .4);
+            }
+          }
+        }
+      }
+  
+      .mapBottom{
+        position: absolute;
+        left: 4%;
+        bottom: 4%;
+        z-index: 1;
+  
+        >div{
+          margin-top: scaleSize(80px);
+  
+          >div:first-child{
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: scaleSize(20px) 0;
+            font-size: scaleSize(60px);
+  
+            &::before{
+              display: inline-block;
+              content: '';
+              width: scaleSize(10px);
+              height: scaleSize(70px);
+              margin-right: scaleSize(40px);
+              @include paralRect();
+            }
+  
+            >span:last-child{
+              margin-left: scaleSize(30px);
+              font-size: scaleSize(100px);
+              font-family: 'Rajdhani-Medium';
+            }
+          }
+  
+          >div:last-child{
+            display: flex;
+            flex-flow: row nowrap;
+  
+            .status{
+              min-width: scaleSize(240px);
+              height: scaleSize(200px);
+              margin-right: scaleSize(80px);
+  
+              @include status();
+            }
+          }
+        }
+      }
+    }  
+  }
+}
+
+.noData{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: rgba($white, .3);
+}
+
+.mapOtherContainer{
+  position: relative;
+
+  >div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mapOther{
+    position: absolute;
+    left: 50%;    
+    bottom: scaleSize(180px);
+    transform: translateX(-50%);
+    transition: bottom .1s linear;
+    min-width: scaleSize(400px);
+    min-height: scaleSize(136px);
+    border-radius: scaleSize(24px);
+    white-space: nowrap;
+    background: rgba(#0A2D66, .7) url(./images/other.svg) center bottom no-repeat;
+    background-size: 100% auto;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    z-index: 1;
+
+    // fuck nausea design
+    background-position: center top;
+    bottom: scaleSize(-80px);
+    transform: translateX(-32%);
+    
+    &:hover{
+      cursor: pointer;
+      bottom: scaleSize(200px);
+
+      // fuck nausea design
+      bottom: scaleSize(-100px);
+    }
+
+    >div{
+      padding-left: scaleSize(90px);
+      background: url(./images/monitor.svg) left center no-repeat;
+      background-size: contain;
+    }
+
+    >i{
+      position: absolute;
+      left: 50%;
+      //bottom: scaleSize(-42px);
+      display: block;
+      box-shadow: 0px 1px 6px rgba(16,210,255,0.6),inset 0px 0px 3px #2ad7ff;
+      //border-color: #10d2ff transparent transparent;
+      border-style: solid;
+      //border-width: scaleSize(42px) scaleSize(28px) 0;
+      //transform: translateX(-50%) rotate(0deg);
+
+      // fuck nausea design
+      bottom: auto;
+      top: scaleSize(-26px);
+      border-width: 0 scaleSize(28px) scaleSize(30px);
+      border-color: transparent transparent #10d2ff;
+      transform: translateX(-100%) rotate(0deg) skew(60deg); 
+    }
+
+    &.mapOther1{
+      background-position: center top;
+      bottom: scaleSize(-150px);
+      transform: translate(0);
+
+      &:hover{
+        cursor: pointer;
+        bottom: scaleSize(-170px);
+      }
+
+      >i{
+        bottom: auto;
+        top: scaleSize(-80px);
+        border-width: 0 scaleSize(28px) scaleSize(80px);
+        border-color: transparent transparent #10d2ff;
+        transform: translateX(-150%) rotate(0deg) skew(60deg); 
+      }
+
+      >div{
+        background: url(./images/wrench.svg) left center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .waterWave{
+    @include ripple(waterfade, $common);
+  }
+}
+
+// style of factory flag on map
+.flagContainer{
+  position: relative;
+
+  >div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  >div:first-child{
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: scaleSize(160px);
+    transition: bottom .2s ease-in-out;
+    z-index: 1;
+
+    &:hover{
+      cursor: pointer;
+      bottom: scaleSize(180px);
+    }
+  }
+
+  >div:last-child{
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: scaleSize(12px);
+    white-space: nowrap;
+  }
+
+  &.flagWind{
+    &.flagRun{
+      @include flagStyle(wind, #03C2AB, #029060, waterfaderun, $status_run);
+    }
+    &.flagStandby{
+      @include flagStyle(wind, #007CFF, #00AFFF, waterfadeby, $status_standby);
+    }
+    &.flagFault{
+      @include flagStyle(wind, #E0091F, #EB4294, waterfadefault, $status_fault);
+    }
+    &.flagMaintain{
+      @include flagStyle(wind, #FD851A, #FFB500, waterfademain, $status_maintain);
+    }
+    &.flagNoconnect{
+      @include flagStyle(wind, #A8B0C3, #6E778B, waterfadeno, $status_noconnect);
+    }
+  }
+
+  &.flagSolar{
+    &.flagRun{
+      @include flagStyle(solar, #03C2AB, #029060, waterfaderun, $status_run);
+    }
+    &.flagStandby{
+      @include flagStyle(solar, #007CFF, #00AFFF, waterfadeby, $status_standby);
+    }
+    &.flagFault{
+      @include flagStyle(solar, #E0091F, #EB4294, waterfadefault, $status_fault);
+    }
+    &.flagMaintain{
+      @include flagStyle(solar, #FD851A, #FFB500, waterfademain, $status_maintain);
+    }
+    &.flagNoconnect{
+      @include flagStyle(solar, #A8B0C3, #6E778B, waterfadeno, $status_noconnect);
+    }
+  }
+}
+
+.tooltip{
+  font-size: scaleSize(48px);
+  font-family: PingFangSC-Medium;  
+  z-index: 5;
+  background: rgba(#000, .6);
+  border-radius: 5%;
+
+  .tooltipArrow{
+    border-color: rgba(#000, .6) transparent transparent!important;
+  }
+
+  .tooltipContent{
+    margin: scaleSize(40px);
+
+    >div{
+      white-space: nowrap;
+
+      >span:first-child{
+        display: inline-block;
+        width: scaleSize(340px);
+        color: rgba($white, .8);
+      }
+
+      >span:last-child{
+        display: inline-block;
+
+        >span:last-child{
+          margin-left: scaleSize(30px);
+          color: rgba($white, .8);
+        }
+      }
+    }
+  }
+}
+
+:export {
+  statusRunColor: $status_run;
+  statusStandbyColor: $status_standby;
+  statusFaultColor: $status_fault;
+  statusMaintainColor: $status_maintain;
+  statusNoconnectColor: $status_noconnect;
+}

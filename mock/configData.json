@@ -1,0 +1,90 @@
+{
+    "code" : "10000",
+    "message": "success",
+    "data":[ 
+        {
+            "wtg_model_alias":"EN-87/1.5",
+            "noise_mode_list":[
+                {
+                    "noise_mode":"0",
+                    "noise_name":"Mode0"
+                },
+                {
+                    "noise_mode":"1",
+                    "noise_name":"Mode1"
+                },
+                {
+                    "noise_mode":"2",
+                    "noise_name":"Mode2"
+                }
+            ]
+            
+        },
+        {
+            "wtg_model_alias":"EN-110/2.0",
+            "noise_mode_list":[
+                {
+                    "noise_mode":"0",
+                    "noise_name":"Mode0"
+                },
+                {
+                    "noise_mode":"1",
+                    "noise_name":"Mode1"
+                },
+                {
+                    "noise_mode":"2",
+                    "noise_name":"Mode2"
+                }
+            ]
+            
+        },
+        {
+            "wtg_model_alias":"EN-93/1.5",
+            "noise_mode_list":[
+                {
+                    "noise_mode":"0",
+                    "noise_name":"Mode0"
+                },
+                {
+                    "noise_mode":"1",
+                    "noise_name":"Mode1"
+                },
+                {
+                    "noise_mode":"2",
+                    "noise_name":"Mode2"
+                },
+                {
+                    "noise_mode":"3",
+                    "noise_name":"Mode3"
+                },
+                {
+                    "noise_mode":"4",
+                    "noise_name":"Mode4"
+                }
+            ]
+            
+        },
+        {
+            "wtg_model_alias":"En-93/1.5",
+            "noise_mode_list":[
+                {
+                    "noise_mode":"0",
+                    "noise_name":"Mode0"
+                },
+                {
+                    "noise_mode":"1",
+                    "noise_name":"Mode1"
+                },
+                {
+                    "noise_mode":"2",
+                    "noise_name":"Mode2"
+                },
+                {
+                    "noise_mode":"3",
+                    "noise_name":"Mode3"
+                }
+            ]
+            
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+@import "../../common/css/define.scss";
+
+.setPanel{
+    height: 100%;
+    overflow: auto;
+}
+
+.wrap{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.tab{
+
+    :global(.ant-tabs-nav::before){
+        border-bottom: none;
+    }
+
+    :global(>.ant-tabs-nav .ant-tabs-ink-bar){
+        background: linear-gradient(90deg, $tabLineGradientColor 0%, $tabLineGradientColor2 100%);
+        transition: none;
+    }
+
+    :global(.ant-tabs-tab .ant-tabs-tab-btn){
+        color: $envWhiteTransparent6;
+
+        &:hover{
+            color: $white;
+        }
+    }
+
+    :global(.ant-tabs-tab){
+        padding: 10px 0 5px 0;
+    }
+
+    :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn){
+        color: $white;
+    }
+
+    :global(.ant-tabs-tab.ant-tabs-tab-active){
+        color: $white;
+        background: linear-gradient(360deg, $tabBgGradientColor 0%, $tabBgGradientColor2 100%);
+    }
+
+    .tabHeader{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 0 5px;
+    }
+}
+
+.mainTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 5px;
+}
+
+.mainTopSelect{
+    min-width: 150px;
+
+    :global(.ant-select-selection-item){
+        background-image: linear-gradient(270deg, #0A6EFA 0%, #00DBFF 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-weight: bold;
+    }
+}
+
+.main{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    overflow: auto;
+}
+
+$ROW_HEIGHT: 62;
+.rankRow{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    padding: 8px 0;
+    height: #{$ROW_HEIGHT}px;;
+
+    >div:first-child{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        >span:first-child{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 8px;
+            align-items: center;
+        }
+    }
+
+    .no{
+        min-width: 35px;
+        font-family: Rajdhani-Medium, Rajdhani;
+        padding: 2px 8px;
+        border-radius: 8px  0px  8px  0px ;
+        background: linear-gradient(90deg, #00667B 0%, #043A79  100%);
+    
+        &.top{
+            background: linear-gradient(90deg, #00DBFF 0%, #0A6EFA  100%);
+        }
+    }
+
+    .rankName{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .value{
+        font-size: $envFontSize18;
+    }
+
+    .unit{
+        font-size: $envFontSize12;
+        color: $envWhiteTransparent6;
+    }
+
+    .progress{
+        position: relative;
+        height: 6px;
+        background: $envWhiteTransparent1;
+        border-radius: 4px;
+        margin-top: 10px;
+
+        >div{
+            position: absolute;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #048EFF 0%, #02FFD7 100%);
+            border-radius: 4px;
+
+            &.negative{
+                background: linear-gradient(90deg, #FFAA00 0%, #FFE65C 100%);
+            }
+        }
+    }
+}
+
+:export {
+    rowHeight: $ROW_HEIGHT;
+}

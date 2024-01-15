@@ -1,0 +1,48 @@
+@import '../../common/css/define.scss';
+
+.pureicon{
+    font-size: 18px;
+    color: $iconColor;
+
+    &:hover, &.highlight{
+        color: $iconHighlightColor;
+    }
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: $iconColor;
+    border: 1px solid $iconBorder;
+    border-radius: 2px;
+
+    &:hover, &.highlight{
+        color: $iconHighlightColor;
+        background-color: $iconHighlightBg;
+        border: 1px solid $iconHighlightBg;
+    }
+}
+
+.icon2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: $white;
+    background-color: $iconBg;
+    border-radius: 2px;
+
+    &:hover, &.highlight{
+        color: $iconHighlightColor;
+        background-color: $iconHighlightBg;
+        border: 1px solid $iconHighlightBg;
+    }
+}
+
+:export{
+    tipColor: $iconTip
+}

@@ -1,0 +1,84 @@
+{
+    "code":"10000",
+    "data": [{
+        "name_zh": "遥信变位",
+        "name_en": "Signal Change",
+        "value": "0",
+        "id": 4300000000
+    }, {
+        "name_zh": "遥信SOE",
+        "name_en": "SOE",
+        "value": "1",
+        "id": 4300000001
+    }, {
+        "name_zh": "遥测越限",
+        "name_en": "Over Limit",
+        "value": "2",
+        "id": 4300000002
+    },{
+        "name_zh": "工况信息",
+        "name_en": "Work Information",
+        "value": "3",
+        "id": 4300000003
+    }, {
+        "name_zh": "人工操作",
+        "name_en": "Manual Operation",
+        "value": "4",
+        "id": 4300000004
+    }, {
+        "name_zh": "遥控遥调",
+        "name_en": "Remote Control",
+        "value": "5",
+        "id": 4300000005
+    },{
+        "name_zh": "保护事件",
+        "name_en": "Relay Event",
+        "value": "6",
+        "id": 4300000006
+    }, {
+        "name_zh": "系统信息",
+        "name_en": "System Information",
+        "value": "7",
+        "id": 4300000007
+    }, {
+        "name_zh": "事件信息",
+        "name_en": "Status Code",
+        "value": "8",
+        "id": 4300000008
+    },{
+        "name_zh": "服务请求",
+        "name_en": "Service Request",
+        "value": "9",
+        "id": 4300000009
+    }, {
+        "name_zh": "CMS告警",
+        "name_en": "CMS Alarm",
+        "value": "10",
+        "id": 4300000010
+    }, {
+        "name_zh": "Turbox告警",
+        "name_en": "Turbox Alarm",
+        "value": "11",
+        "id": 4300000011
+    }, {
+        "name_zh": "MC告警",
+        "name_en": "MC Alarm",
+        "value": "12",
+        "id": 4300000012
+    }, {
+        "name_zh": "通讯状态",
+        "name_en": "Connection Status",
+        "value": "13",
+        "id": 4300000013
+    },{
+        "name_zh": "FC告警",
+        "name_en": "FC Alarm",
+        "value": "14",
+        "id": 4300000014
+    },{
+        "name_zh": "EMS告警",
+        "name_en": "EMS Alarm",
+        "value": "15",
+        "id": 4300000015
+    }]
+}

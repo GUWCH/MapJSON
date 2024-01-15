@@ -1,0 +1,228 @@
+@import "@/common/css/define.scss";
+
+$quotaSetSelect: quota-set-select;
+
+$progress: #20bee5;
+$progressGray: #083F4D;
+
+@mixin icon-background {
+    display: inline-block;
+    background: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100px;
+    height: 18px;
+    margin-top: 3px;
+}
+
+$borderColor: #3F6D85;
+$backgroundColor: #01333D;
+
+.env-rc-select {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: $borderColor;
+    background-color: $backgroundColor;
+    opacity: 0.8;
+    height: 26px;
+    min-width: 100px;
+
+    &:hover{
+        box-shadow: 0 0px 4px $borderColor;
+        cursor: default;
+    }
+
+    &-selector{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-selection-search{
+        display: none
+    }
+
+    &-selection-item{
+        margin: auto 0 auto 10px;
+    }
+
+    &-dropdown {
+        box-shadow: none;
+        border: none;
+        z-index: 9999;
+        position: absolute !important;
+    }
+
+    &-item{
+        display: flex;
+        padding: 10px 0;
+
+
+        &:hover{
+            background-color: #52656f;
+        }
+
+        &-option{
+            &-content{
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+            &-state-icon{
+                display: none
+            }
+        } 
+    }
+}
+.#{$quotaSetSelect}{
+
+    font-size: 12px;
+
+    &-self{
+        float: right;
+        width: 142px;
+        height: 24px;
+        font-size: 12px;
+        margin-left: 5px;
+
+        .ant-select-selection-item {
+            display: flex;
+            line-height: 26px !important;
+            height: 24px ;
+
+            &::after{
+                display: none;
+            }
+        }
+
+        .ant-select-selector{
+            height: 24px !important;
+            align-items: center;
+        }
+
+        .ant-select-arrow{
+            margin-top: -5px;
+            font-size: 10px;
+        }
+    }
+
+    &-dropDown{
+
+        .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+            background-color: #7d909554;
+            color:#fff;
+        }
+
+        .ant-select-item-option-active{
+            background-color: #7d909554; 
+        }
+    }
+
+    &-select{
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        
+        &:hover{
+            background-color: #7d909554;
+        }
+    }
+
+    &-progress{
+        width: 70px;
+        height: 7px;
+        background-color: $progressGray;
+        border-radius: 10px/20px;
+
+        &::before{
+            content: ' ';
+            position: absolute;
+            width: 50px;
+            height: 7px;
+            background-color: $progress;
+            border-radius: 10px/20px;  
+        }
+    }
+
+    &-progress_step{
+        width: 5px;
+        height: 9px;
+        background: $progress;
+        box-shadow:
+            $progress 7px 0px 0,
+            $progress 14px 0px 0,
+            $progress 21px 0px 0,
+            $progress 28px 0px 0,
+            $progress 35px 0px 0,
+            $progress 42px 0px 0,
+            $progressGray 49px 0px 0,
+            $progressGray 56px 0px 0,
+            $progressGray 63px 0px 0,
+            $progressGray 70px 0px 0
+    }
+
+    &-line{
+        &::before{
+            content: '';
+            @include icon-background;
+            display: inline;
+            position: absolute;
+            width: 18px;
+            background-image: url('./line.svg');
+        }
+        &-text{
+            margin-left: 30px;
+        }
+        
+    }
+
+    &-bar{
+        &::before{
+            content:'';
+            @include icon-background;
+            display: inline;
+            position: absolute;
+            width: 18px;
+            background-image: url('./bar.svg');
+        }
+        &-text{
+            margin-left: 30px;
+        }
+    }
+
+    &-area{
+        &::before{
+            content: '';
+            @include icon-background;
+            display: inline;
+            position: absolute;
+            width: 18px;
+            background-image: url('./area.svg');
+        }
+        &-text{
+            margin-left: 30px;
+        }
+        
+    }
+
+    &-bullet{
+        &::before{
+            content:'';
+            @include icon-background;
+            display: inline;
+            position: absolute;
+            width: 18px;
+            background-image: url('./bullet.svg');
+        }
+        &-text{
+            margin-left: 30px;
+        }
+    }
+
+    &-icon{
+        display: flex;
+        font-size: 12px;
+        align-self: center;
+    }
+
+}

@@ -1,0 +1,35 @@
+@import "../common/css/define.scss";
+
+:global(.react-html) {
+    :global(#center) {
+        height: 100%;
+    }
+}
+
+
+.plan-import {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    margin: 15px 15px;
+    position: relative;
+    padding-bottom: 15px;
+
+    &-button {
+        display: flex;
+        justify-content: right;
+        padding-top: 20px;
+    }
+}
+
+.ant-form-item {
+    margin-bottom: 0;
+}
+
+// .highlight-row {
+//     background-color: #045355;
+// }
+
+.ant-select {
+    max-width: 300px;
+}

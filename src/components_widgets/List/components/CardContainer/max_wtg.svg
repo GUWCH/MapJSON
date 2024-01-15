@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg parameter_list="BAY" refresh_cycle="2" height="130" width="206" title="" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect height="130" width="206" fill="rgba(192,192,192,0.00)" x="0" y="0"/>
+    <defs>
+        <symbol id="Other:big_wtg_0" preserveAspectRatio="xMidYMid meet">
+        </symbol>
+        <symbol id="Other:big_wtg_1" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_01.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_2" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_02.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_3" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_03.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_4" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_04.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_5" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_05.gif" height="68" width="68"/>
+            <image x="0" y="1" xlink:href="big_wtg_05.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_6" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_06.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_7" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_07.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_8" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_08.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_9" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_09.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_10" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_10.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_11" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_11.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_12" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_12.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_13" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_13.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_14" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_14.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_15" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_15.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_16" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_16.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_17" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_17.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_18" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_18.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_19" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_19.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_20" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_20.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_21" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_21.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_22" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_22.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_23" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_23.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_24" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_24.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:big_wtg_25" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="big_wtg_25.png" height="68" width="68" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:flag_wtg_0" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="flag_wtg_0.png" height="31" width="32" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:flag_wtg_1" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="flag_wtg_1.png" height="31" width="32" transform="translate(0,0) scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:healthSts_0" preserveAspectRatio="xMidYMid meet">
+            <ellipse cx="22" cy="21" rx="8" ry="8" fill="rgba(255,255,255,1.0)" stroke="#000000" stroke-width="1"/>
+        </symbol>
+        <symbol id="Other:healthSts_1" preserveAspectRatio="xMidYMid meet">
+            <ellipse cx="22" cy="21" rx="8" ry="8" fill="rgba(0,170,0,1.0)" stroke="#000000" stroke-width="0"/>
+        </symbol>
+        <symbol id="Other:healthSts_2" preserveAspectRatio="xMidYMid meet">
+            <ellipse cx="22" cy="21" rx="8" ry="8" fill="rgba(54,166,225,1.0)" stroke="#000000" stroke-width="0"/>
+        </symbol>
+        <symbol id="Other:healthSts_3" preserveAspectRatio="xMidYMid meet">
+            <ellipse cx="22" cy="21" rx="8" ry="8" fill="rgba(255,255,127,1.0)" stroke="#000000" stroke-width="0"/>
+        </symbol>
+        <symbol id="Other:healthSts_4" preserveAspectRatio="xMidYMid meet">
+            <ellipse cx="22" cy="21" rx="8" ry="8" fill="rgba(253,191,83,1.0)" stroke="#000000" stroke-width="0"/>
+        </symbol>
+        <symbol id="Other:healthSts_5" preserveAspectRatio="xMidYMid meet">
+            <ellipse cx="22" cy="21" rx="8" ry="8" fill="rgba(255,85,0,1.0)" stroke="#000000" stroke-width="0"/>
+        </symbol>
+    </defs>
+    <style type="text/css"><![CDATA[.kV500 { stroke:rgb(255,0,0);}			   .kV220 { stroke:rgb(128,0,128);}			   .kV110 { stroke:rgb(240,65,85);}			   .kV35 { stroke:rgb(255,255,0);}			   .kV10.5 { stroke:rgb(185,72,66);}			   .kV6.3 { stroke:rgb(0,0,139);}			   .V380 { stroke:rgb(0,199,0);}			   .kV20 { stroke:rgb(226,172,6);}			   .kV15.75 { stroke:rgb(0,128,0);}			   .kV13.8 { stroke:rgb(0,210,0);}			   .kV66 { stroke:rgb(255,204,0);}			   .V733 { stroke:rgb(229,45,183);}			   .kV750 { stroke:rgb(250,128,10);}			   .kV330 { stroke:rgb(30,144,255);}			   .kV1000 { stroke:rgb(0,0,255);}]]></style>
+    <g>
+        <g id="Plane 1">
+            <g id="picture1" enable_tip="false">
+                <image x="0" y="0" xlink:href="max_wtg_bgd.png" height="130" width="206" transform="translate(0,0) scale(1,1)"/>
+            </g>
+            <g id="dynData3" dyn_param="1:62:{bay}.WNAC.WindSpeed:9" if_check_card="false" decimal="1" class="env_dyndata" enable_tip="false">
+                <text x="168" y="89" text-anchor="end" fill="#eb6100" dy="1em" font-size="11pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">###.#</text>
+            </g>
+            <g id="text4">
+                <text x="171" y="88" text-anchor="start" fill="#000000" dy="1em" font-size="11pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">m/s</text>
+            </g>
+            <g id="text5">
+                <text x="171" y="58" text-anchor="start" fill="#000000" dy="1em" font-size="11pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">kW</text>
+            </g>
+            <g id="dynData6" dyn_param="1:62:{bay}.WGEN.GenActivePW:9" if_check_card="false" decimal="1" class="env_dyndata" enable_tip="false">
+                <text x="168" y="58" text-anchor="end" fill="#eb6100" dy="1em" font-size="11pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">####.#</text>
+            </g>
+            <g id="dynData7" dyn_param="1:435:{bay}:1" if_check_card="false" decimal="0" class="env_dyndata" enable_tip="false">
+                <text x="49" y="9" text-anchor="start" fill="#13b5b1" dy="1em" font-size="12pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">###########.</text>
+            </g>
+            <g id="primitive8" dyn_param="1:435:{bay}:74" enable_tip="false">
+                <use transform="translate(164,6) scale(1,1)" xlink:href="#Other:flag_wtg"/>
+            </g>
+            <g id="text9">
+                <text x="77" y="58" text-anchor="start" fill="#000000" dy="1em" font-size="11pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">功率:</text>
+            </g>
+            <g id="text9">
+                <text x="77" y="88" text-anchor="start" fill="#000000" dy="1em" font-size="11pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">风速:</text>
+            </g>
+            <g id="primitive12" dyn_param="1:61:{BAY}.WTUR.TurbineHealthSts:9" enable_tip="false">
+                <use xlink:href="#Other:healthSts"/>
+            </g>
+            <g id="primitive13" dyn_param="&lt;status,integer,1:61:{bay}.WTUR.TurbineListSts:9&gt;&lt;tele,integer,1:61:{bay}.WTUR.ConnectionSts:9&gt;" expression="tele*13+status" if_filter="false" enable_tip="false">
+                <use transform="translate(4,47) scale(1.05882,1.04348)" xlink:href="#Other:big_wtg"/>
+            </g>
+        </g>
+    </g>
+</svg>

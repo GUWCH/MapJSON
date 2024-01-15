@@ -1,0 +1,136 @@
+@import "../../../../common/css/define.scss";
+
+$env-solar-cbx: "env-solar-cbx";
+
+@mixin status {
+    &.unknown {
+        background-color: #aaa;
+    }
+    &.health {
+        background-color: rgb(7, 201, 136);
+    }
+    &.fault {
+        background-color: #fc0006;
+    }
+}
+
+@mixin header {
+    &-header {
+        @extend %headline1;
+
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        &-button{
+            @extend %button2;
+        }
+    }
+}
+
+.#{$env-solar-cbx} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &-header {
+        display: flex;
+        padding: 0 20px 0 0;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        &-target {
+            color: $envBlue5;
+            margin-right: 8px;
+        }
+        &-value {
+            margin-right: 8px;
+            border-right: 1px solid $envWhiteTransparent2;
+            padding-right: 8px;
+        }
+    }
+
+    &-left {
+        margin-right: 10px;
+        flex: 0 1 50%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+
+        &-current {
+            position: relative; // for loading
+            min-height: 200px;
+            background: $envBlackTransparent2;
+        }
+        &-chart {
+            position: relative; // for loading
+            margin-top: 20px;
+            min-height: 250px;
+            flex: 1;
+            background: $envBlackTransparent2;
+            @include header();
+            &-content {
+                height: calc(100% - #{$headline1Height});
+                overflow: hidden;
+            }
+        }
+    }
+    &-right {
+        margin-left: 10px;
+        flex: 0 1 50%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+
+        &-gz {
+            position: relative; // for loading
+            min-height: 200px;
+            background: $envBlackTransparent2;
+        }
+
+        &-alarm {
+            position: relative; // for loading
+            margin-top: 20px;
+            min-height: 250px;
+            flex: 1;
+            background: $envBlackTransparent2;
+            @include header();
+
+            &-content{
+                height: calc(100% - #{$headline1Height});
+                padding: 5px 20px;
+                overflow: auto;
+
+                >div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    border-bottom: 1px solid $envWhiteTransparent1;
+                    
+                    >div:first-child {
+                        display: flex;
+                        >div:first-child  {
+                            display: none;
+                            flex: 0 0 7px;
+                            height: 7px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                            margin-top: 8px;
+                        }
+                    }
+                    >div:last-child {
+                        flex: 0 0 270px;
+                        padding-left: 15px;
+                    }
+                }
+
+                >div:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

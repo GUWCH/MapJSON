@@ -1,0 +1,47 @@
+.add {
+    margin: 8px 0;
+    color: #22BAE0;
+    width: max-content;
+    line-height: 100%;
+    display: flex;
+    cursor: pointer;
+
+    &>span {
+        margin-right: 3px;
+    }
+}
+
+.name {
+    line-height: 32px;
+    color: #A1B2C2;
+}
+.require::after {
+    content: '*';
+    color: red;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 2px;
+}
+
+.operation {
+    margin: 8px 0;
+    display: flex;
+    column-gap: 20px;
+
+    &>div {
+        color: #22BAE0;
+        width: max-content;
+        line-height: 100%;
+        display: flex;
+        cursor: pointer;
+
+        &>span {
+            margin-right: 3px;
+        }
+    }
+}
+
+.compare {
+    display: flex;
+}

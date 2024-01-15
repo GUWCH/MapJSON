@@ -1,0 +1,480 @@
+import Intl, { msgTag } from '../../common/lang';
+import { FetchModel, POINT_TABLE, POINT_FIELD, PROPS, DECIMAL} from '../../common/constants';
+
+export const msg = msgTag('solar');
+
+export const isZh = Intl.isZh;
+
+export const normalColor = '#32ebaa';
+
+export const memoReq = Object.assign({}, FetchModel.MemoReq, {
+    description:'center_sites',
+    is_desc: '1',
+    type: '5050',
+    username: ''
+});
+
+export const CONST_TYPE = {
+    COMM: {
+        cn: '通讯状态',
+        en: 'Connection status'
+    }[isZh ? 'cn' : 'en'],
+    INVERTER_STATUS: {
+        cn: '逆变器列表状态',
+        en: 'Inverter List State'
+    }[isZh ? 'cn' : 'en'],
+    SOLAR_DEVICE_STATUS: {
+        cn: '光伏设备状态',
+        en: 'Solar Device State'
+    }[isZh ? 'cn' : 'en']
+};
+
+
+/**
+ * @typedef {Object} POINT
+ * @property {String} name
+ * @property {String} alias
+ * @property {String} unit
+ * @property {String|Number} tableNo
+ * @property {String|Number} fieldNo
+ * @property {String|Number} decimal
+ * @property {Number?=} factor
+ * @property {(String|Number)?=} fixDecimal 转换数据后修正
+ */
+
+/**
+ * 列表key
+ * @param {POINT} point 
+ * @returns 
+ */
+export const getListKey = (point) => {
+    let { alias, fieldNo} = point;
+    return `${alias}:${fieldNo}`;
+};
+
+export const SOLAR_POINTS = [{
+    [PROPS.STATE]: true,
+    name: msg('site.State'),
+    alias: 'Statics.State',
+    unit: '',
+    tableNo: POINT_TABLE.YX,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0
+}, {
+    name: msg('site.APProduction'),
+    abbr: msg('siteProd'),
+    alias: 'Statics.APProduction',
+    unit: 'kWh',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.GENERATE]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.APProductionMonth'),
+    alias: 'Statics.APProduction',
+    unit: 'kWh',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_MONTH,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.APProductionYear'),
+    alias: 'Statics.APProduction',
+    unit: 'kWh',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_YEAR,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.RPProduction'),
+    alias: 'Statics.RPProduction',
+    unit: 'kVarh',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.RPConsumed'),
+    alias: 'Statics.RPConsumed',
+    unit: 'kVarh',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.APConsumed'),
+    alias: 'Statics.APConsumed',
+    unit: 'kWh',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.APProductionHourDay'),
+    abbr: msg('siteHours'),
+    alias: 'Statics.APProductionHour',
+    unit: 'h',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HOUR]: true
+}, {
+    name: msg('site.PlanHoursYear'),
+    alias: 'Statics.PlanHoursYear',
+    unit: 'h',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}/* , {
+    name: msg('site.ApproCompRate'),
+    alias: 'Statics.ApproCompRate',
+    unit: '%',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    factor: 100,
+    [PROPS.HIDDEN]: true
+} */, {
+    name: msg('site.RadiationKWH'),
+    abbr: msg('siteRadiat'),
+    alias: 'Statics.RadiationKWH',
+    unit: 'Wh/㎡',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.RADIATION]: true
+}, {
+    name: msg('site.GHIRadiationKWH'),
+    alias: 'Statics.GHIRadiationKWH',
+    unit: 'Wh/㎡',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.POARadiationKWH'),
+    alias: 'Statics.POARadiationKWH',
+    unit: 'Wh/㎡',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.CO2Sum'),
+    alias: 'Statics.CO2Sum',
+    unit: '',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.CO2SumMonth'),
+    alias: 'Statics.CO2Sum',
+    unit: '',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_MONTH,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.CO2SumYear'),
+    alias: 'Statics.CO2Sum',
+    unit: '',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_YEAR,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.IPR'),
+    alias: 'Statics.IPR',
+    unit: '%',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    factor: 100,
+    [PROPS.PR]: true
+}, {
+    name: msg('site.RatedPR'),
+    alias: 'Statics.RatedPR',
+    unit: '%',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    factor: 100,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.Profit'),
+    alias: 'Statics.Profit',
+    unit: '',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_DAY,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.ProfitMonth'),
+    alias: 'Statics.Profit',
+    unit: '',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_MONTH,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.ProfitYear'),
+    alias: 'Statics.Profit',
+    unit: '',
+    tableNo: POINT_TABLE.PROD,
+    fieldNo: POINT_FIELD.PROD_YEAR,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.DaylightHour'),
+    alias: 'Statics.DaylightHour',
+    unit: 'h',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.TheoryPowerSUM'),
+    alias: 'Statics.TheoryPowerSUM',
+    unit: 'kW',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.TheoryPower'),
+    alias: 'Statics.TheoryPower',
+    unit: 'kW',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.Utiliz'),
+    alias: 'Statics.Utiliz',
+    unit: '%',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    factor: 100,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.CapacitySum'),
+    alias: 'Statics.CapacitySum',
+    unit: 'MWp',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    factor: 0.001,
+    [PROPS.HIDDEN]: true,
+    [PROPS.CAPACITY]: true
+}, {
+    name: msg('site.MachineCount'),
+    alias: 'Statics.MachineCount',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.Radiation'),
+    abbr: msg('siteRadiance'),
+    alias: 'Statics.Radiation',
+    unit: 'W/㎡',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.RADIA]: true
+}, {
+    name: msg('site.GHIRadiation'),
+    alias: 'Statics.GHIRadiation',
+    unit: 'W/㎡',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.POARadiation'),
+    alias: 'Statics.POARadiation',
+    unit: 'W/㎡',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.GenActivePW'),
+    abbr: msg('sitePower'),
+    alias: 'Statics.GenActivePW',
+    unit: 'kW',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.POWER]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.GenReactivePW'),
+    alias: 'Statics.GenReactivePW',
+    unit: 'kVar',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.Temperature'),
+    alias: 'Statics.Temperature',
+    unit: '℃',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.WindSpeed'),
+    alias: 'Statics.WindSpeed',
+    unit: 'm/s',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.WindDirection'),
+    alias: 'Statics.WindDirection',
+    unit: '°',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.Humidity'),
+    alias: 'Statics.Humidity',
+    unit: '%',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    factor: 100,
+    [PROPS.HIDDEN]: true
+}, {
+    name: msg('site.LS1'),
+    alias: 'Statics.LS1',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.LS2'),
+    alias: 'Statics.LS2',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.LS3'),
+    alias: 'Statics.LS3',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.LS4'),
+    alias: 'Statics.LS4',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.LS5'),
+    alias: 'Statics.LS5',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.LS6'),
+    alias: 'Statics.LS6',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.BTFS1'),
+    alias: 'Statics.BTFS1',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.BTFS2'),
+    alias: 'Statics.BTFS2',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.ACS1'),
+    alias: 'Statics.ACS1',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.ACS2'),
+    alias: 'Statics.ACS2',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.DCS1'),
+    alias: 'Statics.DCS1',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}, {
+    name: msg('site.DCS2'),
+    alias: 'Statics.DCS2',
+    unit: '',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: 0,
+    [PROPS.HIDDEN]: true,
+    [PROPS.SIGMA]: true
+}/* , {
+    name: msg('site.ApproPlan'),
+    alias: 'Statics.ApproPlan',
+    unit: 'kWh',
+    tableNo: POINT_TABLE.YC,
+    fieldNo: POINT_FIELD.VALUE,
+    decimal: DECIMAL.COMMON,
+    [PROPS.HIDDEN]: true
+} */];

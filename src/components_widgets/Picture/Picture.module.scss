@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin pic {
+    width: 100%;
+    height: 100%;
+}
+.pic_fill {
+    @include pic();
+    object-fit: fill;
+}
+
+.pic_contain {
+    @include pic();
+    object-fit: contain;
+}

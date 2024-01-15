@@ -1,0 +1,47 @@
+.modal {
+    [class*='ant-modal-header'] {
+        padding: 27px 30px 20px 30px;
+    }
+
+    [class*='ant-modal-body'] {
+        padding: 0 30px;
+        max-height: 548px;
+        overflow-y: auto;
+        
+        & > div {
+            margin-bottom: 16px;
+        }
+    
+        & > div:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    [class*='ant-modal-footer'] {
+        padding: 20px 30px;
+    }
+}
+
+.tplName {
+    max-width: 320px;
+}
+
+.name {
+    line-height: 32px;
+    color: #A1B2C2;
+}
+
+.require::after {
+    content: '*';
+    color: red;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 2px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

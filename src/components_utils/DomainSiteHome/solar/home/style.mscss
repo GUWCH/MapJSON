@@ -1,0 +1,102 @@
+@import "@/common/css/define.scss";
+
+.container{
+    height: 100vh;
+    background-color: #011d24;
+    padding: 15px 20px;
+
+    .head{
+        width: 100%;
+        height: calc((100% - 12px) * 45 / 668);
+        background-color: $boxBg;
+        margin-bottom: 12px;
+    }
+
+    .content{
+        width: 100%;
+        height: calc((100% - 20px) * 626 / 668);
+        display: flex;
+
+        .left{
+            width: 40%;
+
+            >div{
+                width: 100%;
+            }
+
+            >div:not(:last-child){
+                margin-bottom: 12px;
+            }
+
+            .overview{ 
+                height: calc((100% - 24px) * 160 / 597);
+            }
+
+            .waterDroplet{
+                height: calc((100% - 24px) * 169 / 597);
+
+                >div{
+                   padding: 0 0 10px 0; 
+                }
+            }
+
+            .curve{
+                height: calc((100% - 24px) * 268 / 597);
+            }
+        }
+
+        .right{
+            width: calc(60% - 12px);
+            height: 100%;
+            margin-left: 12px;
+            background-color: $boxBg;
+        }
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .container{
+        padding: 5px 20px;
+
+        .head{
+            height: calc((100% - 12px) * 45 / 688);
+        }
+
+        .content{
+            height: calc((100% - 12px) * 643 / 688);
+
+            .left{
+
+                >div:not(:last-child){
+                    margin-bottom: 5px;
+                }
+
+                .overview{ 
+                    height: calc((100% - 10px) * 216 / 636);
+
+                    >div{
+                        >div{
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+
+                .waterDroplet{
+                    height: calc((100% - 10px) * 220 / 636);
+                    div[class*='page_tpl-widgets-common-components-Card-style__card_body']{
+                        padding: 0 0 5px 0;
+                    }
+                }
+
+                .curve{
+                    height: calc((100% - 10px) * 200 / 636);
+
+                    div[class$='page_tpl-widgets-common-components-Card-style__card_header']{
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

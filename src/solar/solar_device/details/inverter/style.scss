@@ -1,0 +1,306 @@
+
+@import "../../../../common/css/define.scss";
+
+$prefixCls: env-invt;
+
+.#{$prefixCls}{
+    display: flex;
+    height: 100%;
+
+    &-head{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        &-action{
+            margin-left: auto;
+            align-self: center;
+
+            button{
+                @extend %button3;
+            }
+        }
+    }
+
+    &-left{
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+        width: 50%;
+    }
+
+    &-attributes{
+        position: relative; // for loading
+        display: flex;
+        flex-flow: row nowrap;
+        height: 250px;
+        @media screen and (min-width: 1360px){
+            height: 280px;
+        }
+        flex-shrink: 0;
+        background-color: $envBlackTransparent2;
+
+        section{
+            flex: 1 1 auto;
+            display: flex;
+            flex-flow: column nowrap;
+            overflow: hidden;
+
+            >div{
+                flex: 1;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border-bottom: 1px solid $envWhiteTransparent1;
+
+                >span{
+                    margin-right: 5px;
+                }
+
+                >span:first-child{
+                    color: $envBlue;
+                    white-space: nowrap;
+
+                    & + span {
+                        flex: 0 1 auto;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                >span:last-child{
+                    margin-right: 0;
+                    white-space: nowrap;
+                }
+            }
+
+            >div:first-child{
+                @extend %headline1;
+                border-bottom: none;
+                flex: none;
+            }
+
+            >div:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+
+    &-prod{
+        position: relative; // for loading
+        margin-top: 20px;
+        flex: 1;
+        min-height: 250px;
+        overflow: hidden;
+        background-color: $envBlackTransparent2;
+
+        &-head{
+            @extend %headline1;
+            display: flex;
+
+            >div{
+                display: flex;
+                align-items: center;
+            }
+
+            >div:first-child{
+                flex: 1;
+            }
+
+            >div:last-child{
+                display: block;
+                flex: 2;
+                text-align: right;
+                padding-top: 7px;
+            }
+        }
+
+        &-show{
+            height: calc(100% - #{$headline1Height});
+            overflow: hidden;
+        }
+
+        &-select{
+            width: 100px;
+            margin-right: 10px;
+            vertical-align: middle;
+
+            &.env-rc-select-single{
+                .env-rc-select-selector{
+                    background: $envBlackTransparent2;
+                    border-radius: 2px;
+                    border: 1px solid $envBlue5;
+    
+                    .env-rc-select-selection-search{
+                        height: 26px;
+                    }
+    
+                    .env-rc-select-selection-item{
+                        top: 3px
+                    }
+                }
+
+                .env-rc-select-arrow{
+                    top: 3px;
+                }
+            }
+        }
+
+        &-date{
+            height: 30px;
+            vertical-align: middle;
+        }
+    }
+
+    &-right{
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+        width: 50%;
+        padding-left: 15px;
+    }
+
+    &-gz{
+        background-color: $envBlackTransparent2;
+        flex: 0;
+        flex-shrink: 0;
+        height: 250px;
+        min-height: 250px;
+        @media screen and (min-width: 1360px){
+            height: 280px;
+            min-height: 280px;
+        }
+
+        &#{&}-small{
+            flex: none;
+            height: 120px;
+            min-height: 120px;
+            @media screen and (min-width: 1360px){
+                height: 220px;
+            }
+            overflow: hidden;
+        }
+    }
+
+    &-alarm{
+        position: relative; // for loading
+        background-color: $envBlackTransparent2;
+        flex: 1;
+        min-height: 250px;
+        @media screen and (min-width: 1360px){
+            min-height: 250px;
+        }
+        margin-top: 20px;
+
+        &#{&}-small{
+            flex: none;
+            height: 110px;
+            min-height: 110px;
+            @media screen and (min-width: 1360px){
+                height: 220px;
+            }
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        &-header{
+            @extend %headline1;
+            display: flex;
+            align-items: center;
+        }
+
+        &-contain{
+            padding: 0 20px;
+            height: calc(100% - #{$headline1Height});
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+
+            >div{
+                display: flex;
+                padding: 5px 0;
+                border-bottom: 1px solid $envWhiteTransparent1;
+
+                >div{
+                    flex: 1;
+                }
+
+                >div:last-child{
+                    flex: none;
+                    flex-shrink: 0;
+                    width: 275px;
+                    padding-left: 15px;                    
+                }
+            }
+        }
+    }
+
+    &-other{
+        position: relative; // for loading
+        flex: 1;
+        margin-top: 20px;
+        min-height: 250px;
+        overflow: hidden; 
+        background: $envBlackTransparent2;
+
+        .#{$prefixCls}-chart{
+            height: calc(100% - #{$headline1Height});
+
+            &-first{
+                height: 100%;
+
+                >div:first-child{
+                    display: flex;
+                    height: 40px;
+                    padding: 0 15px;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    span{
+                        visibility: hidden;
+                        opacity: 0;
+                        color: $envBlue5;
+                        padding-left: 18px;
+                        background: url('../../../common/images/info.svg') left center no-repeat;
+                        cursor: pointer;
+                    }
+                    
+                    button{
+                        @extend %button2;
+                    }
+                }
+    
+                >div:last-child{
+                    height: calc(100% - 40px);
+                }
+            }
+        }        
+    }
+
+    &-tab{
+        @extend %headline1;
+        display: flex;
+        background: $envBlackTransparent2;
+
+        button {
+            border: none;
+            background: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        button#{&}-active{
+            background: $envWhiteTransparent1;
+        }
+    }
+}
+
+.env-solar-inverter-modal{
+    >.ant-modal-content{
+        background: #094d67;
+    }
+}

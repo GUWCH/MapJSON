@@ -1,0 +1,583 @@
+{
+    "code": "10000",
+    "current_date_time": "2022-04-27 14:07:43",
+    "data": [
+
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.Statics.stateTest1:9",
+            "display_value": "9",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.Statics.stateTest2:9",
+            "display_value": "1",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.Statics.stateTest3:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.Statics.stateTest4:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+
+
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.Statics.TotalAPProduction:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.WWPP.APProduction:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.ESS.APProductionKWH:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:35:USCADA.Farm.Statistics.ESS.APConsumedKWH:29",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:35:USCADA.Farm.Statistics.WGEN.GenActivePW:29",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:35:USCADA.Farm.Statistics.ESS.PCSAP:29",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.PCS.W:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.PCS.Var:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.Statics.TotalAPProduction:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.WWPP.APProduction:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:USCADA.Farm.Statistics.ESS.APProductionKWH:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+
+
+
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.PCS01.PCS.W:9",
+            "display_value": "1234.56",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.PCS01.PCS.Var:9",
+            "display_value": "234.67",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS01.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS01.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.PCS02.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.PCS02.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS01.PCS02.PCS.StatusMode:9",
+            "raw_value": "1",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS01.PCS02.PCS.StatusMode:9",
+            "raw_value": "1",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS02.PCS01.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS02.PCS01.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS02.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS02.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS02.PCS02.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS02.PCS02.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS02.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS02.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS03.PCS01.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS03.PCS01.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS03.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS03.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS03.PCS02.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS03.PCS02.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS03.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS03.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS04.PCS01.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS04.PCS01.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS04.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS04.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS04.PCS02.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS04.PCS02.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS04.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS04.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS05.PCS01.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS05.PCS01.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS05.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS05.PCS01.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS05.PCS02.PCS.W:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS05.PCS02.PCS.Var:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS05.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.ESS05.PCS02.PCS.StatusMode:9",
+            "raw_value": "0",
+            "display_value": "正常",
+            "status": "遥信无效",
+            "status_value": 1,
+            "line_color": "#238787",
+            "fill_color": "#696969",
+            "timestamp": "2022-04-27 14:07:43"
+        }
+    ]
+}

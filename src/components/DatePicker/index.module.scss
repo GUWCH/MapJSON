@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    max-width: max-content;
+    background-color: #174755;
+    border-radius: 2px;
+
+    :global(.ant-picker) {
+        border-color: #3A5A66;
+
+        &:hover {
+            border-color: #00A7DB;
+        }
+    }
+
+    :global(.ant-picker-clear) {
+        background: #04262a;
+    }
+
+    :global(.ant-picker-focused) {
+        border-color: #00A7DB;
+        box-shadow: none;
+    }
+
+    :global(.ant-picker-active-bar) {
+        background: #00A7DB;
+    }
+
+    :global(.ant-picker-separator) {
+        color: #6A8CA3;
+    }
+}
+
+.select {
+    width: 100px;
+    min-width: 0;
+    
+    &:global(.ant-select) {
+        :global(.ant-select-selector) {
+            border-right: none;
+        }
+    }
+}
+
+.picker {
+}

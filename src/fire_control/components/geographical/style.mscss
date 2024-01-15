@@ -1,0 +1,77 @@
+@import "@/common/css/define.scss";
+
+%UniversalButton{
+    width: 76px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 20px;
+    background-color: $boxBg;
+    border-radius: 4px;
+
+    .head{
+        height: 32px;
+        display: flex;
+        align-items: center;
+
+        .title{
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .editor{
+            margin-left: auto;
+            margin-right: 14px;
+            font-size: 18px;
+        }
+
+        .set{
+            // margin-left: auto;
+        }
+
+        .onEditor{
+            margin-left: auto;
+
+            >button{
+                @extend %button4;
+                @extend %UniversalButton;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .content{
+        display: flex;
+        flex-flow: wrap;
+        height: calc(100% - 60px);
+        overflow: overlay;
+        align-content: flex-start;
+        margin-top: 28px;
+
+        .dragDropContainer{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .container{
+        padding: 3px 10px 3px 20px;
+
+        .head{
+            .title{
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+
+        .content{
+            margin-top: 5px;
+        }
+    }
+}

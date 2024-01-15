@@ -1,0 +1,126 @@
+.select__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .select__name {
+        padding-right: 0.5em;
+    }
+
+    .selector {
+        height: 32px;
+        flex: 1;
+        min-width: 0;
+        position: relative;
+    }
+
+    .arrow {
+        font-size: 12px;
+        color: #7a8c8e;
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        transform: translateY(-50%);
+
+        &.arrow_showSwitch {
+            right: 39px;
+        }
+    }
+
+    [class~='ant-select-selector'] {
+        height: 100%;
+
+        [class~='ant-select-selection-overflow'] {
+            display: none;
+        }
+    }
+
+    [class~='ant-select-selector']::before {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        content: attr(data-before);
+        position: absolute;
+        left: 12px;
+        height: 100%;
+        width: calc(100% - 24px - 6px);
+        z-index: 1;
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    [class~='ant-select-selection-search'] {
+        width: 100% !important;
+
+        &>input {
+            display: none;
+        }
+    }
+}
+
+
+
+.search__container {
+    margin: 5px 8px;
+
+    [class~='ant-select-tree-node-content-wrapper'] {
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+    }
+
+    &-input {
+        border: 1px solid #3F6D85;
+    }
+
+    input {
+        height: 24px;
+    }
+
+    .content {
+        margin-top: 13px;
+
+        [class~='ant-select-tree-checkbox-inner'] {
+            background-color: transparent;
+            border: 1px solid #537C94;
+        }
+
+        [class~='ant-select-tree-checkbox-checked'] {
+            .ant-select-tree-checkbox-inner {
+                background-color: #00A7DB;
+            }
+        }
+
+        [class~='ant-select-tree-checkbox-disabled'] {
+            [class~='ant-select-tree-checkbox-inner'] {
+                background-color: #537079;
+                border: none;
+            }
+        }
+
+        [class~='ant-select-tree-checkbox-inner::after'] {
+            background-color: #00A7DB;
+        }
+
+        [class*='ant-select-tree-title'] {
+            max-width: 150px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: inline-block;
+        }
+    }
+}
+
+.switchBtn {
+    margin: 0 8px;
+    color: #00a7db;
+    font-size: 12px;
+    cursor: pointer;
+
+    &.disable {
+        color: #2d5f75;
+        cursor: unset;
+    }
+}

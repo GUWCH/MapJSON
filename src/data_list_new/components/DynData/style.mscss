@@ -1,0 +1,14 @@
+@import "@/common/css/define.scss";
+
+.data{
+    cursor: pointer;
+}
+
+:export{
+    tipColor: $iconTip
+}
+
+.yxBgStyle {
+    border: none;
+    border-radius: 2px;
+}

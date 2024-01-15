@@ -1,0 +1,7 @@
+.trigger{
+    background-image: url('@/common/image/red_alert.svg')
+}
+
+.notTrigger{
+    background-image: url('@/common/image/green_alert.svg')
+}

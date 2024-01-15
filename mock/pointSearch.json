@@ -1,0 +1,411 @@
+{
+    "code": "10000",
+    "data": [
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧P22(有功功率)",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.ActPowPhBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧cos21(功率因数)",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.CosPhiBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧cos22(功率因数)",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.CosPhiBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011箱变频率",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.Freq",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧Ia1",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IaBr1",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ia21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IaBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ia22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IaBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧Ib1",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IbBr1",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ib21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IbBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ib22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IbBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧Ic1",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IcBr1",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ic21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IcBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ic22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IcBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011油位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.Oil",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Q21(无功功率)",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.ReActPowPhBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Q22(无功功率)",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.ReActPowPhBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011油温",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.Temp",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ua21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.UaBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ua22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.UaBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ub21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.UbBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ub22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.UbBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Uc21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.UcBr2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Uc22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.UcBr22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Uab21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.VolLab2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Uab22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.VolLab22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ubc21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.VolLbc2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Ubc22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.VolLbc22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Uca21",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.VolLca2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011低压侧Uca22",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.VolLca22",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011绕组温度",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.WindingTemp",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011设备测试",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.test",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "62",
+            "field_no": "9",
+            "value_type": "1"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变0112#低压侧断路器远方就地",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.Breaker2Class",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧开关远方就地",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.BreakerClass",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧接地开关合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.EarthSwitchClose",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011告警总",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.GJZ",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧隔离开关合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.IsolationSwitchClose",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011高压侧开关合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.LoadSwitchClose",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011环网接地开关1合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.RMUEarthSwitchClose1",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011环网接地开关2合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.RMUEarthSwitchClose2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011环网开关1合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.RMUIsolationSwitchClose1",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011环网开关2合位",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.RMUIsolationSwitchClose2",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011事故总",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.SGZ",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变0111#低压断路器合",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.SingleBreaker01",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变0112#低压断路器合",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.SingleBreaker02",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        },
+        {
+            "point_unit": "",
+            "point_name": "GF1箱变011箱变状态",
+            "point_alias": "GFT1.T1_L1.BTF011.BXTF.State",
+            "time_zone_info": "(UTC+08:00)",
+            "table_no": "61",
+            "field_no": "9",
+            "value_type": "3"
+        }
+    ],
+    "record_count": 45
+}

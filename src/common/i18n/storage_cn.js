@@ -1,0 +1,51 @@
+export default {
+    report: {
+        availability: '可利用率报表',
+        downtime: '设备停机记录'
+    },
+    day: '日',
+    week: '周',
+    month: '月',
+    year: '年',
+    site: '场站',
+    subsystem: '子系统',
+    selectSubsys: '选择子系统',
+    search: '查询',
+    export: '导出',
+    batchedit: '批量编辑',
+    column: {
+        date: '日期',
+        siteName: '场站名称',
+        subNO: '子系统编号',
+        availability: '可利用率'
+    },
+    columnS: {
+        st: '开始时间',
+        et: '结束时间',
+        subName: '子系统名称',
+        sub: '子系统',
+        sub2: '子系统可利用率',
+        converter: '变流器',
+        cluster: '电池簇',
+        box: '箱变',
+        eco: 'ECO原因',
+        operater: '操作人',
+        operateTime: '操作时间',
+        remark: '备注'
+    },
+    insertTime: '拆分时间',
+    edit: '编辑',
+    nodata: '无相关数据',
+    failed: '获取数据失败',
+    operateOK: '操作成功',
+    operateFailed: '操作失败',
+    downloadFailed: '下载失败',
+    nocess: '请选择子系统',
+    noSetCess: '请设置子系统可利用率',
+    minCess: '子系统可利用率不能小于{0}',
+    maxCess: '子系统可利用率不能大于{0}',
+    noEco: '请选择ECO原因',
+    noSplitTime: '请设置拆分时间',
+    ecoPlaceholder: '说明外部停机原因',
+    alertDateRange: '拆分时间必须在开始时间和结束时间之间'
+}

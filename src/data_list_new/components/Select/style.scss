@@ -1,0 +1,184 @@
+@import "@/common/css/define.scss";
+
+$quotaSetSelect: quota-set-select;
+
+$progress: #20bee5;
+$progressGray: #083F4D;
+
+@mixin icon-background {
+    display: inline-block;
+    background: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100px;
+    height: 28px;
+}
+
+$borderColor: #3F6D85;
+$backgroundColor: #01333D;
+
+.env-rc-select {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: $borderColor;
+    background-color: $backgroundColor;
+    opacity: 0.8;
+    height: 26px;
+    min-width: 100px;
+
+    &:hover{
+        box-shadow: 0 0px 4px $borderColor;
+        cursor: default;
+    }
+
+    &-selector{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-selection-search{
+        display: none
+    }
+
+    &-selection-item{
+        margin: auto 0 auto 10px;
+    }
+
+    &-dropdown {
+        box-shadow: none;
+        border: none;
+        z-index: 9999;
+        position: absolute !important;
+    }
+
+    &-item{
+        display: flex;
+        padding: 10px 0;
+
+
+        &:hover{
+            background-color: #52656f;
+        }
+
+        &-option{
+            &-content{
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+            &-state-icon{
+                display: none
+            }
+        } 
+    }
+}
+.#{$quotaSetSelect}{
+
+    &-self{
+        float: right;
+        width: 120px;
+        height: 28px;
+        font-size: 12px;
+        margin-left: 5px;
+
+        .ant-select-selection-item::after{
+            display: none !important;
+        }
+
+        .ant-select-selector{
+            height: 28px !important;
+            align-items: center;
+        }
+    }
+
+    &-dropDown{
+
+        .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+            background-color: #7d909554;
+            color:#fff;
+        }
+
+        .ant-select-item-option-active{
+            background-color: #7d909554; 
+        }
+    }
+
+    &-select{
+        font-size: 12px;
+        
+        &:hover{
+            background-color: #7d909554;
+        }
+    }
+
+    &-progress{
+        width: 70px;
+        height: 7px;
+        background-color: $progressGray;
+        border-radius: 10px/20px;
+
+        &::before{
+            content: ' ';
+            position: absolute;
+            width: 50px;
+            height: 7px;
+            background-color: $progress;
+            border-radius: 10px/20px;  
+        }
+    }
+
+    &-progress_step{
+        width: 5px;
+        height: 9px;
+        background: $progress;
+        box-shadow:
+            $progress 7px 0px 0,
+            $progress 14px 0px 0,
+            $progress 21px 0px 0,
+            $progress 28px 0px 0,
+            $progress 35px 0px 0,
+            $progress 42px 0px 0,
+            $progressGray 49px 0px 0,
+            $progressGray 56px 0px 0,
+            $progressGray 63px 0px 0,
+            $progressGray 70px 0px 0
+    }
+
+    &-line{
+        margin: 10px 0;
+        &::before{
+            content: '';
+            @include icon-background;
+            display: inline;
+            position: absolute;
+            width: 20px;
+            background-image: url('./line.svg');
+        }
+        &-text{
+            margin-left: 30px;
+        }
+        
+    }
+
+    &-bar{
+        margin: 10px 0;
+        &::before{
+            content:'';
+            @include icon-background;
+            display: inline;
+            position: absolute;
+            width: 20px;
+            background-image: url('./bar.svg');
+        }
+        &-text{
+            margin-left: 30px;
+        }
+    }
+
+    &-icon{
+        font-size: 15px;
+        align-self: center;
+    }
+
+}

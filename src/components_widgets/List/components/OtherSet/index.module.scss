@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    color: #fff;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    background-color: #01333D;
+}
+
+@mixin iconColor {
+    color: #6a8ca3;
+}
+
+.icon {
+    @include iconColor();
+    font-size: 22px;
+}
+
+.icon_small {
+    @include iconColor();
+}
+
+.item {
+    height: 34px;
+    padding: 6px 7px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #01262e;
+}

@@ -1,0 +1,25 @@
+.collapse {
+    color: red;
+    border: 1px solid #164a5a;
+    border-bottom: 0;
+
+    .panel {
+        font-size: 14px;
+        border-bottom: 1px solid #164a5a;
+        background-color: #073c49;
+
+        :global(.ant-collapse-header) {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        :global(.ant-collapse-content){
+            border-top: 1px solid #164a5a;
+        }
+
+        :global(.ant-collapse-content-box) {
+            padding: 0;
+            background-color: #01333e;
+        }
+    }
+}

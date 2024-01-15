@@ -1,0 +1,83 @@
+@import "@/common/css/define.scss";
+
+@mixin dark-font {
+    color: #6A8CA3;
+}
+
+@mixin normal-font {
+    color: #CAD3DB;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -6px;
+    padding: 3px 8px;
+
+    .rename,
+    .count {
+        @include dark-font;
+    }
+
+    .name {
+        max-width: 250px;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    >div:first-child {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+    }
+}
+
+.table {
+    max-width: 300px;
+    margin-top: 12px;
+
+    .col_name,
+    .col_status {
+        @include normal-font;
+    }
+
+    .clickable {
+        text-decoration: underline;
+    }
+
+    .col_status {
+        display: flex;
+        column-gap: 4px;
+
+        &>div {
+            line-height: 100%
+        }
+    }
+
+    .th {
+        @include dark-font;
+    }
+
+    .op {
+        color: #22BAE0;
+        cursor: pointer;
+    }
+}
+
+.tooltip {
+    min-width: 320px;
+    max-width: max-content;
+
+    :global(.ant-tooltip-arrow-content) {
+        background-color: $statBg;
+    }
+
+    :global(.ant-tooltip-inner) {
+        background-color: $statBg;
+    }
+}

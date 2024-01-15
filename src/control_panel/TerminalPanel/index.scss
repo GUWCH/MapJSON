@@ -1,0 +1,96 @@
+@import "../index.scss";
+.terminal-panel {
+	display: flex;
+	flex: 2;
+	margin-left: 10px;
+	background: $grid-background;
+	flex-direction: column;
+	padding: 10px;
+	height: 100%;
+	overflow: auto;
+	.control-right-tips {
+		white-space: pre-wrap;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+		align-items: flex-start;
+		height: 40px;
+		.control-right-tips-text {
+			font-size: 12px;
+			display: flex;
+			align-items: flex-start;
+			.img {
+				width: 16px;
+				height: 16px;
+				background: url("../res/idea.png") center no-repeat;
+				margin-right: 4px;
+			}
+		}
+		.control-right-tips-all {
+			margin: 5px 10px 0 auto;
+			white-space: nowrap;
+
+			>input{
+				margin-right: 3px;
+			}
+
+			>label{
+				white-space: nowrap;
+			}
+		}
+		.batch-setting {
+			align-self: flex-start;
+			height: 30px;
+			width: 100px;
+			cursor: pointer;
+			line-height: 30px;
+			text-align: center;
+			border: 1px solid #267173;
+			border-radius: 4px;
+			background: #194853;
+			color: #fff;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+}
+.terminal-modal-item {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+	.terminal-modal-input-label {
+		width: 115px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 14px;
+	}
+	.env-input-number{
+		width: 100px;
+		@media screen and (min-width: 1200px) {
+			width: 150px!important;
+		}
+	}
+	.env-input-number-input {
+		@include env-input-number-input();
+	}
+	.terminal-modal-input-wrap {
+		select {
+			width: 100px;
+			height: 26px;
+			color: #fff;
+			text-align: right;
+			background: $enable-select-bg;
+			outline: none;
+			border: none;
+
+			@media screen and (min-width: 1200px) {
+				width: 150px;
+			}
+		}
+		select:disabled {
+			background-color: $disable-input-bg;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@import "../../common/css/define.scss";
+
+.breadContainer{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.icon{
+    margin-right: 12px;
+    background: $iconBg;
+    color: $black;
+    border-radius: 2px;
+    padding: 2px;
+    transition: color 0.3s;
+
+    &.alone{
+        margin-right: 0;
+    }
+}
+
+.breadItem{
+    &:hover{
+        color: $iconHighlightColor!important;
+
+        .icon{
+            color: $iconHighlightColor;
+        }
+    }
+}

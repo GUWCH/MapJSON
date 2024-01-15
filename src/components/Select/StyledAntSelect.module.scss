@@ -1,0 +1,75 @@
+@mixin ant-select {
+    &:global(.ant-select) {
+        :global(.ant-select-selector) {
+            border-color: #3A5A66;
+        }
+    }
+}
+
+.select-default {
+    height: max-content;
+    min-width: 164px;
+    position: relative;
+    @include ant-select();
+
+    &::after {
+        position: absolute;
+        top: calc(50% + 2px);
+        left: 0.5em;
+        transform: translateY(-50%);
+        content: attr(data-content);
+        pointer-events: none;
+    }
+}
+
+.select-with-title {
+    width: max-content;
+    position: relative;
+    @include ant-select();
+
+    .select {
+        min-width: 164px;
+
+        [class*='ant-select-selection-item'] {
+            opacity: 0;
+
+            &::before {
+                content: attr(data-prefix);
+            }
+        }
+    }
+
+    .inner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        top: 50%;
+        left: 0.5em;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        &.with-arrow {
+            padding-right: 18px;
+        }
+    }
+
+    .inner-name {
+        color: #6A8CA3;
+    }
+
+    .required::before {
+        content: '* ';
+        color: red;
+
+    }
+
+    .inner-text {
+        color: white;
+    }
+
+    .inner-placeholder {
+        color: #849EB3;
+    }
+}

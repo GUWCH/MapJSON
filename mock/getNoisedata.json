@@ -1,0 +1,90 @@
+{
+    "code" : "10000",
+    "message": "success",
+    "data":[
+        {
+            "time_in": "2020-06-13 00:00:00",  
+            "time_out": "2020-10-15 00:00:00",
+            "time_in_raw":"2020-06-13 00:00:00", 
+            "time_out_raw": "2020-10-15 00:00:00",
+            "block_name":"Block1",
+            "data_type":"0",
+            "modes":[                  
+                {
+                    "sector_in": "0",
+                    "sector_out": "60",
+                    "windspeed_in": "0",
+                    "windspeed_out": "3",
+                    "noise_mode": "1"   
+                },
+                {
+                    "sector_in": "70",
+                    "sector_out": "80",
+                    "windspeed_in": "0",
+                    "windspeed_out": "3",
+                    "noise_mode": "2"   
+                },
+                {
+                    "sector_in": "0",
+                    "sector_out": "60",
+                    "windspeed_in": "4",
+                    "windspeed_out": "5",
+                    "noise_mode": "3"   
+                },
+                {
+                    "sector_in": "70",
+                    "sector_out": "80",
+                    "windspeed_in": "4",
+                    "windspeed_out": "5",
+                    "noise_mode": "4"   
+                }
+            ],
+            "wtg_alias_list":[ 
+                "SXGL.T2_L1.WTG027",
+                "SXGL.T2_L1.WTG028"
+            ]
+        },
+        {
+            "time_in": "2020-06-13 00:00:00",  
+            "time_out": "2020-10-15 00:00:00",
+            "time_in_raw":"2020-06-13 00:00:00", 
+            "time_out_raw": "2020-10-15 00:00:00",
+            "block_name":"Block2",
+            "data_type":"0",
+            "modes":[                  
+                {
+                    "sector_in": "70",
+                    "sector_out": "100",
+                    "windspeed_in": "0",
+                    "windspeed_out": "3",
+                    "noise_mode": "1"   
+                },
+                {
+                    "sector_in": "0",
+                    "sector_out": "60",
+                    "windspeed_in": "0",
+                    "windspeed_out": "3",
+                    "noise_mode": "1"   
+                },
+                {
+                "sector_in": "70",
+                "sector_out": "100",
+                "windspeed_in": "4",
+                "windspeed_out": "5",
+                "noise_mode": "2"   
+                },
+                {
+                    "sector_in": "0",
+                    "sector_out": "60",
+                    "windspeed_in": "4",
+                    "windspeed_out": "5",
+                    "noise_mode": "2"   
+                }
+            ],
+            "wtg_alias_list":[ 
+               "SXGL.T2_L1.WTG029",
+               "SXGL.T2_L1.WTG030"
+            ]
+        }
+    ]
+}

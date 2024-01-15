@@ -1,0 +1,42 @@
+.enable-switch {
+	display: inline-block;
+	padding: 0 8px;
+	border: 1px solid #066;
+	border-radius: 14px;
+	height: 24px;
+	line-height: 24px;
+	background: #066;
+	position: relative;
+	font-size: 14px;
+	font-weight: normal;
+	&-disabled {
+		display: inline-block;
+		padding: 0px 8px;
+		border: 1px solid #7A8789;
+		border-radius: 14px;
+		height: 24px;
+		line-height: 24px;
+		background: #7A8789;
+		position: relative;
+		font-size: 14px;
+		font-weight: normal;
+		cursor: not-allowed;
+		label {
+			margin: 0 4px;
+			cursor: not-allowed;
+			input {
+				cursor: not-allowed;
+				vertical-align: middle;
+				margin-right: 2px;
+			}
+		}
+	}
+	label {
+		margin: 0 4px;
+
+		input {
+			vertical-align: middle;
+			margin-right: 2px;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    height: 100%;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.scale_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.scale_body {
+    align-items: center;
+    transform-origin: top left;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    line-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

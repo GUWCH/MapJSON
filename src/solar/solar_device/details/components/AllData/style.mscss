@@ -1,0 +1,58 @@
+@import "../../../../../common/css/define.scss";
+
+.alldata{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .header{
+        @extend %headline1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main{
+        flex: 1;
+        overflow: auto;
+        display: flex;
+        flex-flow: row wrap;
+
+        >div{
+            padding: 2px 15px;
+            width: calc(100% / 3);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-bottom: 1px solid $envWhiteTransparent1;
+
+            >span{
+                margin-right: 5px;
+            }
+
+            >span:first-child{
+                color: $envBlue;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                
+                & + span {
+                    flex: 0 1 auto;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            >span:last-child{
+                margin-right: 0;
+                white-space: nowrap;
+            }
+        }
+
+        >div:last-child{
+            border-bottom: none;
+        }
+    }
+}

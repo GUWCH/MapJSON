@@ -1,0 +1,177 @@
+$prefixCls : env-add-condition;
+
+$border: #3F6D85;
+$white: #fff;
+$font: #6A8CA3;
+
+.#{$prefixCls} {
+
+    width: 100%;
+    
+
+    .ant-input-number{
+        border: 1px solid $border;
+        background-color: transparent;
+        height: 24px;
+
+        &-handler{
+            border-color: $border;
+
+            &-up-inner, &-down-inner{
+                color: $white;
+            }
+        }
+
+        &-handler-wrap{
+            background-color: #083F4D;
+        }
+
+        &-focused{
+            box-shadow: none;
+        }
+
+        &-input{
+            padding: 0 5px !important;
+        }
+
+        &-input-wrap{
+
+            >input{
+                height: 24px;
+                color: $white;
+            }
+        }
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+
+    .ant-input {
+        &:hover, &:focus{
+            border-color: $border;
+            box-shadow: none;
+        }
+    }
+    
+    &-header {
+        display: flex;
+    }
+
+    &-name{
+        color: $font;
+    }
+    &-text {
+        margin-left: auto;
+        color: #39e5ea;
+        cursor: pointer;
+    }
+    &-content {
+        display: flex;
+        margin: 5px 0;
+        padding: 5px 4px 5px 8px;
+        background-color: #083F4D;
+        border-radius: 2px;
+
+        >span{
+            height: 24px;
+            align-self: center;
+            display: flex;
+        }
+
+        >span:last-child{
+            cursor: pointer;
+            color: $font;
+            align-self: center;
+            margin-left: auto;
+            margin-right: 5px;
+            font-size: 14px;
+
+            &:hover{
+                color: #83979b;
+            }
+        }
+
+        button{
+            align-self: center;
+        }
+
+        .quota-set-select-self{
+            flex: 1;
+            // max-width: 90px; 
+            margin-right: 5px;
+            margin-left: 0px;
+        }
+            
+    }
+
+    &-range{
+        margin-right: 5px;
+        min-width: 1px;
+        flex: 1;
+    }
+
+    &-color{
+        margin-right: 2px;
+    }
+
+    &-coefficient{
+        &-input{
+            margin-left: 10px;
+            width: 50%;
+
+        }
+        &-name {
+            line-height: 24px;
+            color: $font;
+        }
+    }
+
+    &-unit{
+        &-input.ant-input{
+            border: 1px solid $border;
+            border-radius: 2px;
+            padding: 0 5px;
+            width: 50%;
+            height: 24px;
+            background: transparent;
+            color: $white;
+            margin: 0 5px 0 10px;
+
+        }
+
+        &-name {
+            line-height: 24px;
+            color: $font;
+        }
+    }
+
+    &-demical{
+
+        &-name{
+            line-height: 24px;
+            color: $font; 
+        }
+
+        &-input{
+            margin-left: 10px;
+
+        }
+    }
+
+    &-option {
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    &-delete {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.click-disable {
+    color: #6a737b;
+    cursor: not-allowed;
+    pointer-events: none; 
+}

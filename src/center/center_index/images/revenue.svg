@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="110px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 3 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="95.0285369%" id="linearGradient-1">
+            <stop stop-color="#0f0" offset="0%"></stop>
+            <!-- <stop stop-color="#FFF45C" offset="0%"></stop> -->
+            <stop stop-color="#F5B42D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.首页-展开" transform="translate(-1226.000000, -285.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <g id="Group-57" transform="translate(880.000000, 108.000000)">
+                <g id="Group-56" transform="translate(36.000000, 0.000000)">
+                    <g id="Group-51" transform="translate(30.000000, 177.000000)">
+                        <g id="Group-35-Copy" transform="translate(280.000000, 0.000000)">
+                            <path d="M55,107 C83.718807,107 107,83.718807 107,55 C107,26.281193 83.718807,3 55,3 C26.281193,3 3,26.281193 3,55 C3,83.718807 26.281193,107 55,107 Z M55,110 C24.6243388,110 0,85.3756612 0,55 C0,24.6243388 24.6243388,0 55,0 C85.3756612,0 110,24.6243388 110,55 C110,85.3756612 85.3756612,110 55,110 Z" id="Oval-3-Copy"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

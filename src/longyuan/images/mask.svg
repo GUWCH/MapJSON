@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" width="3552px" height="2504px" viewBox="0 0 3552 2504" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="25" result="effect0_gaussianBlur" />
+    </filter>
+    <rect width="7680" height="3240" id="artboard_1" />
+    <rect width="3552" height="2504" id="slice_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#slice_1" clip-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Slice" clip-path="url(#clip_1)">
+    <use xlink:href="#slice_1" stroke="none" fill="none" />
+    <g id="河南龙源" clip-path="url(#clip_2)" transform="translate(-3992 -455)">
+      <g id="地图" transform="translate(3994 164)">
+        <path d="M1745.27 111.931L1679.37 389.215L1463.71 503.69L1275.5 550.328L925.551 495.202L813.726 630.884L441.309 727.552L-4.53679e-12 798.781L7.98749 1037.91L199.687 1399.14L440.311 1734.93L778.781 1918.09L1134.22 2019.85L1661.4 2039.35L1877.06 2253.88L2320.37 2411.61L2847.54 2411.61L3111.13 2262.36L3189.51 1968.97L3129.1 1745.11L2979.34 1694.23L2781.65 1659.46L2847.54 1586.54L2979.34 1404.23L2979.34 1343.17L3063.2 1399.14L3242.92 1455.1L3513 1294.84L3506.51 1042.99L3252.41 844.571L2865.51 783.517L2715.75 671.586L3045.23 508.778L3326.79 440.093L3308.82 172.984L2979.34 111.931L2536.03 55.9655L2122.68 0L1745.27 111.931Z" transform="translate(19 323.0088)" id="mix-blend" fill="#73ADFF" style="mix-blend-mode: color;" fill-rule="evenodd" stroke="none" filter="url(#filter_1)" />
+      </g>
+    </g>
+  </g>
+</svg>

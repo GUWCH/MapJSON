@@ -1,0 +1,28 @@
+<svg preserveAspectRatio="none" width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dx="0" dy="1" />
+      <feGaussianBlur stdDeviation="3" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0627451 0 0 0 0 0.8235294 0 0 0 0 1 0 0 0 0.6 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect0_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect0_dropShadow" result="shape" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dx="0" dy="0" />
+      <feGaussianBlur stdDeviation="1.5" />
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.16470589 0 0 0 0 0.84313726 0 0 0 0 1 0 0 0 1 0" />
+      <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+    </filter>
+    <path d="M27.6 34.4867C27.6 34.4867 27.6 52.2814 27.6 52.2814C27.6 57.3624 23.481 61.4814 18.4 61.4814C13.319 61.4814 9.2 57.3624 9.2 52.2814C9.2 52.2814 9.2 34.4867 9.2 34.4867C3.59236 31.2483 -6.75023e-13 25.2271 -6.75023e-13 18.548C-6.75023e-13 11.1648 4.38972 4.58555 11.0389 1.68041L14.8761 0.00386488C15.1286 -0.106474 15.3333 0.0274893 15.3333 0.303079C15.3333 2.64293 15.3333 12.4147 15.3333 12.4147C15.3333 14.1084 16.7063 15.4814 18.4 15.4814C20.0937 15.4814 21.4667 14.1084 21.4667 12.4147L21.4667 0.303079C21.4667 0.0274893 21.6714 -0.106474 21.9239 0.00386484C23.0303 0.487255 25.7611 1.68041 25.7611 1.68041C32.4103 4.58555 36.8 11.1648 36.8 18.548C36.8 25.2271 33.2076 31.2483 27.6 34.4867Z" transform="matrix(0.70710677 0.70710677 -0.70710677 0.70710677 52.473633 8)" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="形状结合" filter="url(#filter_1)">
+    <g clip-path="url(#clip_1)">
+      <use xlink:href="#path_1" fill="none" stroke="#10D2FF" stroke-width="12" />
+    </g>
+  </g>
+</svg>

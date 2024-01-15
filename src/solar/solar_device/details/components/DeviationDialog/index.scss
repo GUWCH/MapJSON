@@ -1,0 +1,102 @@
+@import "../../../../../common/css/define.scss";
+
+/* dialog */
+$prefixClsDialog: env-deviation-dialog;
+$prefixClsDialogPaper: #{$prefixClsDialog}-paper;
+$prefixClsDialogTitle: #{$prefixClsDialog}-title;
+$prefixClsDialogAction: #{$prefixClsDialog}-action;
+$prefixClsDialogDel: #{$prefixClsDialog}-del;
+
+.#{$prefixClsDialog} {
+    color: $white;
+
+    .#{$prefixClsDialogPaper} {
+        background: linear-gradient(to right, #022d36, #0d5a73);
+        overflow-y: hidden;
+
+        .#{$prefixClsDialogTitle} {
+            border-bottom: 1px solid $envBlue3;
+            padding: 8px 10px;
+
+            h2 {
+                color: $white;
+                font-size: 16px;
+                padding: 8px 0;
+
+                > div {
+                    position: relative;
+                    padding-right: 1.5em;
+
+                    .#{$prefixClsDialogDel} {
+                        position: absolute;
+                        right: 0;
+                        display: inline-block;
+                        width: 1.5em;
+                        height: 1.5em;
+                        padding: 2px;
+                        cursor: pointer;
+                        transition: all 0.25s ease;
+                        background: url(~@/common/image/del.svg) center center no-repeat;
+
+                        &:hover {
+                            border-radius: 5px;
+                            background-color: $envHover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .#{$prefixClsDialogAction} {
+            display: block;
+            text-align: center;
+            padding: 10px;
+
+            button {
+                @extend %button;
+            }
+        }
+    }
+}
+
+.#{$prefixClsDialog}-diviation-content {
+    color: $white;
+
+    .#{$prefixClsDialog}-diviation-now {
+        margin-top: 20px;
+        > button {
+            background-color: transparent;
+            border: 1px solid $envBlue3;
+            width: 90px;
+            height: 27px;
+            margin-left: 60px;
+            border-radius: 2px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $envBlue3;
+            }
+        }
+    }
+
+    .#{$prefixClsDialog}-diviation-name {
+        background-color: $envBlackTransparent2;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    .#{$prefixClsDialog}-diviation-input {
+        background-color: $envBlackTransparent4;
+        border: solid 1px $envBlue3;
+        width: 300px;
+        height: 25px;
+        line-height: 25px;
+        margin-left: 15px;
+    }
+
+    .#{$prefixClsDialog}-diviation-tips {
+        margin-top: 20px;
+        font-size: 8px;
+        display: grid;
+        color: $envWhiteTransparent4;
+    }
+}

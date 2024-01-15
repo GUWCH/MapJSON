@@ -1,0 +1,59 @@
+@import "../../../common/css/define.scss";
+
+:global(.react-html){
+  :global(#center){
+      height: 100%;
+  }    
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 45px);
+
+  .containerLeft{
+    height: 100%;
+  }
+
+  .rightpanel{
+    :global(.ant-formily-item-label){
+      color: #000;
+    }
+    
+    position: fixed;
+    right: 0;
+    top: 46px;
+    height: 100%;
+    transition: all ease-in-out 0.5s;
+    transform: translate(400px,0);
+
+    &.rightexpand{
+      transform: translate(0,0);
+    }
+  
+    .rightbtn {
+      position: absolute;
+      transform: translate(0, -50%);
+      transition: all ease-in-out 0.5s;
+      width: 20px;
+      height: 80px;
+      background: #ffffff;
+      box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: -20px;
+      top: 50%;
+      margin-top: -40px;
+      color: $envBlackTransparent;
+      cursor: pointer;
+      &:hover {
+        color: #2f54eb;
+      }
+    }
+  }
+}
+
+

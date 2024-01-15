@@ -1,0 +1,128 @@
+@import "../../common/css/define.scss";
+
+.keyinfo{
+    display: flex;
+    background: $tplCardBg;
+    box-shadow: 0px 0px 8px 0px $envBlackTransparent1;
+    border-radius: 4px;
+    height: 100%;
+    padding: 5px 12px;
+    align-items: center;
+
+    >div{
+        flex: 1;
+
+        &.left{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            min-width: 100px;
+            overflow: hidden;
+
+            .switchWrap{
+                overflow: hidden;
+            }
+
+            .status{
+                margin-left: 20px;
+                white-space: nowrap;
+            }
+
+            .tokenShow{
+                margin-left: 20px;
+                white-space: nowrap;
+
+                &>img{
+                    margin-right: 8px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &.right{
+            display: flex;
+            justify-content: flex-end;
+
+            &>div{
+                display: flex;
+                align-items: center;
+                margin-right: 12px;
+
+                button{
+                    @extend %button5;
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    padding-left: 6px;
+                    white-space: nowrap;
+                    &>span{
+                        margin-right: 6px;
+                    }
+                }
+
+                &.param{
+                    position: relative;
+                    padding-left: 12px;
+                    margin-right: 0;
+
+                    &::before{
+                        content: ' ';
+                        background-color: $iconHighlightColor;
+                        width: 4px;
+                        height: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: 25%;
+                    }
+
+                    &>div{
+                        white-space: nowrap;
+                        margin-right: 24px;
+                    }
+                }
+
+                &.start{
+
+                }
+
+                &.stop{
+
+                }
+
+                &.reset{
+
+                }
+
+                &.token{
+                    cursor: pointer;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.keyinfoSet{
+    .setHeader{
+        font-size: $envFontSize18;
+    }
+    
+    .setFooter{
+        display: flex;
+    }
+
+    & [class*="ant-popover-inner-content"] {
+        background: $toolTipBg;
+        border-radius: 4px;
+    }
+
+    & [class*="ant-popover-arrow-content"] {
+        background: $toolTipBg;
+    }
+}

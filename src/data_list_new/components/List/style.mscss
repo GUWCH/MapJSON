@@ -1,0 +1,75 @@
+@import "@/common/css/define.scss";
+
+.list{
+    display: flex;
+    height: 100%;
+
+    :global{
+        .ant-table-wrapper, 
+        .ant-spin-nested-loading, 
+        .ant-spin-container, 
+        .ant-spin-container{
+            max-height: 100%;
+        }
+        .ant-table{
+            max-height: calc(100% - 40px);
+        }
+
+        .ant-table-body{
+            max-height: calc(100% - 40px);
+        }
+
+        .ant-table-thead > tr > th {
+            border-bottom: 0px solid #2d5f75;
+
+            &:hover{
+                background-color: rgba(0, 167, 219, 0.1) !important;
+            }
+        }
+        
+        .ant-table-tbody > tr > td{
+            border-bottom: 1px solid #2d5f75;
+        }
+
+        .ant-pagination {
+            position: relative;
+        }
+
+        .ant-pagination-total-text {
+            position: absolute;
+            left: 0;
+        }
+
+        .ant-pagination-options {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .name{
+        .top{
+            // depend on antd style
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border: 14px solid $cardTopBg;
+            border-color: $cardTopBg transparent transparent $cardTopBg;
+            font-size: 13px;
+            color: $cardTopStar;
+            cursor: pointer;
+
+            >span{
+                position: absolute;
+                left: -12px;
+                top: -15px;
+            }
+
+            &.checked{
+                color: #FFAA00;
+                border-color: $cardTopHighlightBg transparent transparent $cardTopHighlightBg;
+            }
+        }
+    }
+}

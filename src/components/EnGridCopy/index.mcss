@@ -1,0 +1,193 @@
+.container{
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+	overflow: hidden;
+	div {
+		box-sizing:border-box;
+	}
+	
+	& > .table{
+		position: relative;
+		width:100%;
+
+		& > div{
+			position: absolute;
+			overflow: hidden;
+	
+			/* 标题栏 */
+			&.top{
+
+				/* 排序指示器 */		
+				& > .sortable {
+					cursor:pointer;
+					
+					&.asc::after{
+						background:url(./asc.png);
+					}
+					&.desc::after{
+						background:url(./desc.png);
+					}
+
+					&::after{
+						content:'';
+						background:url(./sort.png);
+						display: inline-block;
+						position: static;
+						width: 14px;
+						height: 16px;
+						margin-left: 0.5em;
+						vertical-align: middle;	
+					}
+				}
+
+				/* resizing 把手 */
+				& > div > .handler{
+					content:'';
+					width:5px;
+					height: 100%;
+					position: absolute;
+					right: 0px;
+					top:0;
+					z-index: 3;
+					cursor: col-resize;
+					&:hover{
+						background-color:#555;
+					}
+				}
+
+				&.right > div > .handler{
+					left: 0px;
+					right:auto;
+				}		
+	
+			} 
+				
+
+			
+	
+				
+				
+		}	
+		& > .left{
+			left:0;
+			bottom:0;
+			border-right:solid 1px rgba(255,255,255,0.1);
+		}
+		& > .right{
+			right:0;
+			bottom:0;
+			border-left:solid 1px rgba(255,255,255,0.1)
+		}
+		& > .top{
+			top:0;
+		}
+		& > .middle{
+			bottom:0;
+		}
+		.left,.top,.right,.middle > div{
+			& >div{
+				position:absolute;
+				box-sizing:border-box;
+				vertical-align: middle;
+				overflow: hidden;
+				white-space: nowrap;
+				padding:0 1em;
+			}
+		}
+		.shadowLeft{
+			transform: rotate(180deg)
+		}
+		
+		.shadowRight{
+
+		}
+		.shadowLeft,.shadowRight{
+			width:15px;
+			height: 100%;
+			position: absolute;
+			top:0;
+			background-size: 100% 100%; 
+			z-index: 3;
+			pointer-events:none;
+			background:	radial-gradient(at right,rgba(0,0,0,0.2),transparent 70%) no-repeat;
+		}
+	}
+    
+
+
+    & > ul.pager{
+		position: relative;
+		max-width:100%;
+		min-width: 450px;
+    	box-sizing: border-box;
+    	height: 66px;
+    	line-height: 66px;
+    	text-align: center;
+		margin:0;
+		padding: 0 0.5em;
+		font-size:12px;	
+	
+    	& > li{
+    		display: inline-block;
+			line-height: 2em;
+			color:#00ccff;
+    		vertical-align: middle;
+    		border: solid 1px currentColor;
+    		border-radius: 2px;
+    		padding: 0 8px;
+    		margin:0 5px;
+    		cursor: pointer;
+			user-select:none;
+			background-color: rgba(0, 0, 0, 0.4);
+			
+			&:hover,&.active{
+				background-color: rgba(0, 204, 255, 0.2);
+			}
+
+			&.prev::before,&.next::before{
+				content:" ";
+				display: inline-block;
+				width:0;
+				height: 0;
+				border: 4px solid transparent;
+				vertical-align: middle;
+				margin:0 3px;
+			}
+			&.prev::before{				
+				border-right: 4px solid currentColor;
+				border-left:none;				
+			}
+
+			&.next::before{			
+				border-left: 4px solid currentColor;
+				border-right:none;
+			}
+
+			&.input:hover{
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			& > input{
+				width:18px;
+				height: auto;
+				text-align: center;
+				color:inherit;
+				background: transparent;
+				border: none;
+				outline: none;
+				
+				font: inherit;
+			}
+    	}
+
+    	& > span{
+			vertical-align: middle;
+			color:rgba(0, 204, 255, 0.5);
+			margin:0 4px;
+		}
+
+    }
+}
+
+
+

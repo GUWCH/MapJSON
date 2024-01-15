@@ -1,0 +1,5 @@
+export { TextForm, TextAreaForm } from './form'
+export type { ITextOptions, ITextFormCfg } from './Text'
+export type { ITextAreaOptions, ITextAreaFormCfg } from './TextArea'
+export { TextWidget, TextDefaultOptions, TextDefaultCfg } from './Text'
+export { TextAreaWidget, TextAreaDefaultOptions, TextAreaDefaultCfg } from './TextArea'

@@ -1,0 +1,66 @@
+@import "../index.scss";
+
+.control-table {
+    width: 100%;
+    height: calc(100% - 40px - 20px - 10px - 10px);
+    .rc-table-container{
+        height: 100%;
+        .rc-table-header {
+            border: solid 1px #366;
+        }
+        .rc-table-thead {
+            .rc-table-cell {
+                background-color: #03181c;
+                border: solid 1px #366;
+                padding: 4px;
+                color: #fff;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+        .rc-table-body {
+            border: solid 1px #366;
+            border-top: none;
+            box-sizing: border-box;
+            overflow: hidden;
+            .rc-table-cell {
+                background-color: transparent;
+                border: solid 1px #366;
+                padding: 0px;
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+                input[type="checkbox"] {
+                    vertical-align: middle;
+                }
+            }
+            .td-setting {
+                width: 24px;
+                border: 1px solid #187180;
+                height: 20px;
+                line-height: 20px;
+                cursor: pointer;
+                display: inline-block;
+                vertical-align: middle;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        .rc-table-cell-scrollbar::after {
+            background: transparent !important;
+        }
+        .control-table-expand-icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            margin: 0 5px 0 0;
+            background: url("../res/arrow-right.png") center no-repeat;
+            margin: 2px;
+        }
+        .control-table-expand-icon-expand {
+            transform: rotate(45deg);
+        }
+    }
+}

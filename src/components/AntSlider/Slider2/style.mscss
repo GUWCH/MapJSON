@@ -1,0 +1,33 @@
+@import '../../../common/css/define.scss';
+
+.slider{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+
+    >i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-size: $envFontSize16;
+        color: $slider;
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        background-color: $sliderBg;
+
+        &.minus{
+            color: $sliderDisabled;
+        }
+    
+        &.increase{
+            margin-left: 6px;
+        }
+    }
+
+    >div{
+        flex: 1;
+    }
+}

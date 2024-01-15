@@ -1,0 +1,23 @@
+export default {
+	'enable': 'Enabled',
+	'disable': 'Disabled',
+	'nodata': 'No data',
+	noData: 'No data',
+	'ok': 'OK',
+	save: 'Save',
+	'cancel': 'Cancel',
+	'net_error': "Network Error!",
+	'data_fail': 'Get data failed',
+	'download': 'Download',
+	'download_fail': 'Download failed',
+	fileType: 'File Type',
+	reset: "Reset",
+	reset_warning: "Are you sure to restore default Settings?",
+	reset_content: "This operation replaces all metrics that have been set.",
+	yx: 'DI',
+	yc: 'AI',
+	dl: 'PI',
+	other: 'Other',
+	yes: 'Yes',
+	no: 'No'
+};

@@ -1,0 +1,331 @@
+{
+    "code": 10000,
+    "message": "success",
+    "data": [
+        {
+            "domain_id": "101",
+            "domain_name": "wind domain",
+            "domain_name_cn": "风领域",
+            "model_id_vec": [
+                {
+                    "model_name": "uscada_wind_turbine",
+                    "model_name_raw": "wtg",
+                    "model_name_cn": "风机模型",
+                    "model_name_en": "uscada_wind_turbine",
+                    "model_id": "uscada_wind_turbine",
+                    "table_no": 430,
+                    "type": 3,
+                    "device_model_list": ["test111","test222","test333"]
+                },
+                {
+                    "model_name": "uscada_wind_farm",
+                    "model_name_raw": "windfarm",
+                    "model_name_cn": "风场站模型",
+                    "model_name_en": "uscada_wind_farm",
+                    "model_id": "uscada_wind_farm",
+                    "table_no": 4,
+                    "type": 3,
+                    "device_model_list": ["wind111","wind222","wind333","wind444"]
+                },
+                {
+                    "model_name": "uscada_wind_met",
+                    "model_name_raw": "met",
+                    "model_name_cn": "测风塔模型",
+                    "model_name_en": "uscada_wind_met",
+                    "model_id": "uscada_wind_met",
+                    "table_no": 430,
+                    "type": 6,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_wind_domain",
+                    "model_name_raw": "winddomain",
+                    "model_name_cn": "风领域模型",
+                    "model_name_en": "uscada_wind_domain",
+                    "model_id": "uscada_wind_domain",
+                    "table_no": 430,
+                    "type": 5,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_wind_wtrf",
+                    "model_name_raw": "wtrf",
+                    "model_name_cn": "风领域箱变模型",
+                    "model_name_en": "uscada_wind_wtrf",
+                    "model_id": "uscada_wind_wtrf",
+                    "table_no": 433,
+                    "type": 4,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_wind_ems",
+                    "model_name_raw": "windems",
+                    "model_name_cn": "风电场能量管理模型",
+                    "model_name_en": "uscada_wind_ems",
+                    "model_id": "uscada_wind_ems",
+                    "table_no": 430,
+                    "type": 27,
+                    "device_model_list": []
+                }
+            ]
+        },
+        {
+            "domain_id": "102",
+            "domain_name": "solar domain",
+            "domain_name_cn": "光领域",
+            "model_id_vec": [
+                {
+                    "model_name": "uscada_solar_string_inverter",
+                    "model_name_raw": "string_inverter",
+                    "model_name_cn": "光伏组串式逆变器模型",
+                    "model_name_en": "uscada_solar_string_inverter",
+                    "model_id": "uscada_solar_string_inverter",
+                    "table_no": 432,
+                    "type": 6,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_central_inverter",
+                    "model_name_raw": "central_inverter",
+                    "model_name_cn": "光伏集中式逆变器模型",
+                    "model_name_en": "uscada_solar_central_inverter",
+                    "model_id": "uscada_solar_central_inverter",
+                    "table_no": 430,
+                    "type": 7,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_combiner_box",
+                    "model_name_raw": "combiner_box",
+                    "model_name_cn": "光伏直流汇流箱模型",
+                    "model_name_en": "uscada_solar_combiner_box",
+                    "model_id": "uscada_solar_combiner_box",
+                    "table_no": 432,
+                    "type": 8,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_ac_junction_box",
+                    "model_name_raw": "ac_junction_box",
+                    "model_name_cn": "光伏交流汇流箱模型",
+                    "model_name_en": "uscada_solar_ac_junction_box",
+                    "model_id": "uscada_solar_ac_junction_box",
+                    "table_no": 430,
+                    "type": 15,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_box",
+                    "model_name_raw": "solar_box",
+                    "model_name_cn": "光伏箱变模型",
+                    "model_name_en": "uscada_solar_box",
+                    "model_id": "uscada_solar_box",
+                    "table_no": 430,
+                    "type": 8,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_weather_station",
+                    "model_name_raw": "weather_station",
+                    "model_name_cn": "光伏气象站模型",
+                    "model_name_en": "uscada_solar_weather_station",
+                    "model_id": "uscada_solar_weather_station",
+                    "table_no": 430,
+                    "type": 9,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_farm",
+                    "model_name_raw": "solarfarm",
+                    "model_name_cn": "光伏场站模型",
+                    "model_name_en": "uscada_solar_farm",
+                    "model_id": "uscada_solar_farm",
+                    "table_no": 4,
+                    "type": 5,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_domain",
+                    "model_name_raw": "solardomain",
+                    "model_name_cn": "光伏领域模型",
+                    "model_name_en": "uscada_solar_domain",
+                    "model_id": "uscada_solar_domain",
+                    "table_no": 430,
+                    "type": 5,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_solar_array",
+                    "model_name_raw": "array",
+                    "model_name_cn": "光伏方阵模型",
+                    "model_name_en": "uscada_solar_array",
+                    "model_id": "uscada_solar_array",
+                    "table_no": 430,
+                    "type": 29,
+                    "device_model_list": []
+                }
+            ]
+        },
+        {
+            "domain_id": "103",
+            "domain_name": "substation domain",
+            "domain_name_cn": "升压站领域",
+            "model_id_vec": [
+                {
+                    "model_name": "uscada_substation_farm",
+                    "model_name_raw": "substationfarm",
+                    "model_name_cn": "升压站场站模型",
+                    "model_name_en": "uscada_substation_farm",
+                    "model_id": "uscada_substation_farm",
+                    "table_no": 4,
+                    "type": 0,
+                    "device_model_list": []
+                }
+            ]
+        },
+        {
+            "domain_id": "110",
+            "domain_name": "storage domain",
+            "domain_name_cn": "储能领域",
+            "model_id_vec": [
+                {
+                    "model_name": "uscada_storage_farm",
+                    "model_name_raw": "storagefarm",
+                    "model_name_cn": "储能场站模型",
+                    "model_name_en": "uscada_storage_farm",
+                    "model_id": "uscada_storage_farm",
+                    "table_no": 4,
+                    "type": 6,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_pcs",
+                    "model_name_raw": "PCS",
+                    "model_name_cn": "储能变流器模型",
+                    "model_name_en": "uscada_storage_pcs",
+                    "model_id": "uscada_storage_pcs",
+                    "table_no": 430,
+                    "type": 20,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_ac",
+                    "model_name_raw": "AC",
+                    "model_name_cn": "储能空调模型",
+                    "model_name_en": "uscada_storage_ac",
+                    "model_id": "uscada_storage_ac",
+                    "table_no": 430,
+                    "type": 23,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_bankems",
+                    "model_name_raw": "BANK",
+                    "model_name_cn": "储能电池组模型",
+                    "model_name_en": "uscada_storage_bankems",
+                    "model_id": "uscada_storage_bankems",
+                    "table_no": 430,
+                    "type": 21,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_rackems",
+                    "model_name_raw": "RACK",
+                    "model_name_cn": "储能电池簇模型",
+                    "model_name_en": "uscada_storage_rackems",
+                    "model_id": "uscada_storage_rackems",
+                    "table_no": 430,
+                    "type": 25,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_cess",
+                    "model_name_raw": "CESS",
+                    "model_name_cn": "储能子系统模型",
+                    "model_name_en": "uscada_storage_cess",
+                    "model_id": "uscada_storage_cess",
+                    "table_no": 430,
+                    "type": 22,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_mcd",
+                    "model_name_raw": "STS",
+                    "model_name_cn": "储能箱变模型",
+                    "model_name_en": "uscada_storage_mcd",
+                    "model_id": "uscada_storage_mcd",
+                    "table_no": 432,
+                    "type": 23,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_domain",
+                    "model_name_raw": "storagedomain",
+                    "model_name_cn": "储能领域模型",
+                    "model_name_en": "uscada_storage_domain",
+                    "model_id": "uscada_storage_domain",
+                    "table_no": 430,
+                    "type": 5,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_emt",
+                    "model_name_raw": "EMT",
+                    "model_name_cn": "储能电表模型",
+                    "model_name_en": "uscada_storage_emt",
+                    "model_id": "uscada_storage_emt",
+                    "table_no": 430,
+                    "type": 24,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_fmxk",
+                    "model_name_raw": "FireMaster",
+                    "model_name_cn": "储能显控主机模型",
+                    "model_name_en": "uscada_storage_fmxk",
+                    "model_id": "uscada_storage_fmxk",
+                    "table_no": 430,
+                    "type": 30,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_yzj",
+                    "model_name_raw": "FireSlave",
+                    "model_name_cn": "储能抑制主机模型",
+                    "model_name_en": "uscada_storage_yzj",
+                    "model_id": "uscada_storage_yzj",
+                    "table_no": 430,
+                    "type": 31,
+                    "device_model_list": []
+                },
+                {
+                    "model_name": "uscada_storage_dclcc",
+                    "model_name_raw": "DCLiquidCoolingController",
+                    "model_name_cn": "储能直流液冷控制器模型",
+                    "model_name_en": "uscada_storage_dclcc",
+                    "model_id": "uscada_storage_dclcc",
+                    "table_no": 430,
+                    "type": 32,
+                    "device_model_list": []
+                }
+            ]
+        },
+        {
+            "domain_id": "1",
+            "domain_name": "root domain",
+            "domain_name_cn": "总领域",
+            "model_id_vec": [
+                {
+                    "model_name": "uscada_root_domain",
+                    "model_name_raw": "RootDomain",
+                    "model_name_cn": "总领域模型",
+                    "model_name_en": "uscada_root_domain",
+                    "model_id": "uscada_root_domain",
+                    "table_no": 430,
+                    "type": 5,
+                    "device_model_list": []
+                }
+            ]
+        }
+    ]
+}

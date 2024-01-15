@@ -1,0 +1,355 @@
+@import "@/common/css/define.scss";
+
+$quotaSetUnit: env-quota-set-unit;
+
+$searchSelect: env-tree-multi-select;
+
+$panelDropDown : panel-drop-down;
+
+$labelBg: #01262e;
+$panelDropDownBg: #052932;
+$panelDropDownColor: #9ea6ab;
+$unitBg:#01333D;
+
+@mixin input-item {
+    min-width: 50px;
+    border: 1px solid #5d6f7a;
+    background: transparent;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.ant_select{
+    padding: 10px 0;
+}
+
+.ant-select-selection-item {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.#{$quotaSetUnit} {
+    width: 100%;
+    color: #fff;
+    padding: 10px 18px 10px 10px;
+    // margin: 20px 0;
+    margin-bottom: 10px;
+    background-color: $unitBg;
+
+    .ant-collapse {
+        border: none;
+        background-color: $labelBg;
+        margin: 10px 0;
+    
+        &-item {
+    
+            display: flex;
+            flex-wrap: wrap;
+    
+            // display: flex;
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            &::before{
+                background-color: $labelBg;
+                content: "\e958";
+                font-size: 22px;
+                height: 36px;
+                color: #48585c;
+            }
+    
+            border-bottom: none !important;
+    
+            &:hover{
+                #edict{
+                    visibility: visible;
+                    display: inline;
+                }
+            }
+        }
+    
+        &-content{
+            width: 100%;
+            border-top: none;
+            // background-color: #2d4847;
+            background-color: $panelDropDownBg;
+    
+            &-box{
+                padding: 5px 10px !important;
+            }
+        }
+    
+        &-header{
+            align-self: center;
+            display: flex;
+            width: calc(100% - 22px);
+            height: 36px;
+            background-color: $labelBg;
+    
+            >span{
+                align-self: center;
+            }
+    
+            >div{
+                display: flex;
+                width: calc(100% - 24px);
+                align-items: center;
+
+                >span{
+                    display: flex;
+                    align-items: center;
+                }
+    
+                >input{
+                    align-self: center;
+                    border: none;
+                    background-color: transparent;
+                    color: #fff;
+                }
+    
+                #delete{
+                    margin-left: auto;
+                    color: #456066;
+                    &:hover{
+                        color: #83979b;
+                    }
+                }
+    
+                #edict{
+                    text-align: right;
+                    margin-right: 10px;
+                    color: #456066;
+                    visibility: hidden;
+                    &:hover{
+                        color: #83979b;
+                    }
+                }
+            }
+        }
+    }
+
+    &-associated{
+        &-select{
+            display: flex;
+            align-items: center;
+            // .env-rc-select{
+            //     float: right;
+            // }
+            .quota-set-select-self{
+                margin-left: auto;
+            }
+        }
+
+        &-style{
+            display: flex;
+            margin-top: 10px;
+
+            .env-color-pick{
+                margin-left: auto;
+            }
+
+            // .env-rc-select{
+            //     width: 80%;
+            // }
+        }
+    }
+
+    &-header {
+        padding: 10px 0;
+
+        &-check{
+            float: right;
+        }
+    }
+
+    &-icon{
+        display: inline;
+        background-color: #083F4D;
+        margin-right: 8px;
+        padding: 0 2px;
+        border-radius: 10px;
+    }
+
+    &-content{
+        margin: 0 0 10px 0;
+
+        >input{
+            align-self: center;
+        }
+
+        >span{
+            align-self: center;
+        }
+
+        &-label{
+            align-items: center;
+            >span:first-child{
+                flex: 1;
+                // width: 150px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            >input{
+                align-self: center;
+            }
+        }
+
+        &-select{
+            display: flex;
+            margin: 0 0 10px 0;
+
+            >span{
+                align-self: center;
+            }
+
+            >div{
+                display: inline;
+                margin-left: auto;
+                align-self: center;
+            }
+        }
+    }
+
+    &-time{
+        div{
+            display: flex;
+            margin-bottom: 10px;
+
+            >span:first-child{
+                flex: 1;
+            }
+
+            >span:last-child{
+                flex: 1;
+            }
+        }
+        
+    }
+
+
+    &-condition{
+        width: 100%;
+        &-input{
+            width: 30%;
+            @include input-item;
+        }
+    }
+
+
+    &-color-button{
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border: none;
+        border-radius: 4px;
+        margin: 5px;
+    }
+
+    &-coefficient-name{
+        margin: 10px;
+    }
+
+    &-coefficient-input{
+        @include input-item;
+        width: 25%;
+    }
+
+    &-demical-name{
+        margin: 10px;
+    }
+
+    &-demical-input{
+        @include input-item;
+        width: 25%;
+    }
+
+    &-unit-name{
+        margin: 10px;
+    }
+
+    &-unit-input{
+        @include input-item;
+        width: 25%;
+    }
+}
+
+.#{$searchSelect} {
+
+    .ant-select-tree-node-content-wrapper{
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+    }
+
+    &-search{
+        width: '90%';
+        margin: '10px 0px 10px 22px';
+
+        &-input{
+            color: #fff;
+            display: block;
+            margin: 8px auto;
+            padding: 0 5px;
+            min-width: 200px;
+            width: 90%;
+            background-color: transparent;
+            border: 1px solid #516164;
+            
+        }
+        // &-input:focus{
+        //     outline: none;
+        //     border: 1px solid #39e5ea 
+
+        // }
+        
+    } 
+
+    &-content{
+        width: '90%';
+        margin: '10px 0px 10px 22px';
+    }
+
+    
+}
+
+.#{$panelDropDown} {
+
+    &-row {
+        display: flex;
+        margin: 10px 0;
+
+        &-item {
+            >span{
+                color: $panelDropDownColor;
+            }
+
+            >button {
+                float: right;
+            }
+        }
+
+        >div{
+            display: inline;
+            align-self: center;
+        }
+
+        div:first-child{
+            // display: flex;
+            // width: calc(100% - 40px);
+            flex: 4;
+
+            .env-rc-select{
+                // margin-left: auto;
+                float: right;
+                max-width: 110px;
+            }
+
+        }
+
+        >div:nth-child(2) {
+            flex: 1;
+            // margin-left: auto;
+            text-align: right;
+        }
+    }
+}

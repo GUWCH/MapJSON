@@ -1,0 +1,107 @@
+{
+    "code": "10000",
+    "message": "全部成功",
+    "success_lst": [
+        {
+            "define_alias": "SXCN.ESS01.RBMS101.RB.CelTmp",
+            "dataset": [
+                {
+                    "name": "电芯温度001",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp001"
+                },
+                {
+                    "name": "电芯温度002",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp002"
+                },
+                {
+                    "name": "电芯温度003",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp003"
+                },
+                {
+                    "name": "电芯温度004",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp004"
+                },
+                {
+                    "name": "电芯温度005",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp005"
+                },
+                {
+                    "name": "电芯温度006",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp006"
+                },
+                {
+                    "name": "电芯温度007",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp007"
+                },
+                {
+                    "name": "电芯温度008",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp008"
+                },
+                {
+                    "name": "电芯温度009",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp009"
+                },
+                {
+                    "name": "电芯温度010",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp010"
+                },
+                {
+                    "name": "电芯温度011",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp011"
+                },
+                {
+                    "name": "电芯温度012",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp012"
+                },
+                {
+                    "name": "电芯温度013",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp013"
+                },
+                {
+                    "name": "电芯温度014",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp014"
+                },
+                {
+                    "name": "电芯温度015",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp015"
+                },
+                {
+                    "name": "电芯温度016",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp016"
+                },
+                {
+                    "name": "电芯温度017",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp017"
+                },
+                {
+                    "name": "电芯温度018",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp018"
+                },
+                {
+                    "name": "电芯温度019",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp019"
+                },
+                {
+                    "name": "电芯温度020",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp020"
+                },
+                {
+                    "name": "电芯温度021",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp021"
+                },
+                {
+                    "name": "电芯温度022",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp022"
+                },
+                {
+                    "name": "电芯温度023",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp023"
+                },
+                {
+                    "name": "电芯温度024",
+                    "alias": "SXCN.ESS01.RBMS101.RB.CelTmp024"
+                }
+            ]
+        }
+    ]
+}

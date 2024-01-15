@@ -1,0 +1,25 @@
+$border: #3F6D85;
+$white: #fff;
+$bg: #04262a;
+
+.inputNumber{
+    border: 1px solid $border;
+    background-color: $bg;
+    box-shadow: none;
+
+    span[class*='ant-input-number-handler']{
+        border-color: $border;
+    }
+
+        div[class*='ant-input-number-handler-wrap']{
+            background-color: $bg;
+
+            svg{
+                color: $white;
+            }
+        }
+
+    input{
+        color: $white;
+    }
+}

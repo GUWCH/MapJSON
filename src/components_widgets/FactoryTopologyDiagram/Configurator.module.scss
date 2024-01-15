@@ -1,0 +1,44 @@
+:global(.ant-collapse){
+    &.collapse {
+        background-color: #033640;
+        border: none;
+    
+        [class~='ant-collapse-content'] {
+            background: none;
+            border: none;
+        }
+    
+        [class~='ant-collapse-content-box'] {
+            padding: 0 8px;
+        }
+    
+        .panel {
+            border: none;
+    
+            [class~='ant-collapse-header'] {
+                padding: 12px 8px 12px 8px;
+            }
+    
+            [class~='ant-collapse-content-box'] {
+                padding-bottom: 12px;
+            }
+    
+        }
+    
+        .panel_inner {
+            border: none;
+    
+            [class~='ant-collapse-header'] {
+                padding: 0px 8px 12px 8px;
+            }
+    
+            [class~='ant-collapse-content-box'] {
+                padding-bottom: 0;
+            }
+    
+            &[class*='ant-collapse-item-active'] {
+                padding-bottom: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+@import './iconfont.scss';
+
+/*chrome scrollbar*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}/* 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #28c6de;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track-piece {
+    background: #314552;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius:6px;
+    border-radius: 6px;
+    background: #28c6de;
+    -webkit-box-shadow: inset 0 0 6px #28c6de;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(31, 67, 85, 0.4);
+} */
+::-webkit-scrollbar-corner  {
+    background:#314552;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+}
+
+::-webkit-scrollbar-track-piece{
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    /* 滚动条拖动块颜色 */
+    background-color: rgba(#6A8CA3, .6);
+    -webkit-box-shadow: none;
+    -webkit-border-radius:6px;
+    border-radius: 6px;
+}
+
+html,body,ol,ul,li,p,div,button,input, textarea, select, button{
+    margin: 0;
+    padding: 0;
+}
+
+html.react-html{
+    box-sizing: border-box;
+    height: 100%;
+
+    * {
+        box-sizing: border-box;
+    }
+    *:before,*:after {
+        box-sizing: border-box;
+    }
+    *:focus{outline: none;} 
+
+    /*IE scrollbar*/
+    scrollbar-arrow-color: #3397b3;
+    scrollbar-face-color: #3397b3;
+    scrollbar-3dlight-color: #3397b3;
+    scrollbar-highlight-color: #3397b3;
+    scrollbar-shadow-color: #3397b3;
+    scrollbar-darkshadow-color: #0a0a0a;
+    scrollbar-track-color: #324550;
+    scrollbar-base-color:#121212;
+}
+
+body{
+    height: 100%;
+    background: #075760 url(~@/common/image/bg.svg) no-repeat fixed top center/cover;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, Roboto, "PingFang SC", 苹方, "Microsoft YaHei", 微软雅黑, sans-serif;
+    color: #fff;
+}
+
+ul,li,ol{
+  list-style: none;
+  margin-bottom: 0;
+} 
+
+input, textarea, select, button{
+    font-size: 14px;
+    font-family: Microsoft YaHei, Arial, Helvetica, sans-serif
+}
+
+#center{
+    font-size: 14px;
+    font-family: Microsoft YaHei, Arial;
+    color: #fff;
+
+    * {
+        box-sizing: border-box;
+    }
+    *:before,*:after {
+        box-sizing: border-box;
+    }
+    *:focus{outline: none;} 
+
+    ul,li,ol{
+        list-style: none;
+        margin-bottom: 0;
+    } 
+}
+
+$list: (
+    "DS-Digital", //Free for Commercial Use
+    "Rajdhani", //Free for Commercial Use
+    "Rajdhani-Medium", //Free for Commercial Use
+    "Fontello" //https://fontello.com/
+);
+
+@mixin setFonts() {
+    @each $var in $list {
+        @font-face {
+            font-family: "#{$var}";
+            src: url("../font/#{$var}.ttf") format("truetype");
+        }
+    }
+}
+@include setFonts();
+
+
+/** Fontello style define*/
+[class^="icon-fonttello-"], [class*=" icon-fonttello-"] {
+    font-family: 'Fontello' !important;
+}
+
+.icon-fonttello-sun:before {
+    content: "\e603";
+}
+
+.icon-fonttello-yibiao:before {
+    content: "\e6ba";
+}
+
+.icon-fonttello-Clock:before {
+    content: "\e691";
+}
+
+.icon-fonttello-lightning:before {
+    content: "\e69d";
+}
+
+

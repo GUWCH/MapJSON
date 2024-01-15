@@ -1,0 +1,149 @@
+$inputNumberPrefixCls: env-input-number;
+$height: 22px;
+$fontSize: 14px;
+
+.#{$inputNumberPrefixCls}.#{$inputNumberPrefixCls}-no-manual-btn{
+    .#{$inputNumberPrefixCls}-handler-wrap{
+        display: none;
+    }
+}
+
+.#{$inputNumberPrefixCls} {
+    box-sizing: initial!important;
+    * {
+        box-sizing: initial!important;
+    }
+    
+    margin: 0;
+    padding: 0;
+    line-height: $height;
+    font-size: $fontSize;
+    height: $height;
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+
+    &-focused {
+        border-color: #40a9ff;
+        box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+    }
+
+    &-handler {
+        text-align: center;
+        line-height: 12px;
+        height: 12px;
+        overflow: hidden;
+        display: block;
+        touch-action: none;
+
+        &-active {
+            background: #ddd;
+        }
+    }
+
+    &-handler-up-inner,
+    &-handler-down-inner {
+        color: #666666;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    &:hover {
+        border-color: #23c0fa;
+
+        .#{$inputNumberPrefixCls}-handler-up,
+        .#{$inputNumberPrefixCls}-handler-wrap {
+            visibility: visible;
+            border-color: #23c0fa;
+        }
+    }
+
+    &-disabled:hover {
+        border-color: #d9d9d9;
+
+        .#{$inputNumberPrefixCls}-handler-up,
+        .#{$inputNumberPrefixCls}-handler-wrap {
+            border-color: #d9d9d9;
+        }
+    }
+
+    &-input-wrap {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    &-input {
+        width: 100%;
+        text-align: center;
+        outline: 0;
+        -moz-appearance: textfield;
+        line-height: $height;
+        height: 100%;
+        transition: all 0.3s ease;
+        color: #000;
+        border: 0;
+        border-radius: 0px;
+        padding: 0;
+    }
+
+    &-handler-wrap {
+        visibility: hidden;
+        float: right;
+        border-left: 1px solid #D9D9D9;
+        width: 20px;
+        height: 100%;
+    }
+
+    &-handler-up {
+        border-bottom: 1px solid #D9D9D9;
+        padding-top: 1px;
+
+        &-inner {
+            &:after {
+                content: '▲';
+                font-size: 10px;
+                display:block;
+            }
+        }
+    }
+
+    &-handler-down {
+        &-inner {
+            &:after {
+                content: '▼';
+                font-size: 10px;
+                display: block;
+            }
+        }
+    }
+
+    @mixin handler-disabled() {
+        opacity: 0.72;
+
+        &:hover {
+            color: #999;
+            border-color: #d9d9d9;
+            cursor: not-allowed;
+        }
+    }
+
+    &-handler-down-disabled,
+    &-handler-up-disabled {
+        @include handler-disabled();
+    }
+
+    &-disabled {
+        .#{$inputNumberPrefixCls}-input {
+            opacity: 1;
+            cursor: not-allowed;
+            background-color: #7a7f80;
+            color: #b8c2c4;
+        }
+
+        .#{$inputNumberPrefixCls}-handler {
+            @include handler-disabled();
+        }
+    }
+}

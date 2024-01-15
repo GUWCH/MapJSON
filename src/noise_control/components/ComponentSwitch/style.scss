@@ -1,0 +1,30 @@
+
+.env-edit-input{
+    display: inline-block;
+    background: #04262a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: calc(50% - 5px);
+    height: 100%;
+    vertical-align: middle;
+    line-height: 2em;
+}
+
+.env-edit-span{
+    display: inline-block;
+    background: #04262a;
+    color: #fff;
+    text-align:center;
+    width: calc(50% - 5px);
+    height: 100%;
+    vertical-align: middle;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}

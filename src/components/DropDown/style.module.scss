@@ -1,0 +1,164 @@
+@import "@/common/css/define.scss";
+
+$dropDownFont: #6A8CA3;
+$dropDownBg: #052932;
+
+.dropDown{
+    color: $dropDownFont;
+    font-size: 12px;
+
+    >div{
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        .content{
+            flex: 1;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            input {
+                font-size: 12px;
+            }
+            
+            >input {
+                width: 142px;
+                height: 24px;
+                margin-left: auto;
+            }
+
+            & div[class *= 'ant-select']{
+                margin-left: auto;
+            }
+
+            >button:not(:first-child){
+                margin-left: 10px;
+            }
+
+            >button:first-child{
+                margin-left: auto;
+            }
+
+            .checkbox{
+                margin-left: auto;
+
+                >span{
+                    >span{
+                        background-color: transparent;
+                    }
+                }
+
+                span[class*='ant-checkbox-checked']{
+                    >span{
+                        background-color: #39e5ea;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.large{
+    color: $white;
+    font-size: 14px;
+
+    >div{
+        .content{
+            input {
+                font-size: 14px;
+            }
+                
+            >input {
+                width: 164px;
+                height: 28px;
+            }
+
+            div[class *= 'quota-set-select-self']{
+                display: inline;
+                width: 164px;
+                height: 28px;
+                font-size: 14px;
+                margin-left: auto;
+                align-self: center;
+
+                div[class *= 'ant-select-selector']{
+                    height: 28px !important;
+
+                    div[class *= 'ant-select-selection-item']{
+                        line-height: 28px;
+                    }
+                }
+            }
+            div[class *= 'components-DropDown-style-module__styleEdit']{
+                width: 126px;
+            }
+            .styleEdit{
+                width: 126px;
+            }
+            >button{
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+.axisContainer{
+    width: 100%;
+
+    .axisItem:not(:last-child){
+        margin-bottom: 8px;
+    }
+
+    .axisItem{
+        display: flex;
+        align-items: center;
+            
+        >div{
+            margin-left: auto;
+
+            >label{
+                min-width: 0;
+                margin-right: 0;
+                font-size: 12px;
+
+                span[class *= 'ant-radio-inner']{
+                    background-color: transparent;
+                }
+
+                &:last-child>span:last-child{
+                    padding-right: 0;
+                }
+            }
+
+            >div{
+                border: 1px solid $inputBorder;
+                background-color: transparent;
+
+                div[class *= 'ant-input-number-handler-wrap']{
+                    background-color: $dropDownBg;
+
+                    >span{
+                        border-color: $inputBorder;
+                        >span{
+                            color: $inputBorder;
+                        }
+                        
+                    }
+                }
+            }
+
+            >div:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+
+        div[class *= 'ant-input-number-input-wrap']{
+            input{
+                color: #fff;
+            }
+        }
+    }
+}

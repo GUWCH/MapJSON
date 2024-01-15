@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg template_para_list="bay" refresh_cycle="2" height="41" width="206" title="" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect height="41" width="206" fill="#c0c0c0" x="0" y="0"/>
+    <image height="41" width="206" xlink:href="EnTurbinelist.png" x="0" y="0"/>
+    <defs>
+        <symbol id="Other:min_wtg_0" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_0.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_1" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_1.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_2" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_2.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_3" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_3.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_4" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_4.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_5" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_5.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_6" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_6.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_7" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_7.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_8" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_8.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_9" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_9.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_10" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_10.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_11" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_11.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+        <symbol id="Other:min_wtg_12" preserveAspectRatio="xMidYMid meet">
+            <image x="0" y="0" xlink:href="min_wtg_12.png" height="40" width="40" transform="translate(0,0)scale(1,1)"/>
+        </symbol>
+    </defs>
+    <style type="text/css"><![CDATA[.kV500 { stroke:rgb(255,0,0);}			   .kV220 { stroke:rgb(128,0,128);}			   .kV110 { stroke:rgb(240,65,85);}			   .kV35 { stroke:rgb(255,255,0);}			   .kV10.5 { stroke:rgb(185,72,66);}			   .kV6.3 { stroke:rgb(0,0,139);}			   .V380 { stroke:rgb(0,199,0);}			   .kV20 { stroke:rgb(226,172,6);}			   .kV15.75 { stroke:rgb(0,128,0);}			   .kV13.8 { stroke:rgb(0,210,0);}			   .kV66 { stroke:rgb(255,204,0);}			   .V733 { stroke:rgb(229,45,183);}			   .kV750 { stroke:rgb(250,128,10);}			   .kV330 { stroke:rgb(30,144,255);}			   .kV1000 { stroke:rgb(0,0,255);}]]></style>
+    <g>
+        <g id="Plane 1">
+            <g id="83308808" enable_tip="false">
+                <image x="0" y="0" xlink:href="min_wtg_bgd.png" height="40" width="205" transform="translate(0,0)scale(1,1)"/>
+            </g>
+            <g id="67484376" dyn_param="1:435:{bay}:1" decimal="0" class="env_dyndata">
+                <text x="63" y="9" text-anchor="start" fill="#045368" dy="1em" font-size="13pt" font-family="微软雅黑" writing-mode="lr" text-decoration="">###########.</text>
+            </g>
+            <g id="453474992" dyn_param="1:61:{bay}.WTUR.TurbineListSts:9" enable_tip="false">
+                <use transform="translate(0,0) scale(1,1)" xlink:href="#Other:min_wtg"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    align-items: center;
+
+    .select [class*='ant-select-selector'] {
+        padding-left: 0;
+    }
+}
+
+.select__dropdown {
+    background-color: #083F4D;
+    z-index: 1;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+}
+
+.select {
+    max-width: 200px;
+
+    .option {
+        color: #ffffff;
+    }
+
+    .operation {
+        display: none;
+    }
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0 2px 0;
+    min-width: 200px;
+    border-top: 1px solid #124B5C;
+
+    span {
+        color: #00A7DB;
+    }
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #CAD3DB;
+
+    .tplName {
+        flex: 1;
+        min-width: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .operation {
+        &>span {
+            margin-left: 2px;
+        }
+    }
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+
+    &>div{
+        margin-top: 8px;
+    }
+}

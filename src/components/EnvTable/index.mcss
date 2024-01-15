@@ -1,0 +1,252 @@
+@import "../../common/css/define.scss";
+
+.header{
+    position: relative;
+
+    .iconTab{
+        display: inline-block;
+        margin-left: 20px;
+
+        >span{
+            display: inline-block;
+            width: 34px;
+            height: 24px;
+            margin-right: 10px;
+            cursor: pointer;
+            text-indent: -9999rem;
+            border-right: 1px solid $envWhiteTransparent;
+
+            &:first-child{
+                opacity: .3;
+                background: url(./card.svg) left center no-repeat;
+
+                &.iconTabSelected{
+                    opacity: 1;
+                    background: url(./card-blue.svg) left center no-repeat;
+                }
+
+                &:hover{
+                    opacity: .8;
+                }
+            }
+
+            &:last-child{
+                opacity: .3;
+                background: url(./list.svg) left center no-repeat;
+
+                &.iconTabSelected{
+                    opacity: 1;
+                    background: url(./list-blue.svg) left center no-repeat;
+                }
+
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+
+    input[type=text]{
+        width: 300px;
+        height: 28px;
+        border-radius: 2px;
+        background-color: $envInputBg;
+        background-image: url(./search.png);
+        background-repeat: no-repeat;
+        background-position: 280px center;
+        border: 1px solid $envBorderColor;
+        margin: 8px 0;
+        padding: 0 25px 0 5px;
+    }
+
+    button{
+        position: absolute;
+        right: 0;
+        top: 8px;
+        padding: 2px 25px;
+        color: $envBtnColor;
+        border: 1px solid $envBorderColor;
+        background: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: $envBtnHoverBg;
+    }
+}
+
+.popover{
+    :global{
+        .ant-popover-inner{
+            background-color: $envDeepGreen;
+        }
+
+        .ant-popover-content{
+            >.ant-popover-arrow{
+                border-top-color: $envDeepGreen;
+                border-left-color: $envDeepGreen;
+            }
+        }
+    }
+
+    .chooser{
+        .search{
+            position: relative;
+            padding: 16px 0 0 0;
+            margin-bottom: 10px;
+    
+            label{
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 0;
+                transform: translate(0, 17px) scale(1);
+                transform-origin: top left;
+                transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,
+                    transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                color: $envLightBlue;
+                padding: 0;
+                font-size: 1rem;
+                line-height: 1;
+                font-weight: 400;
+            }
+    
+            >div{
+                cursor: text;
+                background: none;
+                position: relative;
+    
+                input{
+                    visibility: hidden;
+                    background: none;
+                    border: none;
+                    width: 100%;
+                }
+
+                &::before{
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    content: "\00a0";
+                    position: absolute;
+                    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+                    pointer-events: none;
+                }
+
+                &:hover{
+                    &::before{
+                        border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+                    }
+                }
+
+                &::after{
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    content: "";
+                    position: absolute;
+                    transform: scaleX(0);
+                    transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                    border-bottom: 2px solid $envGreen;
+                    pointer-events: none;
+                }
+            }
+    
+            &.focus, &.active{
+                label{
+                    transform: translate(0, 1.5px) scale(0.75);
+                }
+    
+                >div{
+                    input{
+                        visibility: visible;
+                    }
+                }
+            }
+
+            &.active{
+                label{
+                    color: $envGray;
+                }
+            }
+
+            &.focus, &.active.focus{
+                label{
+                    color: $envLightBlue;
+                }
+    
+                >div{
+                    &::after{
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    
+        .main{
+            overflow: auto;
+
+            >div{
+                padding: 2px 0;
+            }
+
+            label{
+                input{
+                    display: none;
+                }
+
+                input ~ span{
+                    cursor: pointer;
+                }
+
+                input:disabled ~ span{
+                    opacity: .5;
+                    cursor: default;
+                }
+
+                input + span{
+                    display: inline-block;
+                    width: 28px;
+                    height: 10px;
+                    position: relative;
+                    background-color: $envGray;
+                    border-radius: 5px;
+                }
+
+                input + span::after{
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: -3px;
+                    border-radius: 50%;
+                    background-color: $envLightGray;
+                    box-shadow: 2px 1px $black;
+                }
+
+                input:checked + span{
+                    background-color: $envLightGreen;
+                }
+
+                input:checked + span::after{
+                    right: 0;
+                    background-color: $envGreen;
+                }
+
+                span:last-child{
+                    margin-left: 10px;
+                }
+            }
+        }
+    
+        .btn{
+            margin-top: 10px;
+            button {
+                @extend %button;
+            }
+        }
+    }
+}

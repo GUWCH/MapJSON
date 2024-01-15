@@ -1,0 +1,87 @@
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: #01333D;
+    box-shadow: 2px 2px 7px 0px rgba(16, 16, 21, 0.5);
+    border-radius: 2px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
+
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+}
+
+.title {
+    color: #F5F5FA;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 14px;
+    line-height: 100%;
+
+    .bar {
+        width: 2px;
+        height: 9px;
+        background: #00A7DB;
+        border-radius: 1px;
+        margin-right: 4px;
+    }
+
+    .title__text {
+        flex: 1;
+        height: 100%;
+        @include ellipsis();
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 6px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 1.5em;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.field {
+    height: 14px;
+
+    .name-container {
+        flex: 1;
+        color: #537C94;
+        overflow: hidden;
+    }
+
+    .name {
+        @include ellipsis();
+    }
+
+    .value-container {
+        justify-content: flex-end;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .value {
+        @include ellipsis();
+        line-height: 1.3;
+    }
+}

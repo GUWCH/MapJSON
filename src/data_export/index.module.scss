@@ -1,0 +1,15 @@
+.page {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 12px 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.table {
+    flex: 1;
+    overflow: hidden;
+    margin-top: 12px;
+}

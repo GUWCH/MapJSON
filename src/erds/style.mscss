@@ -1,0 +1,345 @@
+$white: #fff;
+$fontColor: #BCCFDF;
+$showColor: #5EF4FF; // rgba(94, 244, 255, 1)
+$unitColor: rgba(94, 244, 255, .6);
+$cornColor: rgba(94, 244, 255, .8);
+$borderColor: rgba(51, 153, 255, .25);
+$commonBg: rgba(1, 31, 60, .8);
+$btnHoverBg: rgba(1, 31, 60, .9);
+$fontSizeMiddle: 1.5em;
+
+%erds_button {
+    font-size: $fontSizeMiddle;
+    font-family: "Microsoft YaHei",Arial;
+    border: 1px solid $borderColor;
+    border-radius: 0;
+    min-width: 10em;
+    height: 2em;
+    padding: 0 2.5em 0 2.5em;
+    margin: 0;
+    line-height: 0;
+    text-align: left;    
+    text-decoration: none;
+    color: $white;
+    background-color: $commonBg;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 1em center, left 0.5em center;
+    background-size: 0.8em 0.8em, 1.25em 1.25em;
+    box-shadow: none;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $btnHoverBg!important;
+    }
+}
+
+:global(.react-html){
+    :global(#center){
+        height: 100%;
+    }    
+}
+
+@keyframes spin {
+    @for $i from 0 through 50 {
+        $j: if($i < 10, '0#{$i}', $i);
+        #{$i * 2%} {
+            background-image: url('./images/seq/wtg_000#{$j}.png');
+        } 
+    }
+}
+
+.main{    
+    position: relative;
+    height:100%;
+    font-size: 0.625vw;
+    font-family: "Microsoft YaHei", Arial;
+    background: url(./images/erds.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    user-select: none;
+
+    .spin{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 27.22%;
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        user-select: none;
+        animation: spin 1s infinite linear;
+    }
+
+    .animate{
+        height:100%;
+        overflow: hidden;
+    }
+
+    .btn{
+        position: absolute;
+        button {
+            @extend %erds_button;
+
+            &>span{
+                margin-left: 5px;
+
+                &>span{
+                    margin-right: 5px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
+                    &>span{
+                        margin-right: 5px;
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.btn1{
+            left: calc((223 / 1920) * 100%);
+            top: calc((779 / 1080) * 100%);
+            
+            button{
+                background-image: url("./images/right_arrow.svg"), url("./images/btn_sub.svg");
+            }
+        }
+        &.btn2{
+            left: calc((1035 / 1920) * 100%);
+            top: calc((104 / 1080) * 100%);
+
+            button{
+                background-image: url("./images/right_arrow.svg"), url("./images/btn_wtg.svg");
+            }
+        }
+        &.btn3{
+            left: calc((496 / 1920) * 100%);
+            top: calc((894 / 1080) * 100%);
+
+            button{
+                background-image: url("./images/right_arrow.svg"), url("./images/btn_ess.svg");
+            }
+        }
+        &.btn4{
+            left: calc((875 / 1920) * 100%);
+            top: calc((726 / 1080) * 100%);
+
+            button{
+                background-image: url("./images/right_arrow.svg"), url("./images/btn_solar.png");
+            }
+        }
+        &.btn5{
+            left: calc((566 / 1920) * 100%);
+            top: calc((379 / 1080) * 100%);
+
+            button{
+                background-image: url("./images/right_arrow.svg"), url("./images/btn_loader.png");
+            }
+        }
+    }
+
+    .card{
+        position: absolute;
+        left: 40%;
+        top: 1em;
+        width: calc((320/1920) * 100vw);
+        height: calc((275/1080) * 100vh);
+        padding: 10px;
+        overflow: hidden;
+        background: $commonBg;
+        opacity: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        min-width: 250px;
+
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            
+            background: 
+                linear-gradient(270deg,$cornColor,$cornColor) 0 0 no-repeat,
+                linear-gradient(180deg,$cornColor,$cornColor) 0 0 no-repeat,
+                linear-gradient(270deg,$cornColor,$cornColor) 100% 0 no-repeat,
+                linear-gradient(180deg,$cornColor,$cornColor) 100% 0 no-repeat,
+                linear-gradient(270deg,$cornColor,$cornColor) 0 100% no-repeat,
+                linear-gradient(180deg,$cornColor,$cornColor) 0 100% no-repeat,
+                linear-gradient(270deg,$cornColor,$cornColor) 100% 100% no-repeat,
+                linear-gradient(270deg,$cornColor,$cornColor) 100% 100% no-repeat,
+
+                linear-gradient($borderColor, $borderColor) top,
+                linear-gradient($borderColor, $borderColor) bottom,
+                linear-gradient($borderColor, $borderColor) left,
+                linear-gradient($borderColor, $borderColor) right;
+
+            background-position: 
+                0px 0px, 0px 0px, 0px 100%, 0px 100%, 
+                100% 0px, 100% 0px, 100% 100%, 100% 100%, 
+                0px 0px, 0px 100%, 0px 100%, 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 
+                1px 10px, 10px 1px, 1px 10px, 10px 1px, 
+                1px 10px, 10px 1px, 1px 10px, 10px 1px, 
+                100% 1px, 100% 1px, 1px 100%, 1px 100%;
+        }
+
+        &>div:first-child{
+            display: flex;
+            flex-flow: row nowrap;
+
+            &>div{
+                flex: 1;
+                overflow: hidden;
+
+                &>div:first-child{
+                    position: relative;
+                    font-size: 1.9em;
+                    color: $showColor;
+                    height: 1.5em;
+
+                    &>span{
+                        font-size: .6em;
+                        color: $showColor;
+                        opacity: .7;
+                        padding-left: 5px;
+                    }
+                }
+
+                &>div:last-child{
+                    font-size: .8vw;
+                    color: $fontColor;
+                }
+            }
+        }
+        &>div:nth-child(2){
+            font-size: .8vw;
+            opacity: .8;
+        }
+        &>div:last-child{
+            flex: 1;
+            overflow: hidden;
+        }
+    }
+
+    .side{
+        position: absolute;
+        right: 10px;
+        top: 0;
+        height: 100%;
+        padding: 45px 0 20px;
+        width: calc(21.25%);
+        display: flex;
+        flex-flow: column nowrap;
+
+        .headline{
+            font-size: 2.3em;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1360px) {
+            .headline{
+                font-size: 2em;
+            }
+        }
+
+        .list{
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            padding: 40px 0;
+
+            &>div{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items:center;
+                justify-content: space-between;
+
+                &>span{
+                    font-size: $fontSizeMiddle;
+                    color: $fontColor;
+
+                    &:nth-child(2){
+                        flex: 1;
+                        font-size: 2.47em;
+                        color: $showColor;
+                        text-align: right;
+                    }
+                    &:last-child{
+                        color: $unitColor;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .sideCenter{
+            flex: 1;
+            overflow: hidden;
+            margin: 0 0 30px;
+
+            &>div:first-child{
+                font-size: $fontSizeMiddle;
+                height: 28px;
+                @media screen and (max-width: 1360px) {
+                    height: 20px;
+                }
+            }
+            &>div:last-child{
+                height: calc(100% - 28px);
+                overflow: hidden;
+                @media screen and (max-width: 1360px) {
+                    height: calc(100% - 20px);
+                }
+            }
+        }
+
+        .sideBottom{
+            flex: 1;
+            overflow: hidden;
+
+            &>div:first-child{
+                font-size: $fontSizeMiddle;
+                height: 0px;
+
+                &.space{
+                    height: 28px;
+
+                    @media screen and (max-width: 1360px) {
+                        height: 20px;
+                    }
+                }
+            }
+            &>div:last-child{
+                height: calc(100% - 0px);
+                overflow: hidden;
+
+                &.space{
+                    height: calc(100% - 28px);
+                    @media screen and (max-width: 1360px) {
+                        height: calc(100% - 20px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// echarts bug hack
+.tooltip{
+    &[style*="opacity: 0;"]{
+        display: none!important;
+    }
+}

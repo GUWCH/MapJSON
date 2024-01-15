@@ -1,0 +1,168 @@
+.container {
+    display: flex;
+    min-width: 280px;
+    height: 280px;
+    overflow: hidden;
+}
+
+@mixin step {
+    display: flex;
+    flex-direction: column;
+    background-color: #01333e;
+    padding: 12px 0;
+    border-right: 1px solid #093b47;
+
+    &:last-child {
+        border-right: none;
+    }
+
+    &>div:last-child {
+        flex: 1;
+        min-height: 0;
+    }
+}
+
+@mixin padding-l-r {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.title {
+    display: flex;
+    height: 22px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 100%;
+    @include padding-l-r;
+
+    .name{
+        display: flex;
+    }
+
+    .name::before {
+        content: '';
+        width: 4px;
+        background-color: #00A7DB;
+        height: 1em;
+        display: block;
+        margin-right: 4px;
+    }
+
+    &>div {
+        width: max-content;
+    }
+}
+
+.domain {
+    @include step;
+    width: 320px;
+
+    .content {
+        @include padding-l-r;
+    }
+
+    .select_long {
+        width: 296px;
+    }
+
+    .select_short {
+        width: 272px;
+    }
+
+    .device-model {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        &>span {
+            color: #3f6d85;
+            font-size: 16px;
+        }
+    }
+
+}
+
+.help {
+    :global(.ant-tooltip-inner) {
+        white-space: break-spaces;
+        width: max-content;
+    }
+}
+
+@mixin selected {
+    width: 240px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.asset {
+    @include step;
+    flex: 1;
+
+    .asset_search {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .selected {
+        @include selected();
+
+        &>div {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            height: 28px;
+            padding: 0 12px;
+            background-color: #174755;
+            border-radius: 2px;
+        }
+    }
+}
+
+.count {
+    border-radius: 4px;
+    margin-left: 6px;
+    padding: 1px 4px;
+    background-color: #2f6177;
+    color: #8FCCFF;
+}
+
+.point {
+    @include step;
+    flex: 1;
+
+    .type {
+        font-size: 14px;
+    }
+
+    .selected {
+        @include selected();
+    }
+
+    .label {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .type_selector_container {
+        width: calc(100% - 24px);
+        margin: 0 12px 8px 12px;
+    }
+
+    .type_selector_select {
+        width: 100%;
+    }
+
+    .point_search {
+        width: calc(100% - 24px);
+        margin: 0 12px 8px 12px;
+    }
+
+    .point_tree {
+        padding: 0 12px;
+        overflow: auto;
+    }
+}

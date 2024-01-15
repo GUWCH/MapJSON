@@ -1,0 +1,36 @@
+.group:global(.ant-collapse) {
+    :global(.ant-collapse-item) {
+        :global(.ant-collapse-header) {
+            padding: 0;
+            height: 28px;
+            line-height: 28px;
+
+            :global(.ant-collapse-arrow) {
+                margin-right: 6px;
+            }
+        }
+        :global(.ant-collapse-content){
+            border-top: none;
+        }
+        :global(.ant-collapse-content-box) {
+            padding: 0 0 0 30px;
+        }
+    }
+}
+
+.checkbox {
+    margin-right: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+}
+
+.grid_item {
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

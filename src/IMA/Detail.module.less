@@ -1,0 +1,62 @@
+@import './base.less';
+
+.container {
+    @padding: 5px;
+
+    padding: @padding;
+    width: calc(100% - 2 * @padding);
+    height: calc(100% - 2 * @padding);
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    background-image: url(../common/image/bg.svg);
+    background-size: 100% 100%;
+}
+
+.header {
+    margin-bottom: 1/@rem;
+    padding: 16/@rem 48/@rem;
+    display: flex;
+    position: relative;
+
+    &>div {
+        padding: 8/@rem 0;
+        margin-right: 48/@rem;
+    }
+
+    .download {
+        background-image: url(../common/image/download.svg);
+        background-size: cover;
+        width: 32/@rem;
+        height: 32/@rem;
+        padding: 0;
+        position: absolute;
+        right: 16/@rem;
+        bottom: 16/@rem;
+        cursor: pointer;
+    }
+}
+
+.main {
+    flex-grow: 1;
+    // border: 2px solid #color[light];
+    overflow: auto;
+    padding: 0 16/@rem;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #color[gray];
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #color[light];
+        border-radius: 4px;
+    }
+
+}

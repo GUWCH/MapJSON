@@ -1,0 +1,62 @@
+<svg preserveAspectRatio="none" width="3840px" height="472px" viewBox="0 0 3840 472" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="0.23628409" y1="0.5" x2="0.755794" y2="0.5" id="gradient_1">
+      <stop offset="0" stop-color="#002358" stop-opacity="0" />
+      <stop offset="0.5151606" stop-color="#0048BB" />
+      <stop offset="1" stop-color="#002358" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient x1="0.19989412" y1="0.9638965" x2="0.80081" y2="0.9638965" id="gradient_2">
+      <stop offset="0" stop-color="#00BFFF" stop-opacity="0" />
+      <stop offset="0.50562066" stop-color="#00E1FF" />
+      <stop offset="1" stop-color="#00BFFF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient x1="1" y1="1" x2="0" y2="1" id="gradient_3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="0.48434767" stop-color="#00F7FF" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient x1="1" y1="1" x2="0" y2="1" id="gradient_4">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="0.48434767" stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="4.5" result="effect0_gaussianBlur" />
+    </filter>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_2">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="4" result="effect0_gaussianBlur" />
+    </filter>
+    <path d="M6396 0.994181L0 0L0 207.22L1940 207.22L2197.78 472L4181.22 472L4456 207.22L6396 207.22L6396 0.994181Z" transform="translate(2091 30)" id="path_1" />
+    <rect width="3840" height="772" id="artboard_1" />
+    <rect width="3840" height="472" id="slice_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#slice_1" clip-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_3">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Slice" clip-path="url(#clip_1)">
+    <use xlink:href="#slice_1" stroke="none" fill="none" />
+    <g id="大标题" clip-path="url(#clip_2)" transform="translate(0 -150)">
+      <use xlink:href="#artboard_1" stroke="none" fill="#07224B" fill-opacity="0" />
+      <g id="标题" transform="translate(-3369 120)">
+        <g id="形状结合备份-144">
+          <use stroke="none" fill="url(#gradient_1)" fill-opacity="0.6" xlink:href="#path_1" fill-rule="evenodd" />
+          <g clip-path="url(#clip_3)">
+            <use xlink:href="#path_1" fill="none" stroke="url(#gradient_2)" stroke-opacity="0.6" stroke-width="18" />
+          </g>
+        </g>
+        <path d="M900.939 0L900.939 5L0.939457 5L0.939457 0L900.939 0Z" transform="translate(4839 494)" id="直线" fill="url(#gradient_3)" style="mix-blend-mode: overlay;" stroke="none" filter="url(#filter_1)" />
+        <path d="M400.9 0L400.9 5L0.065313 5L0.065313 0L400.9 0Z" transform="translate(5110.229 493)" id="直线" fill="url(#gradient_4)" fill-opacity="0.803902" style="mix-blend-mode: normal;" stroke="none" filter="url(#filter_2)" />
+      </g>
+    </g>
+  </g>
+</svg>

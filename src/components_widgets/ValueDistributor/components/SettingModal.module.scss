@@ -1,0 +1,15 @@
+.assets {
+    margin-bottom: 1.5em;
+    white-space: break-spaces;
+    height: max-content;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.setting {
+    display: grid;
+    grid-template-columns: 1fr 164px;
+    column-gap: 0.5em;
+    row-gap: 4px;
+    align-items: center;
+}

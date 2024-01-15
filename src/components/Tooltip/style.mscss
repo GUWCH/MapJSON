@@ -1,0 +1,15 @@
+.envTooltipWrap {
+    position: fixed;
+    z-index: 10000;
+    overflow: hidden;
+    
+    .envTooltip {
+        width: 100%;
+        height: 100%;
+        background-color: #485563;
+        box-shadow: 0 2px 4px 0 rgba(41, 50, 62, 0.6);
+        box-sizing: border-box;
+        border-radius: 2px;
+        padding: 12px;
+    }
+}

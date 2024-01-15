@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.select {
+    flex: 1;
+    min-width: 0;
+}

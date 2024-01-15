@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    :global(.ant-tree){
+        color: #CAD3DB;
+    }
+}
+
+.search {
+    margin-bottom: 8px;
+}
+
+.tree {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+
+    :global(.ant-tree-node-content-wrapper) {
+        max-width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

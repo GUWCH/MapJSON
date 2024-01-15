@@ -1,0 +1,113 @@
+.list__container {
+    margin-top: 10px;
+    padding: 0 0px 10px 0px;
+    width: 100%;
+
+    .config_custom {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        .select {
+            width: 140px;
+        }
+    }
+
+    [class~='ant-collapse'] {
+        border: none;
+        background: transparent;
+        margin: 10px 0;
+
+        [class~='ant-collapse-item'] {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: none !important;
+        }
+
+        [class~='ant-collapse-content'] {
+            width: 100%;
+            border-top: none !important;
+            background-color: #052932 !important;
+
+            [class~='ant-collapse-content-box'] {
+                padding: 5px 10px !important;
+            }
+        }
+
+        [class~='ant-collapse-header'] {
+            align-self: center;
+            display: flex;
+            width: 100%;
+            height: 36px;
+            padding: 7px 6px !important;
+            background-color: #01262e !important;
+            cursor: pointer;
+
+            & :last-child {
+                order: 1;
+            }
+
+            & :nth-child(1) {
+                order: 2;
+            }
+
+            & :nth-child(2) {
+                order: 3;
+            }
+
+            .ant-collapse-extra {
+                cursor: move;
+                font-size: 22px;
+                color: #6a8ca3;
+            }
+
+            >span {
+                align-self: center;
+                color: #6a8ca3;
+            }
+
+            >div {
+                >input {
+                    align-self: center;
+                    border: none;
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.list__item {
+    user-select: "none";
+    margin: 0 0 8px 0;
+}
+
+.item__container {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+
+    .item__title {
+        min-width: 0;
+        flex: 1;
+        display: flex;
+    }
+
+    .item__delete {
+        margin-left: auto;
+        margin-right: 6px;
+        color: #6a8ca3;
+
+        &:hover {
+            color: #83979b;
+        }
+    }
+}
+
+.icon {
+    font-size: 22px;
+    color: #6a8ca3;
+}

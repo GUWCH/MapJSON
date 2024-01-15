@@ -1,0 +1,313 @@
+@import "@/common/css/define.scss";
+
+.container{
+    width: 100%;
+    height: 100%;
+
+    .head{
+        display: flex;
+        align-items: center;
+
+        .title{
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .set{
+            margin-left: auto;
+        }
+    }
+
+    .content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        //flex-flow: wrap;
+        overflow: overlay;
+        align-content: flex-start;
+
+        >div{
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            overflow: overlay;
+            align-content: flex-start;
+            flex: auto;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        .waterDropletContent{
+            justify-content: center;
+            flex: auto;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        .progressBarContent{
+            margin-top: 10px;
+            flex: 40px;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        .contentItem{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+
+            .itemIcon{
+                width: 26px;
+                height: 26px;
+                border-radius: 15px;
+                margin-right: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .itemColor{
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                margin-right: 8px;
+            }
+
+            .itemVal{
+                display: flex;
+                font-size: 16px;
+                color: #F5F5FA;
+
+                >span{
+                    display: inline;
+                }
+
+                .itemUnit{
+                    display: flex;
+                    align-items: end;
+                    color: #6A8CA3;
+                    margin-left: 4px;
+                    font-size: 12px;
+                }
+            }
+
+            .itemDesc{
+                font-size: 12px;
+                color: rgba(202, 211, 219, .7);
+            }
+
+            .itemRight{
+                width: calc(100% - 34px);
+
+                .wrapperCls{
+                    overflow: hidden;
+
+                    .valueContainerCls{
+                        overflow: hidden;
+
+                        >span{
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+
+            div[class *= 'OuterDivStylesEllipsisToolTipChan']{
+                font-size: 12px;
+                color: rgba(202, 211, 219, .7);
+                width: 100%;
+            }
+        }
+
+        .waterDropletItem{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+
+            .itemContent{
+                z-index: 0;
+                margin-bottom: 8px;                
+                border: 1px solid;
+                border-radius: 10000px;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                height: calc(100% - 30px);
+                width: auto;
+
+                position: relative;
+                overflow: hidden;
+                min-width: 50px;
+                min-height: 50px;
+
+                &.narrow{
+                    height: auto;
+                    width: calc(100% - 4px);
+                }
+            }
+
+            .itemName{
+                justify-content: center;
+                color: #fff;
+                order: 2;
+                width: calc(100% - 8px);
+
+                .name{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .itemVal{
+                color: #F5F5FA;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .dsDigitalFont{
+                font-family: DS-Digital;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .itemUnit{
+                color: $iconColor;
+            }
+        }
+
+        .progressBarItem{
+            width: 70%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            margin:0 auto;
+
+            >div{
+                width: 100%;
+            }
+
+            .itemContent{
+                margin-top: 8px;
+                margin-left: auto;
+            }
+
+            .itemName{
+                color: $nameColor;
+            }
+
+            .itemVal{
+                color: #F5F5FA;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .itemUnit{
+                color: $iconColor;
+            }
+
+            .progressBar{
+                height: 6px;
+                border-radius: 4px;
+                background-color: rgba(#FFFFFF, .07);
+
+                >div{
+                    height: 6px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+.dropDown{
+    color: $white;
+}
+
+@media screen and (max-height: 580px) {
+    .container{
+
+        .head{
+            .title{
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+
+        .content{
+            margin-top: 0px;
+            
+            .contentItem{
+                margin-bottom: 4px;
+
+                .itemVal{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// form
+.form{
+    .add{
+        cursor: pointer;
+        font-size: 14px;
+        color: rgb(57, 229, 234);
+    }
+
+    .items{
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e8ecef;
+        border-radius: 2px;
+
+        .delete{
+            cursor: pointer;
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .item{
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            >span{
+                font-size: 14px;
+            }
+
+            .action{
+                display: inline;
+                margin-left: auto;
+            }
+        }
+
+        .addModel{
+            margin-top: 10px;
+
+            .addModelDes{
+                cursor: pointer;
+                color: #39e5ea;
+            }
+
+            .modelItem{
+                padding: 10px;
+                margin-top: 10px;
+                background-color: rgb(80 122 126 / 22%);
+
+                .asset{
+                   display: flex; 
+                   input{
+                        max-width: 210px;
+                        flex: 1;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}

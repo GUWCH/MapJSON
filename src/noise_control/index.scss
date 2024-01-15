@@ -1,0 +1,354 @@
+@import "../common/css/define.scss";
+$leftWidth: 200px;
+$h3Height: 31px;
+$footerHeight: 31px;
+$addHeight: 31px;
+$borderWidth: 1px;
+$borderColor: rgb(133, 130, 130);
+$prefix: 'noise-control';
+$prefixZone: 'noise-zone';
+
+//overwrite antd global style
+@if $env=='release'{
+	*, *::before, *::after {
+		box-sizing: content-box;
+	}
+
+	html,body{
+		width: auto;
+		height: auto;
+	}
+
+	body {
+		margin: 0;
+		color: #fff;
+		font: 14px/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+		background-color: #023750;
+		font-feature-settings: 'normal';
+	}
+}
+
+#center{
+	height: 100%;
+}
+
+.noise-control{
+	padding: 10px 10px 1px;
+	height: calc(100% - 0px);
+	position: relative;
+
+	input,ul,li{
+		margin: 0;
+		padding: 0;
+	}
+
+	h3{
+		margin: 0;
+		padding: 5px 0;
+		font-size: 14px;
+		font-weight: normal;
+		text-align: center;
+		height: #{$h3Height};
+	}
+
+	button{
+		@extend %button;
+		cursor: pointer;
+	}
+	
+	>aside{
+		display: inline-block;
+		vertical-align: top;
+		width: #{$leftWidth};
+		height: calc(100% - 0px);
+
+		>div{
+			height: calc(100% - #{$h3Height});
+			overflow: auto;
+			border: #{$borderWidth} solid #{$borderColor};
+		}
+	}
+
+	.#{$prefix}-main{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 0 5px;
+		width: calc(100% - #{$leftWidth + 5px});
+		height: calc(100% - 0px);
+
+		>div{
+			height: calc(100% - #{$h3Height});
+			overflow: hidden;
+			border: #{$borderWidth} solid #{$borderColor};
+			position: relative;
+
+			>div:first-child{
+				height: calc(100% - #{$addHeight});
+				overflow: auto;
+
+				//zone style
+				.#{$prefixZone}{
+					background: #08353e;
+					margin: 5px;
+					padding: 8px;
+					box-shadow: 1px 1px #000;
+
+					&-title{
+						border-bottom: 1px solid #40f9ff;
+						padding: 0 0 10px;
+						margin: 0 0 5px;
+
+						input{
+							line-height: 22px;
+							padding: 2px 5px;
+							border-radius: 3px;
+							border: none;
+							width: 50%;
+							background: #21606f;
+    						color: #fff;
+						}						
+					}
+					&-del, &-copy{
+						float: right;
+						display: inline-block;
+						width: 1.2em;
+						height: 1.2em;
+						padding: 2px;
+						cursor: pointer;
+						transition: all .25s ease;
+
+						&:hover{
+							border-radius: 3px;
+							background-color: #087c80;
+						}
+					}
+
+					&-del{
+						background: url('../common/image/del.svg') 50% no-repeat;
+					}
+					
+					&-copy{
+						background: url('../common/image/copy.svg') 50% no-repeat;
+						margin-right: 10px;
+					}
+
+					&-date{
+						padding: 5px 0;
+						margin: 5px;
+						overflow: hidden;
+
+						>div:first-child{
+							display: inline-block;
+							vertical-align: top;
+							width: 28%;
+    						margin-right: 2%;
+						}
+
+						&-range{
+							display: block;
+							text-align: center;
+						}
+
+						&-check{
+							text-align: center;	
+    						background-color: #04262a;
+
+							label{
+								cursor: pointer;
+								margin: 0 20px 0 0;
+								
+								>input{
+									margin: 0 5px 0 0;
+								}
+							}
+						}
+
+						&-select{
+							display: inline-block;
+							vertical-align: top;
+							width: 70%;
+
+							.noise-zone-select-date{
+
+							}
+
+							.noise-zone-select-divide{
+								margin-left: 5%;
+								margin-right: 5%;
+								font-size: 200%;
+								color: #3397b3;
+							}
+
+							.ant-picker-range .ant-picker-clear{
+								right: 5px;
+							}
+
+						}
+					}
+
+					&-content{
+						overflow: hidden;
+					}
+
+					&-list{
+						float: left;						
+						width: 15%;
+
+						&-drop{
+							border: 1px solid #5f5d5d;
+							transition: all .25s ease 0s;
+							overflow: auto;
+							background: #194853;
+							height: 200px;
+
+							&-tree{	
+						
+								li{
+									>ul{
+										>li{
+											>div{
+												padding-left: 20px;
+											}
+										}
+									}
+	
+									>div{
+										position: relative;
+										padding: 0 18px 0 5px;
+										text-overflow: ellipsis;
+	
+										.#{$prefixZone}-list-drop-tree-del{
+											display: none;
+											position: absolute;
+											right: 5px;
+											top: 2px;
+											width: 16px;
+											height: 16px;
+											cursor: pointer;
+											background: url('../common/image/del.svg') 50% no-repeat;
+	
+											&:hover{
+												background-color: #28c6de;
+											}
+										}
+									}
+	
+									>div:hover{
+										background: #2d7e91;
+	
+										.#{$prefixZone}-list-drop-tree-del{
+											display: block;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&-add{
+						display: block;
+						background: #2d7e91 url('../common/image/arrow.svg') 50% no-repeat;
+						padding: 10px 0;
+						margin: 0 0 5px 0;
+						cursor: pointer;
+
+						&:hover{
+							background-color: #28c6de;
+						}
+					}
+
+					&-matrix{
+						float: left;
+						height: 225px;
+						width: 85%;
+						padding: 0 0 0 15px;
+						overflow: hidden;
+
+						&-edit{
+							>div{
+								height: 100%;
+							}
+						}
+
+						table{
+							width: 100%;
+							height: 100%;
+							border: 1px solid #5b6566;
+							table-layout: fixed;
+							border-collapse: collapse;
+
+							col:first-child{
+								width: 25px;
+							}
+
+							th{
+								font-weight: normal;
+								text-align: center;
+								border: 1px solid #5b6566;
+
+								>div{
+									height: 100%;
+								}
+							}
+
+							tr{
+
+							}
+
+							td{
+								border: 1px solid #5b6566;
+								border-top: none;
+
+								&.iehack{
+									line-height: 100%;
+								}
+
+								.vertical-rl{
+									writing-mode: vertical-lr;
+									writing-mode: tb-lr;
+								}
+
+								.no-wrap{
+									white-space: nowrap;
+								}
+							}							
+						}
+					}
+				}
+			}
+
+			>div:last-child{
+				position: absolute;
+				left: 0;
+				bottom: 5px;
+				width: 100%;
+				height: #{$addHeight};
+				text-align: right;
+			}
+		}
+	}
+
+	.#{$prefix}-save{
+		height: #{$footerHeight};
+		position: absolute;
+		right: 5px;
+		top: 5px;
+
+		button{
+			background: #0db2d3;
+		}
+	}
+}
+
+//antd overwrite
+.ant-picker-focused .ant-picker-separator{
+	color: rgba(255, 255, 255, 0.5)!important;
+}
+.ant-picker{
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+
+.ant-picker-datetime-panel .ant-picker-time-panel{
+	display: none !important;
+}

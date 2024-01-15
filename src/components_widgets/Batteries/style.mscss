@@ -1,0 +1,251 @@
+@import "@/common/css/define.scss";
+
+.container{
+    height: 100%;
+}
+
+.tab{
+    height: 100%;
+
+    div[class*='ant-tabs-top']{
+        height: 100%;
+    }
+
+    div[class*='ant-tabs-content-top']{
+        height: 100%;
+    }
+}
+
+.tabContent{
+    display: flex;
+    height: 100%;
+
+    .matrixContainer{
+        width: 50%;
+        &:nth-child(n+2){
+            margin-left: 28px;
+        }
+
+        .head{
+            height: 20px;
+            margin-bottom: 16px;
+            display: flex;
+
+            .separate{
+                align-self: center;
+                margin-right: 8px;
+                width: 3px;
+                height: 14px;
+                background-color: $envBtnHoverBg2;
+            }
+        }
+
+        .content{
+            display: flex;
+            height: calc(100% - 70px);
+
+            .matrixBox{
+                overflow-y: auto;
+                width: calc(100% - 40px);
+                height: calc(100% - 17px);
+            }
+
+            .matrix{
+                display: flex;
+                flex-flow: wrap;
+                align-content: flex-start;
+                width: 100%;
+                height: 100%;
+
+                .matrixItem{
+                    display: flex;
+                    position:relative;
+                    height: 32px;
+                    margin-right: 5px;
+                    margin-bottom: 4px;
+
+                    .showNo{
+                        width: 100%;
+                        height: 100%;
+                        position:absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .leftHalf{
+                        width: 50%;
+                        border-radius: 2px 0 0 2px;
+                    }
+
+                    .rightHalf{
+                        width: 50%;
+                        border-radius: 0 2px 2px 0;
+                    }
+                }
+            }
+
+            .barBox{
+                margin-left: 10px;
+                display: flex;
+
+                .bar{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 20px;
+                    height: 100%;
+                    
+                    .barColor{
+                        height: 100%;
+                        width: 12px;
+                    }
+                }  
+
+                .barUnit{
+                    font-size: 12px;
+                    color: $iconColor;
+                }
+
+                .label{
+                    height: calc(100% - 19px);
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+
+                    .labelItem{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 12px;
+                        color: $iconColor;
+                    }
+                }
+            }
+        }
+
+        .footer{
+            height: 24px;
+            margin-bottom: 10px;
+            display: flex;
+
+            .footerItem{
+                font-size: 12px;
+                flex: 1;
+                color: $iconColor;
+                //display: flex;
+                //align-items: center;
+                white-space: nowrap;
+
+                >span{
+                    font-size: 14px;
+                    align-self: center;
+                    margin-right: 4px;
+                }
+
+                .footerDes{
+                    font-size: 12px;
+                }
+
+                .footerValue{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.tooltip{
+    max-width: none;
+    max-height: 500px;
+    overflow: auto;
+    white-space: nowrap;
+    div[class*='ant-tooltip-inner']{
+        background-color: $toolTipBg;
+        border-radius: 10px;
+        padding: 10px 18px;
+    } 
+}
+
+.tooltipNo{
+    color: $iconColor
+}
+
+.tooltipEles {
+    display: flex;
+    writing-mode: vertical-lr;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.tooltipEle{
+    display: flex; 
+    flex-wrap: nowrap;
+    align-items: center;
+    writing-mode: horizontal-tb;
+    margin-right: 20px;
+
+    .mark{
+        display: inline;
+        border-radius: 6px;
+        margin-right: 6px;
+        width: 6px;
+        height: 6px;
+    }
+
+    .tooltipDes{
+        color: $iconColor
+    }
+}
+
+.form{
+    .item{
+        margin-bottom: 10px;
+        display: flex;
+
+        >span{
+            font-size: 14px;
+        }
+
+        .action{
+            display: inline;
+            margin-left: auto;
+        }
+    }
+
+    .modelSelect{
+        >span{
+            font-size: 14px;
+        }
+    }
+
+    .full{
+        .typeSelect{
+            margin-bottom: 10px;
+        }
+
+        .fullType{
+            margin-bottom: 10px;
+            background-color: #e8ecef;
+            padding: 10px;
+            border-radius: 2px;
+        }
+
+        .fullItem{
+            display: flex;
+            align-items: center;
+            line-height: 32px;
+
+            >div{
+                margin-left: auto;
+
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+

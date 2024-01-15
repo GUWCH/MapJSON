@@ -1,0 +1,37 @@
+@import "../../../common/css/define.scss";
+
+.btn{
+    width: 50px;
+    height: 20px;
+    background: $envBlue5;
+    border-radius: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+
+    .slide{
+        width: 23px;
+        height: 16px;
+        display: block;
+        background: #022F36;
+        border-radius: 12px;
+        position: absolute;
+        top: 2px;
+        left: 23px;
+        transition: all 250ms;
+    }
+
+    &.btnClose{
+        background: $envGray1;
+
+        .slide{
+            left: 3px;
+        }
+    }
+
+    &.btnDisable{
+        background: $envGray1;
+        cursor: not-allowed;
+    }
+}

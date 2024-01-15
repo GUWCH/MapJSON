@@ -1,0 +1,132 @@
+@import "@/common/css/define.scss";
+
+:global {
+    .ant-table-filter-dropdown {
+        background-color: $toolTipBg;
+    }
+
+    .ant-dropdown-menu-item-selected {
+        background-color: transparent;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .body {
+        flex: 1;
+        overflow: hidden;
+
+        .tableDiv {
+            height: 100%;
+
+            :global {
+
+                .ant-table-wrapper,
+                .ant-spin-nested-loading,
+                .ant-spin-container,
+                .ant-table-container,
+                .ant-table-placeholder {
+                    height: 100%;
+                }
+
+                .ant-table-tbody>tr.ant-table-placeholder>td {
+                    border-bottom: none;
+                }
+
+                .ant-table {
+                    height: calc(100% - 40px);
+                }
+
+                .ant-table-body {
+                    height: calc(100% - 40px);
+                }
+
+                .ant-table-body table.nodata {
+                    height: 100%;
+                }
+
+                .ant-table-thead>tr>th {
+                    border-bottom: none;
+                }
+
+                .ant-pagination {
+                    position: relative;
+                }
+
+                .ant-pagination-total-text {
+                    position: absolute;
+                    left: 0;
+                }
+
+                .ant-pagination-options {
+                    position: absolute;
+                    right: 0;
+                }
+
+            }
+        }
+
+    }
+}
+
+.tab-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    margin-top: 1em;
+    flex: 1;
+    overflow: hidden;
+}
+
+.pagination__container {
+    display: flex;
+    align-items: center;
+
+    &[disabled] {
+        color: #88979d;
+
+        .next:hover {
+            color: #88979d;
+        }
+    }
+
+    .next {
+        width: 2em;
+        font-size: 12px;
+        border: 1px solid transparent;
+
+        &:hover {
+            color: #40f9ff;
+        }
+    }
+
+    .redirect {
+        margin-left: 0.5em;
+        cursor: pointer;
+
+        &:hover {
+            color: #40f9ff;
+        }
+    }
+}
+
+.filter {
+    
+    &>div {
+        padding: 5px 12px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .btn {
+        border-top: #124b5c solid 1px;
+        padding-top: 5px;
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../../../../common/css/define.scss";
+
+.lightword{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .header{
+        @extend %headline1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main{
+        flex: 1;
+        overflow: auto;
+
+        >div{
+            display: inline-block;
+            vertical-align: top;
+            padding: 2px 8px;
+            margin: 6px;
+            background-color: #aaa;
+            cursor: pointer;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &.green{
+                background-color: $statusGreen;
+            }
+
+            &.red{
+                background-color: $statusRed;
+            }
+        }
+    }
+}

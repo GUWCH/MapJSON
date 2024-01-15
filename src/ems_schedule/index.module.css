@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    padding: 1em;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.select {
+    margin: 0 1em;
+    width: 150px;
+}
+
+.btn {
+    margin-right: 1em;
+    border: 1px solid #3F6D85;
+    background: none;
+}
+
+.btn:last-child {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(10, 63, 45);
+}

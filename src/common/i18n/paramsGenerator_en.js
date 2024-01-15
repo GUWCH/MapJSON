@@ -1,0 +1,86 @@
+export default {
+    common: {
+        name: 'Template name',
+        yes: 'Yes',
+        no: 'No',
+        selectPlaceholder: 'Please select',
+        saveSuc: 'Save Success',
+        saveFail: 'Save Fail',
+        removeSuc: 'Delete Success',
+        removeFail: 'Delete Fail',
+        tempQuery: 'Temporary Query'
+    },
+    templateSelector: {
+        noTpl: 'No Template',
+        title: 'Template:', 
+        defaultAdd: 'New Template',
+        deleteTitle: 'Confirm the deletion?',
+        deleteContent: 'Delete the template:{0}\r\nAfter the template is deleted, it cannot be recovered. Please confirm the deletion.', 
+        edit: 'Edit', 
+        delete: 'Delete', 
+        replaceTitle: 'The template name is existed.',
+        replaceContent: 'Whether to replace the template?',
+    },
+    templateEditor: {
+        selectProto: 'Category',
+        fieldEmpty: '{0} can not be empty.',
+        templateInfo: {
+            name: 'Template name',
+        },
+        saveAsTpl: 'Save as a template',
+        generatorTitle: 'New Query',
+        editorTitle: 'Edit Template',
+        saveAs: 'Save as',
+        save: 'Save',
+        add: 'Query',
+        ruleGroup: 'Condition', 
+        baseGroup: 'Template',
+        saveAsDefault: 'Save as the default template',
+        saveAsTpl: 'Save as a template',
+        selected: 'Selected',
+    },
+    templateProtoRender: {
+        rules: 'Condition',
+        time: 'Time',
+        statisticsCols: 'Data statistics',
+        compareTime: 'Contrast',
+        addRule: 'Add condition',
+        removeAllRule: 'Clear',
+        removeConfirm: {
+            title: 'Delete condition',
+            content: 'Confirm to delete the condition?',
+            allTitle: 'Clear condition',
+            allContent: 'Confirm to delete All of conditions?'
+        },
+        ruleGroupTitle: 'Condition',
+        emptyRules: 'At least one condition must be configured.',
+        ruleName: {
+            domain: 'Domain',
+            model: 'Type',
+            staticPoint: 'Data',
+            samplingSize: 'Sampling granularity',
+            aggregation: 'Aggregation mode',
+            warnLevel: 'Alarm level',
+            warnType: 'Alarm type',
+            time: 'Time',
+            asset: 'Asset',
+            span: 'Time span'
+        },
+        spanEnum: {
+            day: 'Day',
+            week: 'Week',
+            month: 'Month',
+            year: 'Year',
+            custom: 'Custom',
+        },
+        statisticsEnum: {
+            max: 'Maximum',
+            maxOccur: 'Maximum Time',
+            min: 'Minimum',
+            minOccur: 'Minimum Time',
+            avg: 'Average',
+            granularity: 'Sampling Granularity'
+        },
+        custom: 'Custom'
+    },
+}

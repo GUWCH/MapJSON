@@ -1,0 +1,73 @@
+$width-large: 90px;
+$width-middle: 76px;
+$width-small: 68px;
+
+@mixin btn-container($size: middle) {
+    & button[class*="ant-btn"] {
+        height: 32px;
+        background: transparent;
+
+        @if $size ==large {
+            min-width: $width-large;
+        }
+
+        @if $size ==middle {
+            min-width: $width-middle;
+        }
+
+        @if $size ==small {
+            min-width: $width-small;
+        }
+    }
+
+    & button[class*="ant-btn-primary"] {
+        border: none;
+        background: #00A7DB;
+    }
+}
+
+@mixin bordered {
+    & button[class*="ant-btn"] {
+        border: 1px solid #3F6D85;
+        border-radius: 2px;
+    }
+}
+
+.bordered {
+    @include bordered();
+}
+
+.large {
+    @include btn-container(large);
+}
+
+.middle {
+    @include btn-container(middle);
+}
+
+.double {
+    display: flex;
+    justify-content: flex-end;
+
+    &>div:last-child {
+        margin-left: 10px;
+    }
+}
+
+.reset {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #22BAE0;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+.btn-with-icon{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}

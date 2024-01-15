@@ -1,0 +1,19 @@
+.bar {
+    color: #849EB3;
+
+    & > [class*=ant-tabs-nav]{
+        margin-bottom: 0;
+    }
+
+    & > [class*=ant-tabs-nav]::before{
+        border-bottom-color: #2D5F75;
+    }
+}
+
+.eh {
+    height: 100%;
+
+    & [class*=ant-tabs-content] {
+        height: 100%;
+    }
+}

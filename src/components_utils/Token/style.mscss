@@ -1,0 +1,25 @@
+.select{
+    span[class~='ant-select-selection-item-remove']{
+        color: #fff;
+    }
+
+    span[class~='ant-select-selection-item']{
+        background: transparent;
+    }
+}
+
+.remarkContainer{
+    margin-top: 20px;
+
+    .text{
+        >textarea{
+            height: 100%;
+        }
+    }
+
+    :global{
+        .ant-input-textarea-show-count::after{
+            color: #fff;
+        }
+    }    
+}

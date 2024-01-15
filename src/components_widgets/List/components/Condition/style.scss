@@ -1,0 +1,154 @@
+$prefixCls : env-add-condition;
+
+.#{$prefixCls} {
+
+    .ant-input-number{
+        border: 1px solid #616c74;
+        background-color: transparent;
+        height: 25px;
+
+        &-handler{
+            border-color: #616c74;
+
+            &-up-inner{
+                color: #fff;
+            }
+
+            &-down-inner{
+                color: #fff;
+            }
+        }
+
+        &-handler-wrap{
+            background-color: #083F4D;
+        }
+
+        &-focused{
+            box-shadow: none;
+        }
+
+        &-input{
+            padding: 0 5px !important;
+        }
+
+        &-input-wrap{
+
+            >input{
+                height: 25px;
+                color: #fff;
+            }
+        }
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+    
+    &-header {
+        display: flex;
+    }
+
+    &-name{
+        color: #9ea6ab;
+    }
+    &-text {
+        margin-left: auto;
+        color: #39e5ea;
+        cursor: pointer;
+    }
+    &-content {
+        display: flex;
+        margin: 5px 0;
+        padding: 5px 0;
+        background-color: #083F4D;
+        border-radius: 2px;
+
+
+        >span{
+            height: 25px;
+            align-self: center;
+        }
+
+        >span:last-child{
+            cursor: pointer;
+            color: #456066;
+            align-self: center;
+            margin-left: auto;
+            margin-right: 5px;
+
+            &:hover{
+                color: #83979b;
+            }
+        }
+
+        button{
+            align-self: center;
+        }
+
+        .quota-set-select-self{
+            max-width: 88px; 
+            margin-right: 5px;
+        }
+            
+    }
+
+    &-range{
+        &:first-child{
+            margin: 0 10px;
+        }
+        margin: 0 10px 0 0;
+    }
+
+    &-coefficient{
+        &-input{
+            margin-left: 10px;
+            width: 50%;
+
+        }
+        &-name {
+            margin-left: 10px;
+            color: #9ea6ab;
+        }
+    }
+
+    &-unit{
+        &-input{
+            border: 1px solid #616c74;
+            border-radius: 2px;
+            padding: 0 5px;
+            width: 50%;
+            height: 25px;
+            background: transparent;
+            color: #fff;
+            margin: 0 5px 0 10px;
+
+        }
+
+        &-name {
+            color: #9ea6ab;
+        }
+    }
+
+    &-demical{
+
+        &-name{
+            margin-left: 10px;
+            color: #9ea6ab; 
+        }
+
+        &-input{
+            margin-left: 10px;
+
+        }
+    }
+
+    &-option {
+        cursor: pointer;
+    }
+}
+
+.click-disable {
+    color: #6a737b;
+    cursor: not-allowed;
+    pointer-events: none; 
+}

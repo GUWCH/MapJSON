@@ -1,0 +1,25 @@
+@import '../../common/css/define.scss';
+
+.main{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+
+    .data{
+        flex: 1;
+        overflow: auto;
+    }
+}
+
+.btn {
+    padding: 3px 12px;
+    border: solid 1px $iconHighlightColor;
+    color: $iconHighlightColor;
+    background: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.iconBtn{
+    cursor: pointer;
+}

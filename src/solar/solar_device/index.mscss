@@ -1,0 +1,472 @@
+@import "../../common/css/define.scss";
+
+$detailHeadHeigth: 45px;
+$cardGroupNameWidth: 140;
+
+@mixin icon($trans) {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    @if($trans){
+        transform: translateY(60%);
+    }
+}
+
+@mixin icon1($trans) {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @if($trans){
+        transform: translateY(30%);
+    } @else {
+        transform: none;
+    }    
+}
+
+@mixin card() {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 100px;
+    padding: 0;
+    margin: 10px 10px 0 0;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+
+    >div{
+        font-size: 1.1em;
+        height: 100%;
+        background: $white;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 1px 1px $black;
+        transform-origin: left top;
+
+        >div:first-child{
+            height: 36px;
+            line-height: 36px;
+            padding: 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: linear-gradient(90deg,#031114, #125564);
+            color: $envGreen2;
+        }
+
+        >div:last-child{
+            display: flex;
+            height: calc(100% - 36px);
+            background: linear-gradient(180deg, $white, #c0d7da);
+
+            >div:first-child{
+                width: 60px;
+                height: 60px;
+                position: relative;
+                transform: translateY(calc(50% - 15.5px));
+                border-radius: 50%;
+                margin: 0 10px;
+                box-shadow: 1px 1px 6px 4px $envBlackTransparent4;
+
+                >img{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 32px;
+                    height: 32px;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            >div:last-child{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                flex: 2;
+                height: 100%;
+                overflow: hidden;
+
+                >p{
+                    white-space: nowrap;
+                    padding: 5px 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    >span:first-child{
+                        margin-right: 5px;
+                        color: $envBlackTransparent6;
+                    }
+
+                    >span:last-child{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+:global(.react-html){
+    :global(#center){
+        height: 100%;
+    }    
+}
+
+.solarDevice{
+    height: 100%;
+    padding: 10px 20px;
+    user-select: none;
+
+    :global{
+        .ant-tabs-top > .ant-tabs-nav {
+            margin: 0;
+        }
+    
+        .ant-tabs-top > .ant-tabs-nav::before, 
+        .ant-tabs-bottom > .ant-tabs-nav::before, 
+        .ant-tabs-top > div > .ant-tabs-nav::before, 
+        .ant-tabs-bottom > div > .ant-tabs-nav::before{
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .list{
+        height: 100%;
+
+        .status{
+            position: relative;
+            padding: 8px 20px 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+            display: flex;
+            flex-flow: row wrap;
+            transition: all .3s ease-out;
+
+            >div{
+                display: flex;
+                padding: 5px 12px;
+                margin: 0 10px 0 0;
+                background: $envBtnBg2;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+
+                &.active{
+                    background: $envBtnHoverBg2;
+                }
+
+                >i{
+                    @include icon(true);
+
+                    &.symbol{
+                        @include icon1(false);
+                    }
+                }
+
+                .statusCount{
+                    margin-left: 15px;
+                }
+            }
+
+            .help{
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                background: url(../../common/image/help.svg) center center no-repeat;
+                transform: translate(0, -50%);
+
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+
+        .grid{
+            height: calc(100% - 50px);
+            padding: 8px 0 0;
+
+            .gridHead{
+                height: 50px;
+            }
+
+            .cell{
+                cursor: pointer;
+
+                &:hover{
+                    color: $envGreen;
+                }
+            }
+
+            .iconLargeList{
+                color: $black;
+                height: calc(100% - 45px);
+                overflow-y: auto;
+
+                >div.largeBox{
+                    @include card();
+                }
+
+                >div.largeContainer{
+                    min-height: 100%;
+
+                    >section{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        border: 1px solid $envWhiteTransparent1;
+                        padding-bottom: 10px;
+
+                        >div:first-child{
+                            width: #{$cardGroupNameWidth}px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $white;
+                            word-break: break-word;
+                            padding: 0 10px;
+                        }
+
+                        >div:last-child{
+                            flex: 1;
+                            display: flex;
+                            flex-flow: row wrap;
+
+                            >div{
+                                @include card();
+                            }
+                        }
+                    }
+                }
+            }
+
+            .iconSmallList{
+                color: $white;
+                height: calc(100% - 45px);
+                overflow-y: auto;
+
+                >div{
+                    display: flex;
+                    margin-top: 10px;
+
+                    .farm{
+                        display: flex;
+                        width: #{$cardGroupNameWidth}px;
+                        background: $envBlueBlack;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .device{
+                        flex: 1;
+                        overflow: hidden;
+
+                        >div{
+                            width: 100%;
+                            overflow: hidden;
+
+                            >div{
+                                float: left;
+                                position: relative;
+    
+                                @media screen and (max-width: 800px) {
+                                    width: calc(50% - 1px);
+                                }
+    
+                                @media screen and (max-width: 1360px) {
+                                    width: calc(15% - 1px);
+                                }
+    
+                                @media screen and (max-width: 1920px) {
+                                    width: calc(12% - 1px);
+                                }
+                                
+                                margin: 0 1px 1px 0;
+                                padding: 0 10px 0 22px;
+                                background: rgb(118, 118, 121);
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                opacity: .9;
+    
+                                &:hover{
+                                    opacity: 1;
+                                }
+    
+                                >img{
+                                    position: absolute;
+                                    left: 5px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 12px;
+                                    height: 12px;
+                                }
+    
+                                >span{
+                                    display: block;
+    
+                                    /*ellipsis text style*/
+                                    >div:first-child{
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .favorite{
+                width: 100%;
+                height: 100%;
+                background: url(../../common/image/star.png) center center no-repeat;
+                background-size: 20px;
+
+                &.favoriteIn{
+                    background: url(../../common/image/star_solid.png) center center no-repeat;
+                    background-size: 20px;
+                }
+            }
+        }
+    }
+
+    .detail{
+        height: 100%;
+
+        .detailNav{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            font-size: $envFontSize18;
+
+            .detailNavPrev{
+                cursor: pointer;
+                color: $envBtnColor;
+                margin-right: 10px;
+            }
+
+            .detailNavNext{
+                cursor: pointer;
+                color: $envBtnColor;
+                margin-left: 10px;
+            }
+
+            .detailNavDisable{
+                cursor: default;
+                color: $envWhiteTransparent1;
+            }
+
+            .detailNavStatus{
+                font-size: $envFontSize14;
+                margin-left: 25px;
+
+                i{
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .breadCrumbs{
+            height: 35px;
+            line-height: 100%;
+            padding: 5px 0;
+            font-size: 1.1em;    
+
+            span{
+                margin-right: 10px;
+            }
+
+            span:first-child{
+                cursor: pointer;
+            }
+        }
+
+        >div:last-child{
+            height: calc(100% - 35px);
+
+            .detailHead{
+                height: $detailHeadHeigth;
+                overflow: hidden;
+                background: linear-gradient(90deg, rgba(255, 255, 255, .01) 0%, rgba(255, 255, 255, .1) 50%,rgba(255, 255, 255, .01) 100%);
+            }
+
+            .detailContent{
+                height: calc(100% - #{$detailHeadHeigth + 15px});
+                margin-top: 15px;
+                overflow: auto;
+            }
+        }
+    }
+}
+
+.helpPop{
+    :global{
+        .ant-popover-inner{
+            background-color: $envBlackTransparent;
+            border: 1px solid $envBorderLightColor;
+            
+            .ant-popover-inner-content{
+                >div{
+                    margin: 10px 0;
+                    padding: 0 10px;
+
+                    i{
+                        @include icon(false);
+
+                        &:local(.symbol1){
+                            @include icon1(true);
+                        }
+                    }
+                }
+            }
+        }
+
+        .ant-popover-content{
+            >.ant-popover-arrow{
+                width: auto;
+                height: auto;
+                background: none;
+                border-style: solid;
+                border-width: 1px;
+                border-color: $envBorderLightColor;
+                border-bottom: none;
+                border-right: none;
+                z-index: 2;
+                right: 6px;
+                top: 6px;
+
+                .ant-popover-arrow-content{
+                    display: block;
+                    width: 8px; 
+                    height: 8px;  
+                    border-style: solid; 
+                    border-width: 4px;
+                    border-top-color: $black;
+                    border-left-color: $black;
+                    border-right-color: $transparent;
+                    border-bottom-color: $transparent;
+                }
+            }
+        }
+    }
+}
+
+:export{
+    cardGroupNameWidth: $cardGroupNameWidth;
+}

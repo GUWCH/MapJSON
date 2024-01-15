@@ -1,0 +1,342 @@
+$envFocus: 'env-focus';
+$black: #000;
+$white: #fff;
+$red: #ff0000;
+$transparent: transparent;
+$bg: #011D24;
+$bgTP5: rgba(#011D24, .5);
+
+$deepBg: #041a23;
+$envTeal: #055f58;
+$envGray: #b6b1b1;
+$envGray1: #ccc;
+$envGray2: #c5ccd5;
+$envGray3: #8d99a6;
+$envLightGray: #d4cfcf;
+$envLightGreen: #94f6fa;
+$envGreen: #40f9ff;
+$envGreen2: #13a4a3;
+$envDeepGreen: #02646f;
+$envLightBlue: #95b5e5;
+$envBtnColor: #01ccff;
+$envBtnBg: #041d22;
+$envBtnHoverBg: rgba(4,29,34,.4);
+$envBtnBg2: rgba(0,167,219,.3);
+$envBtnBg5: rgba(0,167,219,.5);
+$envBtnBg10: rgba(0,167,219,1);
+$envBtnHoverBg2: #00a7db;
+$envInputColor: #01ccff;
+$envInputBg: rgba(4,29,34,.4);
+$envBorderColor: rgba(1,204,255,.6);
+$envBorderColor1: rgba(63, 109, 133, 0.8);
+$envBorderLightColor: #0cf;
+$envBlack: #29323e;
+$envBlackTransparent: rgba(0, 0, 0, .9);
+$envBlackTransparent1: rgba(0, 0, 0, .1);
+$envBlackTransparent2: rgba(0, 0, 0, .2);
+$envBlackTransparent3: rgba(0, 0, 0, .3);
+$envBlackTransparent4: rgba(0, 0, 0, .4);
+$envBlackTransparent5: rgba(0, 0, 0, .5);
+$envBlackTransparent6: rgba(0, 0, 0, .6);
+$envBlue: #00ccff;
+$envBlue2: #0e2341;
+$envBlue3: #3396af;
+$envBlue31: #3cc;
+$envBlue5: #0ff;
+$envDeepBlue: #06021f;
+$envBlueTransparent: rgba(0, 204, 255, .2);
+$envBlueTransparent1: rgba(124, 217, 255, 0.2);
+$envBlueBlack: #01221f;
+$envBlueBlack2: #103342;
+$envRed1: #f54e5f;
+$envWhiteTransparent: rgba(255, 255, 255, .1);
+$envWhiteTransparent1: rgba(255, 255, 255, .1);
+$envWhiteTransparent2: rgba(255, 255, 255, .2);
+$envWhiteTransparent3: rgba(255, 255, 255, .3);
+$envWhiteTransparent4: rgba(255, 255, 255, .4);
+$envWhiteTransparent5: rgba(255, 255, 255, .5);
+$envWhiteTransparent6: rgba(255, 255, 255, .6);
+$envHover: #087c80;
+$envNormal: #07C988;
+$envAbnormal: #8DA6BB;
+
+$slider: #22BAE0;
+$sliderRing: #22BAE0;
+$sliderDisabled: rgba(#22BAE0, .4);
+$sliderBg: rgba(#537C94, .3);
+
+$nameColor: rgb(#CAD3DB, .7);
+$iconColor: #6A8CA3;
+$iconColor4: rgb(#6A8CA3, .4);
+$iconHighlightColor: #00A7DB;
+$iconBg: rgba(#537C94, .3);
+$iconBorder: rgba(#3F6D85, .8);
+$iconTip: #124B5C;
+$iconHighlightBg: rgba(#00A7DB, .3);
+$iconHighlightBorder: #00A7DB;
+$iconHighlightBorder5: rgb(#00A7DB, .5);
+$iconHighlightBorder8: rgb(#00A7DB, .8);
+
+$itemBg: rgba(#01333D, .8);
+
+$statBg: #01333D;
+
+$filterBtnBg: rgba(#00A7DB, .1);
+$filterBtnHovBg: rgba(#00A7DB, .4);
+
+$tabsBottomBorder: #2D5F75;
+
+$inputBorder: #3F6D85;
+$inputBorder4: rgb(#3F6D85, .4);
+
+$cardBg: #0E2E39;
+$cardBottomBg: rgba(#3F6D85, .2);
+$cardTopHighlightBg: #124B5C;
+$cardTopBg: rgba(#124B5C, .4);
+$cardTopStar: #537C94;
+$cardPageBottomBg: rgba(#3F6D85, .3);
+$cardFlashBg: linear-gradient(90deg, rgba(#00A7DB, 0.4) 0%, rgba(#00A7DB, 0) 100%);
+$cardFlashConfirm: #1E5366;
+
+$tplBg: #021E25;
+$tplCardBg: #0E2E39;
+
+$statusRed: #fc0006;
+$statusGreen: #07C988;
+
+$questionYellow: #FAAE0A;
+$warningRed: #FF3939;
+$fontGray: #A1B2C2;
+
+$toolTipBg: #083F4D ;
+
+$boxBg: rgba(#3F6D85, .22);
+
+$lightBlue: #39e5ea;
+
+$tabLineGradientColor: #55E5FF;
+$tabLineGradientColor2: #00B5FF;
+$tabBgGradientColor: rgba(85,229,255,0.4);
+$tabBgGradientColor2: rgba(0,181,255,0);
+
+$envFontSize12: 12px;
+$envFontSize14: 14px;
+$envFontSize16: 16px;
+$envFontSize18: 18px;
+$envFontSize20: 20px;
+$envFontSize24: 24px;
+
+ 
+@mixin boxSize($box: content-box, $important: false){
+  @if $important {
+    box-sizing: $box!important;
+  } @else {
+    box-sizing: $box;
+  }
+}
+
+@mixin contentBox($important: false){
+  *, *::before,*::after {
+    @include boxSize(content-box, $important);
+  }
+}
+
+@mixin borderBox($important: false){
+  *, *::before,*::after {
+    @include boxSize(border-box, $important)
+  }
+}
+
+%headline {
+  height: 45px;
+  background: $envBlackTransparent4;
+}
+
+$headline1Height: 45px;
+%headline1 {
+  height: $headline1Height;
+  padding: 0 15px;
+  background: $envBlackTransparent2;
+}
+
+%clearfix {
+  &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+  }
+}
+
+%button{
+  color: #fff;
+  background: #194853;
+  border: 1px solid #0c5a75;
+  border-radius: 3px;
+  box-shadow: 1px 1px #000;
+  padding: 5px 20px;
+  margin: 0 15px;
+  cursor: pointer;
+
+  &:not(:disabled):hover{
+    background: #2d7e91;
+    transition: all .1s ease-in;
+  }
+
+  &:disabled{
+    cursor: default;
+    background: #717374;
+    color: #bbb7b7;
+  }
+}
+
+%button1 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei",Arial;
+  color: #fff;
+  border: 1px solid rgba(51, 153, 255, 0.2);
+  min-width: 10em;
+  height: 2em;
+  line-height: 0;
+  //line-height: 2vw;
+  text-align: left;
+  padding-left: 2.5em;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgba(1, 31, 60, .8);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 1em center, left 0.5em center;
+  background-size: 0.8em 0.8em, 1.25em 1.25em;
+
+  &:hover {
+      background-color: rgba(1, 31, 60, 0.9);
+  }
+}
+
+%button2{
+  background-color: transparent;
+  border: 1px solid $envBlue;
+  border-radius: 2px;
+  color: $envBlue;
+  padding: 2px 15px;
+  cursor: pointer;
+
+  &:not(:disabled):hover{
+    background: #2d7e91;
+    transition: all .1s ease-in;
+  }
+
+  &:disabled{
+    cursor: default;
+    background: #717374;
+    color: #bbb7b7;
+  }
+}
+
+%button3{
+  color: #fff;
+  background: $envBtnBg2;
+  border: 1px solid $envBorderColor;
+  border-radius: 3px;
+  box-shadow: 1px 1px #000;
+  padding: 5px 20px;
+  margin: 0 15px;
+  cursor: pointer;
+
+  &:not(:disabled):hover{
+    background: $envBtnHoverBg2;
+    transition: all .1s ease-in;
+  }
+
+  &:disabled{
+    cursor: default;
+    background: #717374;
+    color: #bbb7b7;
+  }
+}
+
+// 次按钮
+%button4{
+  background-color: transparent;
+  border: 1px solid $envBorderColor1;
+  border-radius: 2px;
+  color: $white;
+  cursor: pointer;
+  width: 48px;
+  height: 24px;
+  font-size: 12px;
+
+  &:not(:disabled):hover{
+    border-color: $inputBorder;
+    background-color: transparent;
+    color: $white;
+    transition: all .1s ease-in;
+  }
+
+  &:disabled{
+    cursor: not-allowed;
+    color: $envWhiteTransparent5;
+    border-color: $inputBorder4;
+
+  }
+
+  &:not(:disabled):active{
+    background-color: $iconColor4;
+    border-color: $iconBorder;
+  }
+}
+
+// 文字按钮
+%button5{
+  background-color: transparent;
+  border: 1px solid $iconHighlightBorder;
+  border-radius: 2px;
+  color: $iconHighlightBorder;
+  cursor: pointer;
+  width: 48px;
+  height: 24px;
+  font-size: 12px;
+
+  &:not(:disabled):hover{
+    border-color: $iconHighlightBorder8;
+    transition: all .1s ease-in;
+  }
+
+  &:disabled{
+    border-color: $iconHighlightBorder5;
+    color: $iconHighlightBorder5;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):active{
+
+  }
+}
+
+// 主按钮
+%button6{
+  background-color: $iconHighlightColor;
+  border: none;
+  border-radius: 2px;
+  color: $white;
+  cursor: pointer;
+  width: 48px;
+  height: 24px;
+  font-size: 12px;
+
+  &:not(:disabled):hover{
+    background-color: $iconHighlightBorder8;
+    transition: all .1s ease-in;
+  }
+
+  &:disabled{
+    cursor: not-allowed;
+    color: $envWhiteTransparent5;
+    border-color: $inputBorder4;
+
+  }
+
+  &:not(:disabled):active{
+    background-color: $slider;
+  }
+}

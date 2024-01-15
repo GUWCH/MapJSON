@@ -1,0 +1,15 @@
+.env-storage-curve-tab {
+    border-top: 1px solid #36a0c1;
+    border-left: 1px solid #36a0c1;
+    width: fit-content;
+    display: flex;
+    &-item {
+        cursor: pointer;
+        padding: 4px;
+        border-bottom: 1px solid #36a0c1;
+        border-right: 1px solid #36a0c1;
+        &.selected {
+            background-color: #36a0c1;
+        }
+    }
+}

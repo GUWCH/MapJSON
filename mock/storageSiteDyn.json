@@ -1,0 +1,176 @@
+{
+    "code": "10000",
+    "current_date_time": "2022-08-23 10:37:38",
+    "data": [
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.RBMS101.RB.PkNum:9",
+            "display_value": "0",
+            "status": "无效",
+            "status_value": 1,
+            "line_color": "#000000",
+            "fill_color": "#00aa00",
+            "timestamp": "2022-02-24 11:05:54"
+        },
+        {
+            "id": "name",
+            "key": "1:4:SXCN:3",
+            "display_value": "景泰濉溪储能电站",
+            "status": "",
+            "status_value": -1,
+            "timestamp": ""
+        },
+        {
+            "id": "left",
+            "key": "1:4:SXCN:4",
+            "display_value": "35000",
+            "status": "",
+            "status_value": -1,
+            "timestamp": ""
+        },
+        {
+            "id": "right",
+            "key": "1:4:SXCN:5",
+            "display_value": "50000",
+            "status": "",
+            "status_value": -1,
+            "timestamp": ""
+        },
+        {
+            "id": "subsystem_total",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Fault:9",
+            "display_value": "0",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "subsystem_count",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Fault:9",
+            "display_value": "0",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "converter_total",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Wait:9",
+            "display_value": "5",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "converter_count",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Fault:9",
+            "display_value": "0",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Fault:9",
+            "display_value": "0.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Disconnect:9",
+            "display_value": "5.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Wait:9",
+            "display_value": "5.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Charge:9",
+            "display_value": "0.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Discharge:9",
+            "display_value": "0.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.Statics.Stop:9",
+            "display_value": "0.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.ESS.SOC:9",
+            "display_value": "",
+            "status": "",
+            "status_value": -1,
+            "timestamp": ""
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.ESS.PCSAP:9",
+            "display_value": "0.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.Farm.Statistics.ESS.PCSRP:9",
+            "display_value": "0.000",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:61:SXCN.Farm.Statistics.Statics.StationState:9",
+            "display_value": "",
+            "status": "",
+            "status_value": -1,
+            "timestamp": ""
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.CESS.EMS.PCSRP:9",
+            "display_value": "0.123",
+            "status": "正常",
+            "status_value": 0,
+            "timestamp": "2022-08-23 10:37:38"
+        },
+        {
+            "id": "",
+            "key": "1:62:SXCN.ESS01.CESS.EMS.PCSAP:9",
+            "display_value": "4.567",
+            "status": "",
+            "status_value": -1,
+            "timestamp": ""
+        },{
+            "id": "",
+            "key": "1:61:SXCN.ESS01.CESS.EMS.State:9",
+            "raw_value": "1",
+            "display_value": "未连接",
+            "status": "",
+            "status_value": 1,
+            "timestamp": "2022-08-29 10:22:26"
+        }
+    ]
+}

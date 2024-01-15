@@ -1,0 +1,184 @@
+@import "../common/css/define.scss";
+
+.react-html{
+    #center{
+        height: 100%;
+    }    
+}
+
+.battery-curve {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    margin: 0 15px;
+    position: relative;
+    
+    &-newselect{
+        border: 1px solid $envBorderLightColor;
+        border-radius: 3px;
+        background: $envBlackTransparent3;
+
+        .env-rc-select-selector{
+            border: none!important;
+        }
+    }
+
+    &-Head {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: space-between;
+
+        &-main{
+            display: flex;
+        }
+
+        &-Select{
+            display: flex;
+
+            >div{
+                margin-right: 15px;
+            }
+
+            .env-rc-select-selector{
+                height: 32px;
+            }
+
+            .env-rc-select-selection-item{
+                top: 3.5px !important;
+                left: 4px !important;
+                width: 120px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        &-Date {
+            margin-right: 1%;
+        }
+
+        &-Search {
+            padding: 4px 8px 4px 27px;
+            cursor: pointer;
+            border-radius: 3px;
+            background: url('../common/image/search_white.png') no-repeat #36a0c1;
+            background-size: 16px;
+            background-position: 6px 8px;
+            white-space: nowrap;
+            margin-left: 75px;
+            width: 100px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-ShowType {
+        display: flex;
+        width: 100%;
+        margin: 15px 0 5px;
+
+        >div{
+            border: 1px solid #36a0c1;
+            cursor: pointer;
+            padding: 5px 40px;
+
+            &:last-child{
+                margin-left: auto;
+                padding: 5px 15px;
+                border-radius: 3px;
+
+                &:hover{
+                    background: #36a0c1;
+                }
+            }
+        }
+    }
+
+    &-DataShow {
+        width: 100%;
+        height: calc(100% - 105px);
+
+        >div{
+            height: 100%;
+        }
+
+        &-TableShow {
+            height: 100%;
+            width : 100%;
+            /* border: 1px solid #36a0c1;
+            border-radius: 3px; */
+            overflow-y: auto;
+        }
+
+        &-ChartShow {            
+            height: 100%;
+            width : 100%;
+            //border: 1px solid #36a0c1;
+            border-radius: 3px;
+        }
+    }
+
+    &-grid-head{
+        display: flex;
+        height: 35px;
+        background: rgba(0, 24, 30, .4);
+        //border-bottom: 1px solid #36a0c1;
+        //border-bottom: 1px solid rgba(54, 160, 193, .5);
+        padding-right: 8px;
+
+        >div{
+            display: flex;
+            width: calc(25% - 40px);
+            align-items: center;
+            justify-content: center;
+            //border-right: 1px solid #36a0c1;
+            //border-right: 1px solid rgba(54, 160, 193, .5);
+
+            &:first-child{
+                width: 160px;
+            }
+
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+
+    &-grid-main{
+        height: calc(100% - 35px);
+    }
+
+    &-grid-row{
+        display: flex;
+
+        &:nth-child(even){
+            background: #2385a387;
+        }
+
+        >div{
+            display: flex;
+            width: calc(25% - 40px);
+            align-items: center;
+            justify-content: center;
+            //border-right: 1px solid #36a0c1;
+
+            &:first-child{
+                width: 160px;
+            }
+
+            &:last-child{
+                //border-right: none;
+            }
+        }
+    }
+}
+
+.ant-picker{
+    border: 1px solid $envBorderLightColor;
+    border-radius: 3px;
+    background: $envBlackTransparent3;
+    height: 33px;
+}
+

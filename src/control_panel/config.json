@@ -1,0 +1,214 @@
+{
+	"siteControl": {
+		"title": "Storage EMS Enable Status",
+		"titleCN": "储能EMS使能",
+		"type": "classicBool",
+		"alias": "1:61:{0}.DEFINE.EMS_ctrl_enable:9",
+		"subTitle": "Site Control",
+		"subTitleCN": "场站控制",
+		"tips": "EMS control switch:\nEnabled:EMS can perform internal calculations and issue instructions according to the control settings of the energy storage power station.\nDisabled:EMS performs control operations and command issuance no longer",
+		"tipsCN": "EMS控制启用/禁用总开关：\n启用——EMS可按照储能电站控制设置进行内部运算和指令下发\n禁用——EMS不再进行控制运算和指令下发",
+		"controls": [
+			{
+				"title": "Active Power Control",
+				"titleCN": "有功控制",
+				"type": "bool",
+				"alias": "1:61:{0}.DEFINE.state:9",
+				"privilege": "Ems_55",
+				"tips": "According to external input command for active power control, the command source needs to be selected:\nLocal:EMS executes the target value entered in the \"Command Value(kW)\" box\nScheduling:EMS automatically receives and executes scheduling instructions\nCentralized control: EMS automatically receives and executes target instructions issued by the centralized control terminal",
+				"tipsCN": "根据外部输入指令进行有功功率控制，需选择指令来源：\n本地——EMS执行“本地设值”框中输入的目标值\n调度——EMS自动接收调度指令并执行\n集控——EMS自动接收集控端下发目标指令并执行",
+				"subControls": [
+					{
+						"type": "select",
+						"title": "Command Source",
+						"titleCN": "指令来源",
+						"alias": "1:61:{0}.DEFINE.agcMode:9"
+					},
+					{
+						"type": "number&classicBool",
+						"title": "Command Value(kW)",
+						"titleCN": "本地设值（kW）",
+						"alias": "1:62:{0}.DEFINE.manPower:9",
+						"related": "1:61:{0}.DEFINE.agcMode:9",
+						"relatedValue": 1,
+						"step": 10,
+						"associOptions": [{
+							"value": "discharge", 
+							"nameCn": "放电（+）", 
+							"nameEn": "Discharge(+)"
+						},{
+							"value": "charge",
+							"nameCn": "充电（-）", 
+							"nameEn": "Charge(-)"
+						}]
+					}
+				]
+			},
+			{
+				"title": "Reactive Power Control",
+				"titleCN": "无功控制",
+				"type": "bool",
+				"privilege": "Ems_57",
+				"alias": "1:61:{0}.DEFINE.avcState:9",
+				"tips": "Reactive power control according to the external input command, the command source needs to be selected:\nLocal: EMS executes the target value entered in the \"Command Value(kvar)\" box, and the setting type is switched according to the selection of the limit index\nScheduling:EMS automatically receives and executes scheduling instructions\nCentralized control: EMS automatically receives and executes target instructions issued by the centralized control terminal\nLimit index: reactive power value, voltage value, power factor, reactive power ratio active power",
+				"tipsCN": "按照外部输入指令进行无功功率控制，需选择指令来源：\n本地——EMS执行“本地设值”框中输入的目标值，设值类型依据限值指标选择而切换\n调度——EMS自动接收调度指令并执行\n集控——EMS自动接收集控端下发目标指令并执行\n限值指标：无功值、电压值、功率因数、无功比有功",
+				"subControls": [
+					{
+						"type": "select",
+						"title": "Command Source",
+						"titleCN": "指令来源",
+						"alias": "1:61:{0}.DEFINE.avcMode:9"
+					},
+					{
+						"type": "select",
+						"title": "Limit Target",
+						"titleCN": "限值指标",
+						"alias": "1:61:{0}.DEFINE.avcTarget:9"
+					},
+					{
+						"type": "multi",
+						"title": "Command Value",
+						"titleCN": "本地设值",						
+						"alias": "1:62:{0}.DEFINE.manRePower:9",
+						"step": 10,
+						"related": "1:61:{0}.DEFINE.avcMode:9",
+						"relatedValue": 1,
+						"optionsRelated": "1:61:{0}.DEFINE.avcTarget:9",
+						"minAlias": "1:62:{0}.DEFINE.min_contrat:9",
+						"maxAlias": "1:62:{0}.DEFINE.max_contrat:9"
+					}
+				]
+			},
+			{
+				"title": "Frequency Ctrl",
+				"titleCN": "一次调频",
+				"privilege": "Ems_58",
+				"alias": "1:61:{0}.DEFINE.FR_enable_flag:9",
+				"type": "bool",
+				"tips": "After the function is enabled, when the grid frequency exceeds the limit, the PFC adjusts the active power output of the station according to the set frequency modulation characteristic curve parameters:\nPFC power increase enable: After enabling, under-frequency response is allowed, and it is enabled by default\nPFC power reduction enable:After enabling, allow to perform over-frequency response, enabled by default",
+				"tipsCN": "功能启用后，电网频率越限时PFC根据设定的调频特性曲线参数调整场站有功出力：\nPFC增功率使能——启用后，允许执行欠频响应，默认启用\nPFC减功率使能——启用后，允许执行过频响应，默认启用",
+				"subControls": [
+					{
+						"title": "PFC-PwrUpAllow",
+						"titleCN": "PFC增功率使能",
+						"alias": "1:61:{0}.DEFINE.FR_Pup_enable_flag:9",
+						"type": "bool"
+					},
+					{
+						"title": "PFC-PwrDwnAllow",
+						"titleCN": "PFC减功率使能",
+						"alias": "1:61:{0}.DEFINE.FR_Pdown_enable_flag:9",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"title": "SOC Balance and Calibration Control",
+				"titleCN": "SOC均衡和校准",
+				"privilege": "Ems_59",
+				"alias": "1:61:{0}.DEFINE.socBalCalibEnable:9",
+				"type": "bool",
+				"tips": "SOC Balance:On the premise of not affecting the overall control objectives of the whole field, high SOC energy storage will discharge and low SOC energy storage will charge so as to achieve the goal of keeping the SOC of different energy storage devices as close as possible\nSOC Calibration:Improve the SOC accuracy of energy storage devices through selective charging and discharging control without affecting the overall control objectives of the entire field",
+				"tipsCN": "SOC均衡：在不影响全场总体控制目标的前提下，高SOC的储能设备放电，低SOC的储能充电，实现不同储能设备SOC尽可能接近的目标\nSOC校准：在不影响全场总体控制目标的前提下，通过对储能设备的选择性充放电控制，提高其SOC准确度"
+			}
+		]
+	},
+	"terminalControl": {
+		"title": "Terminal Control",
+		"titleCN": "终端控制",
+		"validate": true,
+		"table": {
+			"columns": [
+				{
+					"title": "Device",
+					"titleCN": "终端设备",
+					"key": "name",
+					"index": 0,
+					"checkbox": true,
+					"isEdit": false,
+					"width": 120
+				},
+				{
+					"title": "AP Control Mode",
+					"titleCN": "有功控制模式",
+					"key": "1:61:{0}.EMS.agcMode:9",
+					"alias": "1:61:{0}.EMS.agcMode:9",
+					"index": 1,
+					"type": "select",
+					"isEdit": true,
+					"options": [
+						{
+							"name": "自动控制",
+							"value": 0
+						},
+						{
+							"name": "人工设值",
+							"value": 1
+						}
+					]
+				},
+				{
+					"title": "AP Set(kW)",
+					"titleCN": "有功设值(kW)",
+					"key": "1:62:{0}.EMS.manPower:9",
+					"alias": "1:62:{0}.EMS.manPower:9",
+					"index": 2,
+					"isEdit": true,
+					"step": 10,
+					"type": "number",
+					"maxAlias": "1:62:{0}.EMS.SoDP:9",
+					"minAlias": "1:62:{0}.EMS.SoCP:9",
+					"related": "1:61:{0}.EMS.agcMode:9",
+					"relatedValue": 1,
+					"minValue": -100,
+					"maxValue": 100
+				},
+				{
+					"title": "RP Control Mode",
+					"titleCN": "无功控制模式",
+					"type": "select",
+					"key": "1:61:{0}.EMS.avcMode:9",
+					"alias": "1:61:{0}.EMS.avcMode:9",
+					"index": 3,
+					"isEdit": true,
+					"options": [
+						{
+							"name": "自动控制",
+							"value": 0
+						},
+						{
+							"name": "人工设值",
+							"value": 1
+						}
+					]
+				},
+				{
+					"title": "RP Set(kvar)",
+					"titleCN": "无功设值(kvar)",
+					"key": "1:62:{0}.EMS.manRePower:9",
+					"alias": "1:62:{0}.EMS.manRePower:9",
+					"type": "number",
+					"index": 4,
+					"isEdit": true,
+					"step": 10,
+					"maxAlias": "1:62:{0}.EMS.SoRCP:9",
+					"minAlias": "1:62:{0}.EMS.SoRPP:9",
+					"related": "1:61:{0}.EMS.avcMode:9",
+					"relatedValue": 1,
+					"minValue": -100,
+					"maxValue": 100
+				},
+				{
+					"title": "Edit",
+					"titleCN": "设置",
+					"key": "setting",
+					"index": 5,
+					"isEdit": false,
+					"width": 60
+				}
+			]
+		},
+		"tips": "For AP, positive for discharging and negative for charging.\nFor RP, positive for active and negative for reactive.",
+		"tipsCN": "有功正值为放电，负值为充电。\n无功正值为容性，负值为感性。"
+	}
+}

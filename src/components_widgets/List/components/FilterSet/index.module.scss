@@ -1,0 +1,27 @@
+.container {
+    padding: 10px 14px;
+    background-color: #01333d;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+
+        &>div:first-child {
+            display: flex;
+            align-items: center;
+        }
+
+        .select {
+            height: 28px;
+            min-width: 164px;
+        }
+    }
+
+    .list {
+        .config{
+        
+        }
+    }
+}

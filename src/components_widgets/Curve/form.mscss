@@ -1,0 +1,151 @@
+@import "@/common/css/define.scss";
+
+div[class *= 'edit-frame']{
+    .enable{
+        display: flex;
+
+        >button{
+            margin-left: auto;
+        }
+    }
+
+    .title{
+        margin: 10px 0;
+    }
+
+    .timeGran{
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+
+        >div{
+            width: 164px;
+            margin-left: auto;
+        }
+    }
+
+    div[class *= 'point-select-container']{
+        >div{
+            width: 100% !important;
+        }
+
+        >div[class *='edit-frame-select']{
+            height: auto !important;
+            min-height: 36px;
+        }
+
+        div[class *= 'collapse-header']{
+            display: flex;
+            align-items: center;
+            padding: 3px 6px !important;
+
+            div {order: 3}
+            span {order: 2}
+            div:last-child {
+                order: 1;
+            }
+
+            div[class *= 'point-select-label']{
+                display: flex;
+            }
+
+            div[class *= '-collapse-extra']{
+                font-size: 18px;
+            }
+        }
+    }
+
+    div[class *= 'quota-set-select-self']{
+        margin-left: auto;
+
+        >div{
+            display: flex;
+            align-items: center;
+            height: 24px !important;
+        }
+
+        span[class *= 'edit-frame-select-selection-item']{
+            display: flex;
+            line-height: 24px !important;
+        }
+
+        div[class *= 'edit-frame-select-item']{
+            width: 100%;
+        }
+    }
+
+    div[class *= 'env-add-condition-content']{
+        background-color: #c9d3dd4a !important;
+
+        input{
+            height: 24px;
+            color: black;
+            border-color: rgb(217, 217, 217);
+            background: #fff;
+
+        }
+    }
+
+    .dropDownItem{
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+
+        span[class *= 'anticon'] {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        >div{
+            margin-left: auto;
+        }
+    }
+
+    div[class *= 'edit-frame-select-dropdown']{
+        div[class *= 'point-select-search']{
+            width: calc(100% - 16px);
+        }
+    }
+
+}
+
+.addModel{
+    .addModelDes{
+        >span{
+           color: $lightBlue;
+            cursor: pointer; 
+        }
+    }
+
+    .modelItem{
+        margin: 10px 0;
+        padding: 5px 10px;
+        background: #f0f2f6;
+        border-radius: 2px;
+
+        .delete{
+            display: flex;
+            font-size: 20px;
+            margin: 5px 0;
+
+            >span{
+                margin-left: auto;
+                cursor: default;
+            }
+        }
+
+        .asset{
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+
+            >input{
+                margin-left: auto;
+                display: inline;
+                width: 164px;
+            }
+        }
+    }
+
+    
+}

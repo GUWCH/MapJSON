@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1em 0 1em 0;
+}
+
+.icons {
+    padding: 1em;
+    overflow-wrap: anywhere;
+    height: 10vh;
+    overflow-y: scroll;
+}
+
+.content {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    border: 1px solid red;
+}
+
+.messure {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: green;
+}

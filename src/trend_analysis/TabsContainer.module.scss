@@ -1,0 +1,37 @@
+@mixin container {
+    margin-top: 12px;
+    background-color: #0e2e3a;
+    padding: 7px 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    @include container();
+    flex: 1;
+    min-height: 80%;
+}
+
+.statistics {
+    @include container();
+
+    overflow: unset;
+
+    .title {
+        font-size: 16px;
+        line-height: 48px;
+    }
+}
+
+.content {
+    flex: 1;
+    min-height: 0;
+    margin-top: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}

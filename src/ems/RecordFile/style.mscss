@@ -1,0 +1,54 @@
+@import "../../common/css/define.scss";
+
+:global(.react-html){
+    :global(#center){
+        height: 100%;
+    }
+}
+
+.main{
+    height: 100%;
+    padding: 15px 30px;
+
+    .listWrapper{
+        height: calc(100% - 0px);
+
+        .list{
+            padding: 10px;
+            border: 1px solid $envBorderColor1;
+
+            .file{
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+
+                &.fileEven{
+                    background: $envWhiteTransparent1;
+                }
+
+                >span{
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nodata{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: $envWhiteTransparent5;
+}
+
+.download{
+    position: absolute;
+    background: $envBtnBg10;
+    cursor: pointer;
+    padding: 5px 10px;
+}

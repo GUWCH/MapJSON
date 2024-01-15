@@ -1,0 +1,189 @@
+import {msgTag} from '../../../common/lang';
+const msg = msgTag('solardevice');
+
+export default [{
+    name: msg('WTST.State'),
+    alias: 'WTST.State',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    isStatus: true
+}, {
+    name: msg('WTST.Humidity'),
+    alias: 'WTST.Humidity',  
+    unit: '%',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.RadObliquity'),
+    alias: 'WTST.Radiation',  
+    unit: 'W/㎡',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.Radiation'),
+    alias: 'WTST.Radiation2',  
+    unit: 'W/㎡',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.Temperature'),
+    alias: 'WTST.Temperature',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.Temperature1'),
+    alias: 'WTST.Temperature1',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.Temperature2'),
+    alias: 'WTST.Temperature2',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.Temperature3'),
+    alias: 'WTST.Temperature3',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.Temperature4'),
+    alias: 'WTST.Temperature4',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.Temperature5'),
+    alias: 'WTST.Temperature5',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.WindDirection'),
+    alias: 'WTST.WindDirection',  
+    unit: '°',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.WindSpeed'),
+    alias: 'WTST.WindSpeed',  
+    unit: 'm/s',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('WTST.WindSpd10mAvg'),
+    alias: 'WTST.WindSpd10mAvg',  
+    unit: 'm/s',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.WindSpd2mAvg'),
+    alias: 'WTST.WindSpd2mAvg',  
+    unit: 'm/s',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.Rainfall'),
+    alias: 'WTST.Rainfall',  
+    unit: 'mm',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.RadObliquityKWH1'),
+    alias: 'WTST.RadiationKWH',  
+    unit: 'Wh/㎡',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: false
+}, {
+    name: msg('WTST.RadObliquityKWH2'),
+    alias: 'WTST.RadiationKWH',  
+    unit: 'Wh/㎡',
+    tableNo: 35,
+    fieldNo: 28,
+    hidden: false
+}, {
+    name: msg('WTST.RadiationKWH1'),
+    alias: 'WTST.Radiation2KWH',  
+    unit: 'Wh/㎡',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: false
+}, {
+    name: msg('WTST.RadiationKWH2'),
+    alias: 'WTST.Radiation2KWH',  
+    unit: 'Wh/㎡',
+    tableNo: 35,
+    fieldNo: 28,
+    hidden: false
+}, {
+    name: msg('WTST.RadObliquityKWH1'),
+    alias: 'WTST.RadiationKWH',  
+    unit: 'MJ/㎡',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: false,
+    factor: 0.0036
+}, {
+    name: msg('WTST.RadObliquityKWH2'),
+    alias: 'WTST.RadiationKWH',  
+    unit: 'MJ/㎡',
+    tableNo: 35,
+    fieldNo: 28,
+    hidden: false,
+    factor: 0.0036
+}, {
+    name: msg('WTST.RadiationKWH1'),
+    alias: 'WTST.Radiation2KWH',  
+    unit: 'MJ/㎡',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: false,
+    factor: 0.0036
+}, {
+    name: msg('WTST.RadiationKWH2'),
+    alias: 'WTST.Radiation2KWH',  
+    unit: 'MJ/㎡',
+    tableNo: 35,
+    fieldNo: 28,
+    hidden: false,
+    factor: 0.0036
+}, {
+    name: msg('WTST.Pressure'),
+    alias: 'WTST.Pressure',  
+    unit: 'Pa',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.Radiation_DHI'),
+    alias: 'WTST.Radiation_DHI',  
+    unit: 'w/㎡',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('WTST.Radiation_DNI'),
+    alias: 'WTST.Radiation_DNI',  
+    unit: 'w/㎡',
+    tableNo: 61,
+    fieldNo: 9
+}, {
+    name: msg('WTST.DaylightHour'),
+    alias: 'WTST.DaylightHour',  
+    unit: 'h',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}]

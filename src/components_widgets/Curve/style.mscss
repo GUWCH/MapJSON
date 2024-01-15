@@ -1,0 +1,255 @@
+@import "@/common/css/define.scss";
+
+$drawer: #083F4D;
+$fontBlue: #22BAE0;
+$block: #01333D;
+$dropDownFont: #6A8CA3;
+$dropDownBg: #052932;
+
+.tool{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    div[class *= 'ant-picker-focused']{
+        span[class *= 'ant-picker-separator']{
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    >div:not(:last-child){
+        // display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+.container{
+    height: 100%;
+
+    .chart{
+        height: 100%;
+    }
+}
+
+.drawer{
+
+    div[class*="ant-drawer-body"]{
+        display: flex;
+        flex-flow: column;
+        padding: 0 0 0 8px;
+        background-color: $drawer;
+    }
+
+    .header{
+        margin: 16px 0;
+        display: flex;
+
+        .setDes{
+            font-size: 16px;
+            margin-left: 8px;
+        }
+
+        .resetDes{
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 8px;
+            font-size: 14px;
+            color: $fontBlue;
+            cursor:	pointer;
+
+            >span {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .content{
+        overflow-y: overlay;
+    }
+
+
+    .block{
+        width: calc(100% - 16px);
+        padding: 10px 8px;
+        margin-bottom: 10px;
+        border-radius: 2px 0px 0px 2px;
+        background-color: $block;
+
+        .title{
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 12px;
+
+        }
+
+        .timeGran{
+            margin-bottom: 12px;
+            font-size: 14px;
+
+            div [class *= 'ant-select'] {
+                height: 28px !important;
+                font-size: 14px;
+            }
+
+            .ant-select-selection-item {
+                line-height: 28px !important;
+            }
+        }
+    }
+
+    .footer{
+        display: flex;
+        margin-top: auto;
+
+        >div {
+            margin: 16px 8px;
+        }
+
+        >div:first-child{
+            margin-left: auto;
+        }
+    }
+}
+
+.dropDown{
+    color: $white;
+}
+
+.interval{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 15px 0;
+
+    >div{
+        margin-left: auto;
+
+        >div{
+            height:28px;
+        }
+    }
+}
+
+div[class *= 'curve-echart-tooltip']{
+    &[style*="opacity: 0;"]{
+        display: none !important;
+    }
+    
+    border-radius: 10px !important;
+
+    >div{
+        display: flex; 
+        flex-wrap: nowrap;
+        align-items: center;
+        
+        >span:first-child{
+            width: 6px !important;
+            height: 6px !important;
+        }
+    }
+}
+
+.axisContainer{
+    width: 100%;
+
+    .axisItem:not(:last-child){
+        margin-bottom: 8px;
+    }
+
+    .axisItem{
+        display: flex;
+        align-items: center;
+            
+        >div{
+            margin-left: auto;
+
+            >label{
+                min-width: 80px;
+                margin-right: 0;
+                font-size: 12px;
+
+                span[class *= 'ant-radio-inner']{
+                    background-color: transparent;
+                }
+            }
+
+            >div{
+                border: 1px solid $inputBorder;
+                background-color: transparent;
+
+                div[class *= 'ant-input-number-handler-wrap']{
+                    background-color: $dropDownBg;
+
+                    >span{
+                        border-color: $inputBorder;
+                        >span{
+                            color: $inputBorder;
+                        }
+                        
+                    }
+                }
+            }
+
+            >div:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+
+        div[class *= 'ant-input-number-input-wrap']{
+            input{
+                color: #fff;
+            }
+        }
+    }
+
+    .axisItem:last-child{
+        margin-bottom: 10px;
+    }
+}
+
+.modalContainer{
+    .ant-modal-content{
+        height: 200px;
+        padding: 10px 8px 12px 6px;
+        background-color:#083F4D;
+    }
+
+    button {
+        width: 90px;
+        border: 1px solid #3F6D85;
+        &:first-child{
+            background-color: transparent;
+        }
+    }
+
+    .modalConfirm{
+        display: flex;
+        height: 28px;
+        font-size: 20px;
+        font-weight: 500;
+
+        >span:first-child{
+            color: #a6761a;
+            font-size: 26px;
+            line-height: 28px;
+            margin-right: 12px;
+        }
+    }
+
+    .modalInfo{
+        height: 22px;   
+        margin-top: 22px;
+        margin-left: 40px;
+        font-size: 14px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #A1B2C2;
+        line-height: 22px;
+    }
+
+    .ant-modal-footer{
+        border: none;
+    }
+
+}
+

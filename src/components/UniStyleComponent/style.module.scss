@@ -1,0 +1,19 @@
+@import '../../common/css/define.scss';
+
+.main{
+    background-color: $itemBg;
+    padding: 10px 8px;
+    margin-bottom: 10px;
+
+    .no-margin-bottom{
+        margin-bottom: 0;
+    }
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}

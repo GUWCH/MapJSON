@@ -1,0 +1,76 @@
+@use "../Button/index.module.scss" as btn;
+@import '../../common/css/define.scss';
+
+@mixin modal-base {
+    & [class*="ant-modal-content"] {
+        background: #083F4D;
+        border-radius: 4px;
+    }
+}
+
+@mixin padding($tb, $lr){
+    & [class*="ant-modal-header"] {
+        padding: $tb $lr;
+    }
+
+    & [class*="ant-modal-body"] {
+        padding: 0 $lr;
+    }
+
+    & [class*="ant-modal-footer"] {
+        padding: $tb $lr;
+    }
+}
+
+.container {
+    @include modal-base;
+
+    & [class*="ant-modal-header"] {
+        background: transparent;
+    }
+
+    &.noHeaderBorder [class*="ant-modal-header"] {
+        border: none;
+    }
+
+    & [class*="ant-modal-footer"] {
+        background: transparent;
+    }
+
+    &.noFooterBorder [class*="ant-modal-footer"] {
+        border: none;
+    }
+
+    & [class*="ant-modal-footer"] [class*="ant-btn"]:not([class*="ant-btn-primary"]) {
+        border: 1px solid $inputBorder;
+        background: transparent;
+    }    
+
+    & [class*="ant-modal-close"]{
+        color: #537c94;
+    }
+}
+
+.big-padding {
+    @include padding(27px, 30px)
+}
+.small-padding {
+    @include padding(16px, 16px);
+}
+
+.confirm {
+    @include modal-base;
+    @include btn.btn-container(large);
+    @include btn.bordered;
+    
+
+    & [class*="ant-modal-confirm-content"] {
+        color: #A1B2C2;
+    }
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

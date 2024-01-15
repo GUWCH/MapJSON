@@ -1,0 +1,447 @@
+@import "@/common/css/define.scss";
+
+$quotaSetUnit: env-quota-set-unit;
+
+$searchSelect: env-tree-multi-select;
+
+$panelDropDown : panel-drop-down;
+
+$labelBg: #01262e;
+$panelDropDownBg: #052932;
+$panelDropDownColor: #6A8CA3;
+$unitBg:#01333D;
+$checked: #00A7DB;
+$checkBorder:#537C94;
+$border: #3F6D85;
+
+@mixin input-item {
+    min-width: 50px;
+    border: 1px solid #5d6f7a;
+    background: transparent;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.ant_select{
+    padding: 10px 0;
+}
+
+.ant-select-selection-item {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.#{$quotaSetUnit} {
+    width: 100%;
+    color: #fff;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    background-color: $unitBg;
+
+    .ant-collapse {
+        border: none;
+        background-color: $labelBg;
+        margin: 10px 0;
+    
+        &-item {
+    
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: none !important;
+    
+            &:hover{
+                #edict{
+                    visibility: visible;
+                    display: inline;
+                }
+            }
+        }
+    
+        &-content{
+            width: 100%;
+            border-top: none;
+            background-color: $panelDropDownBg;
+    
+            &-box{
+                padding: 5px 10px !important;
+            }
+        }
+    
+        &-header{
+            align-self: center;
+            display: flex;
+            width: 100%;
+            height: 36px;
+            background-color: $labelBg;
+            padding: 7px 6px !important;
+            cursor: pointer;
+
+            & :last-child { order: 1;}
+            & :nth-child(1) { order: 2;}
+            & :nth-child(2) { order: 3;}
+
+            .ant-collapse-extra {
+                cursor: move;
+                font-size: 22px;
+                color: $panelDropDownColor;
+            }
+    
+            >span{
+                align-self: center;
+                color: $panelDropDownColor;
+            }
+    
+            >div{
+                display: flex;
+                align-items: center;
+
+                >span{
+                    display: flex;
+                    align-items: center;
+                }
+    
+                >input{
+                    align-self: center;
+                    border: none;
+                    background-color: transparent;
+                    color: #fff;
+                }
+    
+                #delete{
+                    margin-left: auto;
+                    margin-right: 6px;
+                    color: $panelDropDownColor;
+                    &:hover{
+                        color: #83979b;
+                    }
+                }
+    
+                #edict{
+                    text-align: right;
+                    margin-right: 10px;
+                    color: #456066;
+                    visibility: hidden;
+                    &:hover{
+                        color: #83979b;
+                    }
+                }
+            }
+        }
+    }
+
+    &-associated{
+        &-select{
+            display: flex;
+            align-items: center;
+            // .env-rc-select{
+            //     float: right;
+            // }
+            .ant-select.quota-set-select-self{
+                margin-left: auto;
+            }
+        }
+
+        &-style{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+
+            .ant-select.env-quota-set-unit-loc-self{
+                margin-left: 0px;
+            }
+
+            .env-color-pick{
+                margin-left: auto;
+            }
+
+            // .env-rc-select{
+            //     width: 80%;
+            // }
+        }
+    }
+
+    &-header {
+        padding: 10px 0;
+
+        .ant-checkbox-inner{
+            background-color: transparent;
+            border: 1px solid $checkBorder;
+        }
+
+        .ant-checkbox-checked{
+            .ant-checkbox-inner{
+                background-color: $checked;
+                border: 1px solid $checkBorder;
+            }
+        }
+
+        &-check{
+            float: right;
+        }
+    }
+    
+    &-icon{
+        display: inline;
+        background-color: #083F4D;
+        margin-right: 8px;
+        padding: 0 2px;
+        border-radius: 10px;
+    }
+
+    &-content{
+        margin: 0 0 10px 0;
+
+        >input{
+            align-self: center;
+        }
+
+        >span{
+            align-self: center;
+        }
+
+        &-label{
+            align-items: center;
+            width: calc(100% - 22px);
+            >span:first-child{
+                flex: 1;
+                display: grid !important;
+                width: calc(100% - 35px);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            >input{
+                align-self: center;
+            }
+        }
+
+        &-select{
+            display: flex;
+            margin: 0 0 10px 0;
+
+            >span{
+                align-self: center;
+            }
+        }
+    }
+
+    &-time{
+        div{
+            display: flex;
+            margin-bottom: 10px;
+
+            >span:first-child{
+                flex: 1;
+            }
+
+            >span:last-child{
+                flex: 1;
+            }
+        }
+        
+    }
+
+
+    &-condition{
+        width: 100%;
+        &-input{
+            width: 30%;
+            @include input-item;
+        }
+    }
+
+
+    &-color-button{
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border: none;
+        border-radius: 4px;
+        margin: 5px;
+    }
+
+    &-coefficient-name{
+        margin: 10px;
+    }
+
+    &-coefficient-input{
+        @include input-item;
+        width: 25%;
+    }
+
+    &-demical-name{
+        margin: 10px;
+    }
+
+    &-demical-input{
+        @include input-item;
+        width: 25%;
+    }
+
+    &-unit-name{
+        margin: 10px;
+    }
+
+    &-unit-input{
+        @include input-item;
+        width: 25%;
+    }
+}
+
+.#{$searchSelect} {
+
+    .ant-select-selector{
+        height: 100%;
+
+        .ant-select-selection-overflow {
+            display: none;
+        }
+    }
+
+    .ant-select-selection-search{
+        width: 100% !important;
+
+        >input{
+            display: none;
+        }
+    }
+
+    &-dropDown{
+        .ant-select-tree-node-content-wrapper{
+            text-overflow: ellipsis !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+        }
+
+
+        &-search{
+            height: 34px;
+
+            &-input{
+                display: flex !important;
+                height: 34px;
+                border-radius: 2px;
+                color: #fff;
+                display: block;
+                margin: 8px auto;
+                padding: 0 5px;
+                min-width: 200px;
+                width: 90%;
+                background-color: transparent;
+                border: 1px solid $border;
+
+                .ant-input-prefix{
+                    line-height: 32px;
+                }
+            }
+        } 
+
+        &-content{
+
+            margin-top: 13px;
+
+            .ant-select-tree-checkbox-inner{
+                background-color: transparent;
+                border: 1px solid $checkBorder;
+            }
+
+            .ant-select-tree-checkbox-checked{
+                .ant-select-tree-checkbox-inner{
+                    background-color: $checked;
+                }
+            }
+
+            .ant-select-tree-checkbox-disabled{
+                .ant-select-tree-checkbox-inner{
+                    background-color: #537079;
+                    border: none;
+                }
+            }
+
+            .ant-select-tree-checkbox-inner::after{
+                background-color: $checked;
+            }
+        }
+    }
+}
+
+.#{$panelDropDown} {
+
+    &-row {
+        display: flex;
+        margin: 10px 0;
+
+        &-item {
+            width: 100%;
+            display: flex;
+            font-size: 12px;
+
+            .env-add-condition{
+                .quota-set-select-self{
+                    margin-right: 10px;
+                }
+            
+                .env-add-condition-range{
+                    margin-right: 10px;
+                }
+            }
+
+            >input{
+                margin-left: auto;
+                width: 142px;
+                float: right;
+                height: 24px;
+                font-size: 12px;
+            }
+
+            >span{
+                line-height: 24px;
+                color: $panelDropDownColor;
+            }
+
+            >button {
+                float: right;
+            }
+        }
+
+        >div{
+            display: inline;
+            align-self: center;
+        }
+
+        div:first-child{
+            flex: 6;
+
+            .env-rc-select{
+                float: right;
+                max-width: 110px;
+            }
+
+        }
+
+        >div:nth-child(2) {
+            flex: 1;
+            text-align: right;
+        }
+    }
+}
+
+.#{$quotaSetUnit}-loc-self.ant-select{
+    display: inline;
+    width: 164px;
+    height: 28px;
+    font-size: 14px;
+    margin-left: auto;
+    align-self: center;
+
+    .ant-select-selector{
+        height: 28px !important;
+
+        .ant-select-selection-item{
+            line-height: 28px;
+        }
+    }
+}
+
+.#{$quotaSetUnit}-select-quota-dropDown{
+}

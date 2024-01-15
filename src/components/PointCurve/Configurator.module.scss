@@ -1,0 +1,52 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &>div {
+        margin-left: 8px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.reset {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #22BAE0;
+    cursor: pointer;
+}
+
+.list {
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.common {
+    margin-top: 4px;
+
+    &>div:first-of-type {
+        margin-bottom: 7px;
+    }
+
+    &>div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input {
+        width: 69px;
+        height: 24px;
+        margin-left: 4px;
+
+        input {
+            height: 22px;
+        }
+    }
+}

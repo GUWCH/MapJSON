@@ -1,0 +1,18 @@
+
+.fields_container{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 0.5em;
+}
+
+.fields_name{
+    height: 24px;
+    color: #6A8CA3;
+}
+.fields_value{
+    display: flex;
+    align-items: center;
+}
+.fields_unit{
+    margin-left: 2px;
+}

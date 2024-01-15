@@ -1,0 +1,77 @@
+@import "@/common/css/define.scss";
+
+.container{
+    height: 100vh;
+    background-color: #011d24;
+    padding: 15px 20px;
+
+    .head{
+        width: 100%;
+        height: calc((100% - 12px) * 45 / 668);
+        background-color: $boxBg;
+        margin-bottom: 12px;
+    }
+
+    .content{
+        width: 100%;
+        height: calc((100% - 20px) * 626 / 668);
+        display: flex;
+
+        .left{
+            width: calc(50% - 6px);
+
+            >div{
+                width: 100%;
+                // background-color: $boxBg;
+            }
+
+            >div:not(:last-child){
+                margin-bottom: 12px;
+            }
+
+            .overview{ 
+                height: calc((100% - 24px) * 185 / 602);
+            }
+
+            .alarm{
+                height: calc((100% - 10px) * 451 / 636);
+            }
+        }
+
+        .right{
+            width: calc(50% - 6px);
+            height: 100%;
+            margin-left: 12px;
+            background-color: $boxBg;
+        }
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .container{
+        padding: 5px 20px;
+
+        .head{
+            height: calc((100% - 12px) * 45 / 688);
+        }
+
+        .content{
+            height: calc((100% - 12px) * 643 / 688);
+
+            .left{
+
+                >div:not(:last-child){
+                    margin-bottom: 5px;
+                }
+
+                .overview{ 
+                    height: calc((100% - 10px) * 236 / 636);
+                }
+
+                .alarm{
+                    height: calc((100% - 10px) * 400 / 636);
+                }
+            }
+        }
+    }
+}

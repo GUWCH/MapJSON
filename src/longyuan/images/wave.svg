@@ -1,0 +1,56 @@
+<svg preserveAspectRatio="none" width="296px" height="187px" viewBox="0 0 296 187" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="10" result="effect0_gaussianBlur" />
+    </filter>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_2">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dx="0" dy="1" />
+      <feGaussianBlur stdDeviation="3" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.9490196 0 0 0 0 0.99607843 0 0 0 0 1 0 0 0 0.6 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect0_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect0_dropShadow" result="shape" />
+    </filter>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_3">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dx="0" dy="0" />
+      <feGaussianBlur stdDeviation="1.5" />
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.8 0" />
+      <feBlend mode="normal" in2="shape" result="effect0_innerShadow" />
+    </filter>
+    <path d="M60.3077 67.8462C93.6147 67.8462 120.615 52.6583 120.615 33.9231C120.615 15.1879 93.6147 0 60.3077 0C27.0007 0 0 15.1879 0 33.9231C0 52.6583 27.0007 67.8462 60.3077 67.8462Z" transform="matrix(1 -1.7484555E-07 1.7484555E-07 1 87.24805 48.07715)" id="path_1" />
+    <path d="M147.556 166C229.048 166 295.111 128.84 295.111 83C295.111 37.1604 229.048 0 147.556 0C66.0629 0 0 37.1604 0 83C0 128.84 66.0629 166 147.556 166Z" transform="matrix(1 -1.7484555E-07 1.7484555E-07 1 0 21)" id="path_2" />
+    <path d="M10 10C15.5228 10 20 7.76142 20 5C20 2.23858 15.5228 0 10 0C4.47715 0 0 2.23858 0 5C0 7.76142 4.47715 10 10 10Z" transform="translate(137.24805 88.07715)" id="path_3" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#path_2" />
+    </clipPath>
+  </defs>
+  <g id="点-green">
+    <g id="点-2">
+      <g id="椭圆形">
+        <g clip-path="url(#clip_1)">
+          <use xlink:href="#path_1" fill="none" stroke="#D0D4D7" stroke-opacity="0.6" stroke-width="8" />
+        </g>
+      </g>
+      <g id="椭圆形备份-2">
+        <g clip-path="url(#clip_2)">
+          <use xlink:href="#path_2" fill="none" stroke="#D0D4D7" stroke-opacity="0.2" stroke-width="8" />
+        </g>
+      </g>
+      <path d="M94.2222 106C146.26 106 188.444 82.2711 188.444 53C188.444 23.7289 146.26 0 94.2222 0C42.1847 0 0 23.7289 0 53C0 82.2711 42.1847 106 94.2222 106Z" transform="translate(53.02539 40.07715)" id="椭圆形" fill="#D0D4D7" fill-opacity="0.3950763" fill-rule="evenodd" stroke="none" filter="url(#filter_1)" />
+      <path d="M18 20C27.9411 20 36 15.5228 36 10C36 4.47715 27.9411 0 18 0C8.05887 0 0 4.47715 0 10C0 15.5228 8.05887 20 18 20Z" transform="translate(129.24805 83.07715)" id="椭圆形" fill="#D0D4D7" fill-rule="evenodd" stroke="none" />
+      <g id="椭圆形备份" filter="url(#filter_2)">
+        <use stroke="none" fill="#FFFFFF" fill-opacity="0.9490196" xlink:href="#path_3" fill-rule="evenodd" filter="url(#filter_3)" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+.test {
+    border: 1px solid red;
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    div:nth-child(1) {
+        color: blue;
+    }
+
+    div:nth-child(2) {
+        color: green;
+    }
+
+    div:nth-child(3) {
+        color: yellow;
+    }
+}
+
+.input {
+    input {
+        color: white;
+    }
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.params {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.content {
+    flex: 1;
+    overflow: 'hidden';
+    position: relative;
+}
+
+.wrapper {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    // &>div>div>div {
+    //     background-color: black;
+    // }
+
+    [class~='components_utils-Card-style__card_body']{
+        background-color: black;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}

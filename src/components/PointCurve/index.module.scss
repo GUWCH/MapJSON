@@ -1,0 +1,65 @@
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.config {
+    font-size: 16px;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #224554;
+    color: white;
+
+    &:hover {
+        background-color: #294d5d;
+
+        &::after {
+            font-size: 12px;
+            content: attr(data-title);
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+}
+
+.tooltip {}
+
+.container {
+    color: #537C94;
+
+}
+
+.time {
+    padding: 3px 0;
+}
+
+.data {
+    >div {
+        margin: 2px 0;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+}
+
+.name {
+    margin-right: 8px;
+}
+
+.value {
+    color: #F5F5FA;
+}

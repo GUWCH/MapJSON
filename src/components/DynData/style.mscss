@@ -1,0 +1,111 @@
+
+.dynWrap{
+    display: inline-flex;
+
+    .dyn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    
+        & .dynItem{
+            display: flex;
+            align-items: center;
+            margin-right: 8px;
+    
+            &:last-child{
+                margin-right: 0;
+            }
+
+            // 旋转动画
+            @keyframes rotate {
+                from {
+                    transform: translateX(-50%) rotateZ(0deg);
+                }
+
+                to {
+                    transform: translateX(-50%) rotateZ(360deg);
+                }
+            }
+
+            .beforeVirtual, .afterVirtual{
+                z-index: -1;
+                content: "";
+                position: absolute;
+                opacity: .5;
+                left: 50%;
+                bottom: -475%;
+                width: 500%;
+                height: 500%;
+                border-radius: 46%;
+                transform: translateX(-50%); // 居中
+                animation: rotate 15s linear infinite;
+            }
+
+            .afterVirtual{
+                bottom: -480%;
+                left: 20%;
+                border-radius: 46%;
+            }
+        }
+    
+        .name{
+            white-space: nowrap;
+        }
+    
+        .value{
+            white-space: nowrap;
+            cursor: pointer;
+        }
+    
+        .unit{
+            white-space: nowrap;
+            margin-left: 5px;
+        }
+    
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .progress{
+            display: inline-block;
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 1em;
+            block-size: .6em;
+            inline-size: 10em;
+
+            .progressBar{
+                height: 100%;
+                width: 100%;
+                border-radius: 1em;
+                background: linear-gradient(90deg, rgba(#00DBFF, .1), #00DBFF)
+            }
+        }
+    
+        &.leftTopBottom{
+            flex-flow: column-reverse nowrap;
+            position: relative;
+            align-items: flex-start;
+            padding-left: 30px;
+    
+            &.leftTopBottomNoIcon{
+                padding-left: 0;
+            }
+    
+            .icon{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                translate: 0 -50%;
+            }
+        }
+
+        &.waterDroplet{
+            display: flex;
+            flex-flow: column;
+        }
+    }
+}

@@ -1,0 +1,475 @@
+import {msgTag} from '../../../common/lang';
+const msg = msgTag('solardevice');
+
+export default [{
+    name: msg('INVT.ListSts'),
+    alias: 'INVT.ListSts',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    isStatus: true
+}, {
+    name: msg('INVT.UnionSts'),
+    alias: 'INVT.UnionSts',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9
+}, {
+    name: msg('INVT.APProduction'),
+    alias: 'INVT.APProduction',  
+    unit: 'kWh',
+    tableNo: 35,
+    fieldNo: 29
+}, {
+    name: msg('INVT.RPProduction'),
+    alias: 'INVT.RPProduction',  
+    unit: 'kVarh',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: true
+}, {
+    name: msg('INVT.APConsumed'),
+    alias: 'INVT.APConsumed',  
+    unit: 'kWh',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: true
+}, {
+    name: msg('INVT.RPConsumed'),
+    alias: 'INVT.RPConsumed',  
+    unit: 'kVarh',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: true
+}, {
+    name: msg('INVT.IPR'),
+    alias: 'INVT.IPR',  
+    unit: '%',
+    tableNo: 35,
+    fieldNo: 29
+}, {
+    name: msg('INVT.APProductionHour'),
+    alias: 'INVT.APProductionHour',  
+    unit: 'h',
+    tableNo: 35,
+    fieldNo: 29
+}, {
+    name: msg('INVT.APProductionDay'),
+    alias: 'INVT.APProduction',  
+    unit: 'kWh',
+    tableNo: 35,
+    fieldNo: 29,
+    hidden: true,
+    icon: true,
+    iconName: msg('INVT.APProductionDayIcon')
+}, {
+    name: msg('INVT.CosPhi'),
+    alias: 'INVT.CosPhi',  
+    unit: '',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('INVT.GenActivePW'),
+    alias: 'INVT.GenActivePW',  
+    unit: 'kW',
+    tableNo: 62,
+    fieldNo: 9,
+    icon: true,
+    iconName: msg('INVT.GenActivePWIcon')
+}, {
+    name: msg('INVT.GenReActivePW'),
+    alias: 'INVT.GenReActivePW',  
+    unit: 'kVar',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.ActPowOut'),
+    alias: 'INVT.ActPowOut',  
+    unit: 'kW',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.InvtEffi'),
+    alias: 'INVT.InvtEffi',  
+    unit: '%',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('INVT.PVPowIn'),
+    alias: 'INVT.PVPowIn',  
+    unit: 'kW',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('INVT.CurDCIn1'),
+    alias: 'INVT.CurDCIn1',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurDCIn2'),
+    alias: 'INVT.CurDCIn2',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurDCIn3'),
+    alias: 'INVT.CurDCIn3',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurDCIn4'),
+    alias: 'INVT.CurDCIn4',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurDCIn5'),
+    alias: 'INVT.CurDCIn5',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurDCIn6'),
+    alias: 'INVT.CurDCIn6',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCIn1'),
+    alias: 'INVT.VolDCIn1',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCIn2'),
+    alias: 'INVT.VolDCIn2',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCIn3'),
+    alias: 'INVT.VolDCIn3',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCIn4'),
+    alias: 'INVT.VolDCIn4',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCIn5'),
+    alias: 'INVT.VolDCIn5',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCIn6'),
+    alias: 'INVT.VolDCIn6',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Freq'),
+    alias: 'INVT.Freq',  
+    unit: 'Hz',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.MainLine'),
+    alias: 'INVT.MainLine',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolL1'),
+    alias: 'INVT.VolL1',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolL2'),
+    alias: 'INVT.VolL2',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolL3'),
+    alias: 'INVT.VolL3',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurPh1'),
+    alias: 'INVT.CurPh1',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurPh2'),
+    alias: 'INVT.CurPh2',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurPh3'),
+    alias: 'INVT.CurPh3',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.TempAir'),
+    alias: 'INVT.TempAir',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9
+}, {
+    name: msg('INVT.TempIGBT'),
+    alias: 'INVT.TempIGBT',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.TempInductor'),
+    alias: 'INVT.TempInductor',  
+    unit: '℃',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.NGV'),
+    alias: 'INVT.NGV',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.CurDCTotal'),
+    alias: 'INVT.CurDCTotal',  
+    unit: 'A',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.VolDCTotal'),
+    alias: 'INVT.VolDCTotal',  
+    unit: 'V',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.OnHour'),
+    alias: 'INVT.OnHour',  
+    unit: 'h',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.GenHourDaily'),
+    alias: 'INVT.GenHourDaily',  
+    unit: 'h',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, /* {
+    name: msg('INVT.isSample'),
+    alias: 'INVT.isSample',  
+    unit: '',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+},  */{
+    name: msg('INVT.AIStatusCode'),
+    alias: 'INVT.AIStatusCode',  
+    unit: '',
+    tableNo: 62,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.OemState'),
+    alias: 'INVT.OemState',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Fault'),
+    alias: 'INVT.Fault',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM01'),
+    alias: 'INVT.Status_OEM01',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM02'),
+    alias: 'INVT.Status_OEM02',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM03'),
+    alias: 'INVT.Status_OEM03',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM04'),
+    alias: 'INVT.Status_OEM04',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM05'),
+    alias: 'INVT.Status_OEM05',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM06'),
+    alias: 'INVT.Status_OEM06',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM07'),
+    alias: 'INVT.Status_OEM07',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM08'),
+    alias: 'INVT.Status_OEM08',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM09'),
+    alias: 'INVT.Status_OEM09',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM10'),
+    alias: 'INVT.Status_OEM10',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM11'),
+    alias: 'INVT.Status_OEM11',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM12'),
+    alias: 'INVT.Status_OEM12',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM13'),
+    alias: 'INVT.Status_OEM13',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM14'),
+    alias: 'INVT.Status_OEM14',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM15'),
+    alias: 'INVT.Status_OEM15',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.Status_OEM16'),
+    alias: 'INVT.Status_OEM16',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.OTempW'),
+    alias: 'INVT.OTempW',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.DcEIFault'),
+    alias: 'INVT.DcEIFault',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.AuxPFault'),
+    alias: 'INVT.AuxPFault',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.AcSPDFault'),
+    alias: 'INVT.AcSPDFault',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}, {
+    name: msg('INVT.DcSPDFault'),
+    alias: 'INVT.DcSPDFault',  
+    unit: '',
+    tableNo: 61,
+    fieldNo: 9,
+    hidden: true
+}]

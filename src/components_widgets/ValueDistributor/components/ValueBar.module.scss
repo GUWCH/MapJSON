@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.select {
+    flex: 1;
+    max-width: 150px;
+}

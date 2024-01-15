@@ -1,0 +1,13 @@
+.select-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+
+    &> span {
+        line-height: 32px;
+    }
+
+    .muti-select {
+        min-width: 164px;
+    }
+}

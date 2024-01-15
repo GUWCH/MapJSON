@@ -1,0 +1,273 @@
+@import "../../common/css/define.scss";
+
+:global(.react-html){
+  :global(#center){
+      height: 100%;
+  }    
+}
+
+.container{
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    
+    .head{
+        flex: 0 1 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid $envWhiteTransparent1;
+
+        .filter{
+            display: flex;
+            flex-flow: row nowrap;
+    
+            >div{
+                flex: 0 1 auto;
+                background: $envBtnBg2;
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-right: 15px;
+                cursor: pointer;
+    
+                &.active{
+                    background: $envBtnHoverBg2;
+                }
+    
+                i{
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 4px;
+                    margin-right: 10px;
+                }
+    
+                .statusCount{
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .tabs{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            >div{
+                width: 14px;
+                height: 14px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &:first-child{
+                    background: url(../../common/image/card.png) center center no-repeat;
+                    margin-right: 10px;
+
+                    &.active{
+                        background: url(../../common/image/card_hov.png) center center no-repeat;
+                    }
+                }
+
+                &:last-child{
+                    background: url(../../common/image/list.png) center center no-repeat;
+
+                    &.active{
+                        background: url(../../common/image/list_hov.png) center center no-repeat;
+                    }
+                }
+            }
+        }
+    }   
+
+    .main{
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+
+        .menu{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+
+            input{
+                width: 300px;
+                height: 28px;
+                border-radius: 2px;
+                background-color: $envInputBg;
+                background-image: url(../../common/image/search.png);
+                background-repeat: no-repeat;
+                background-position: 280px center;
+                border: 1px solid $envBorderColor;
+                margin: 8px 0;
+                padding: 0 25px 0 5px;
+            }
+        }
+
+        .card{
+            margin-top: 50px;
+            height: calc(100% - 50px);
+
+            .cardItem{
+                display: flex;
+                flex-flow: column nowrap;
+                background-color: $envBlackTransparent4;
+                box-shadow: 1px 1px $black;
+                transition: transform .3s ease;
+                cursor: pointer;
+
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 10px 0 $envBlackTransparent4;
+                }
+
+                >div:first-child{
+                    display: flex;
+                    padding: 10px 0 10px 10px;
+                    align-items: center;
+
+                    >div{
+                        margin-right: 10px;
+
+                        &:first-child{
+                            padding: 1px 5px;
+                            border-radius: 3px;
+                            white-space: nowrap;
+                        }
+
+                        &:last-child{
+                            margin-right: 0;
+                            font-size: 16px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                >div:nth-child(2){
+                    flex: 1;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    padding: 0 20px;
+
+                    >div:first-child{
+                        border-bottom: 1px solid $envWhiteTransparent1;
+                        padding: 5px 0;
+                        display: flex;
+                        align-items: center;
+
+                        &::before{
+                            content: '√';
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background: $envNormal;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 10px;
+                        }
+
+                        &.token{
+                            &::before{
+                                content: '!';
+                                background: $envAbnormal;
+                            }
+                        }
+                    }
+
+                    >div:last-child{
+                        flex: 1;
+                        display: flex;
+                        padding: 20px 0;
+
+                        >div:first-child{
+                            width: calc(100% - 225px);
+                            height: 100%;
+                            background: $envBlueTransparent;
+                            cursor: default;
+                            overflow: hidden;
+                        }
+
+                        >div:last-child{
+                            display: flex;
+                            flex-flow: column nowrap;
+                            margin-left: 20px;
+                            width: 205px;
+
+                            >div{
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+
+                                >span:first-child{
+                                    width: 90px;
+                                    margin-right: 10px;
+                                    text-align-last: justify;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    color: $envWhiteTransparent6;
+                                }
+
+                                >span:last-child{
+                                    flex: 1;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid{
+            height: 100%;
+
+            .gridHead{
+                height: 50px;
+            }
+
+            .favorite{
+                width: 100%;
+                height: 100%;
+                background: url(../../common/image/star.png) center center no-repeat;
+                background-size: 20px;
+
+                &.favoriteIn{
+                    background: url(../../common/image/star_solid.png) center center no-repeat;
+                    background-size: 20px;
+                }
+            }
+
+            .cell{
+                color: $envBlue;
+                cursor: pointer;
+            }
+        }
+
+        :global(.grid-row-0){
+            background-color: $envBlueTransparent1 !important;
+        }
+
+        .mathSum, .mathAve{
+            color: $envBlue;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        .noData{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $envWhiteTransparent6;
+        }
+    }
+}

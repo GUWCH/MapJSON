@@ -1,0 +1,130 @@
+@import "@/common/css/define.scss";
+
+%UniversalButton{
+    width: 76px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    .content{
+        width: 100%;
+        height: 100%;
+
+        >div{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.editor{
+    margin-left: auto;
+    margin-right: 14px;
+    font-size: 18px;
+}
+
+.set{
+    // margin-left: auto;
+}
+
+.onEditor{
+    margin-left: auto;
+
+    >button{
+        @extend %button4;
+        @extend %UniversalButton;
+        margin-left: 10px;
+    }
+}
+
+.head{
+    display: flex;
+}
+
+.typeIcon{
+    margin-bottom: 8px;
+
+    >div{
+        float: right;
+        width: 142px;
+        height: 24px;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}
+
+.edictBg{
+
+    div[class*='ant-modal-content']{
+       padding: 15px; 
+    }
+    
+    .title{
+        font-size: 20px;
+        padding-top: 15px;
+    }
+
+    .upload{
+        display: flex;
+        padding-top: 30px;
+
+        >div{
+            align-self: center;
+        }
+
+        .bgTips{
+            flex: 1;
+        }
+
+        >span{
+            margin-left: 14px;
+            width: 112px;
+            height: 112px;
+        }
+
+        .uploadBox{
+
+            div[class*="ant-upload-select-picture-card"]{
+                background-color: transparent
+            }
+
+            div[class*="ant-upload-list-item-uploading"]{
+                background-color: transparent !important;
+            }
+
+            div[class*='ant-upload-list-picture-card']{
+                background-color: transparent
+            }
+            
+        }
+    }
+
+    button {
+        width: 90px;
+        border: 1px solid #3F6D85;
+        &:first-child{
+            background-color: transparent;
+        }
+    }
+}
+
+.antdTooltip{
+    min-width: 320px;
+    max-width: max-content;
+
+    :global(.ant-tooltip-arrow-content){
+        background-color: $statBg;
+    }
+
+    :global(.ant-tooltip-inner){
+        background-color: $statBg;
+    }
+    
+}
+
+
+

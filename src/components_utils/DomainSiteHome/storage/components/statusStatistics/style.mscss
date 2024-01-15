@@ -1,0 +1,93 @@
+@import "@/common/css/define.scss";
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 20px;
+    background-color: $boxBg;
+    border-radius: 4px;
+
+    .head{
+        display: flex;
+        align-items: center;
+
+        .title{
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .set{
+            margin-left: auto;
+        }
+    }
+
+    .content{
+        display: flex;
+        flex-flow: wrap;
+        margin-top: 20px;
+        height: calc(100% - 40px);
+        overflow: overlay;
+        align-content: flex-start;
+
+        .contentItem{
+            width: calc(50% - 10px);
+            height: 30px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+            margin-right: 10px;
+            padding: 0 12px;
+            border-radius: 2px;
+
+            >span:last-child{
+                margin-left: auto;
+            }
+
+            >div{
+                margin-left: auto;
+            }
+
+            .itemIcon{
+                margin-right: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .itemVal{
+                font-size: 14px;
+                color: #FFFFFF;
+                margin-left: auto;
+            }
+
+            .itemDesc{
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            >div[class *= 'OuterDivStylesEllipsisToolTipChan']{
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.6);
+                width: calc(100% - 50px);
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .container{
+        padding: 3px 10px 3px 20px;
+
+        .head{
+            .title{
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+
+        .content{
+            margin-top: 5px;
+        }
+    }
+}

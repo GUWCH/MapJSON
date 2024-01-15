@@ -1,0 +1,165 @@
+@import "../../common/css/define.scss";
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, 46px);
+    column-gap: 32px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+@mixin dyn-container {
+    &>div {
+        flex: 1;
+        @include ellipsis;
+
+        &:first-child{
+            min-width: 50px;
+        }
+    }
+
+    .ellipsis{
+        @include ellipsis;
+    }
+    
+    .l {
+        color: $envGray3;
+    }
+    
+    .r {
+        flex: 0 1 auto;
+        display: flex;
+        justify-content: right;
+        color: $white;
+        padding-right: 5px;
+    }
+}
+
+.info {
+    display: flex;
+    height: 46px;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+
+    &::after {
+        content: "";
+        width: 1px;
+        height: 1em;
+        background-color: $cardTopHighlightBg;
+        position: absolute;
+        right: -16px;
+    }
+
+    &::before {
+        content: "";
+        width: 1000%;
+        height: 1px;
+        background-color: $cardTopHighlightBg;
+        position: absolute;
+        bottom: 0;
+    }
+
+    @include dyn-container;
+}
+
+
+.container_full {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.full_grid {
+    &>div {
+        transform: translateX(-16px);
+    }
+}
+
+.info_full {
+    justify-content: space-between;
+    @include dyn-container;
+}
+
+@mixin cell {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    align-items: center;
+    border-bottom: 1px solid $cardTopHighlightBg;
+}
+
+@mixin border-right {
+    border-right: 1px solid $cardTopHighlightBg;
+}
+
+/* 单列 start */
+.cell_single {
+    @include cell;
+}
+
+/* 单列 end */
+
+/* 双列 start */
+.cell_double_start {
+    @include cell;
+    position: relative;
+
+    &>div::after {
+        content: "";
+        width: 1px;
+        height: 1em;
+        background-color: $cardTopHighlightBg;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.cell_double_end {
+    @include cell;
+}
+
+/* 双列 end */
+
+/* 两列以上 start */
+.cell_mutiple_start {
+    @include cell;
+    justify-content: flex-start;
+}
+
+.cell_mutiple {
+    @include cell;
+
+    &>div {
+        position: relative;
+    }
+
+    &>div::after {
+        content: "";
+        width: 1px;
+        height: 1em;
+        background-color: $cardTopHighlightBg;
+        position: absolute;
+        right: -16px;
+    }
+}
+
+.cell_mutiple_end {
+    @include cell;
+}
+
+/* 两列以上 end */
+
+.cell_empty {
+    @include cell;
+}

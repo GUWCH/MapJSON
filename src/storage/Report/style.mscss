@@ -1,0 +1,98 @@
+@import "../../common/css/define.scss";
+
+:global(.react-html){
+    :global(#center){
+        height: 100%;
+    }
+}
+
+.main{
+    height: 100%;
+    background: $tplBg;
+    padding: 5px 15px;
+
+    :global(.ant-tabs-content){
+        height: 100%;
+    }
+}
+
+.tab{
+    height: 100%;
+}
+
+.pane{
+    height: 100%;
+    padding: 5px 10px;
+}
+
+.content{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+
+        >div:first-child{
+            >div{
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .table{
+        flex: 1;
+        overflow: hidden;
+        padding: 15px 0 0;
+    }
+}
+
+.splitRecord{
+    padding: 20px 8px;
+    
+    &>div{
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 10px 0;
+
+        &>div:first-child{
+            display: flex;
+            align-items: center;
+            padding: 0 20px 0 0;
+            min-width: 90px;
+        }
+    }
+}
+
+.edit{
+    padding: 20px 8px;
+    
+    &>div{
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 10px 0;
+
+        &>div:first-child{
+            display: flex;
+            align-items: center;
+            padding: 0 20px 0 0;
+            min-width: 150px;
+        }
+
+        &>div:last-child{
+            flex: 1;
+        }
+    }
+}
+
+.warnWrap{
+    max-height: 500px;
+    overflow: auto;
+
+    .warn {
+        >span {
+            margin-right: 10px;
+        }
+    }
+}

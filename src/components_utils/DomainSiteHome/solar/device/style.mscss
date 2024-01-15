@@ -1,0 +1,101 @@
+@import "@/common/css/define.scss";
+
+.topo{
+    height: 100%;
+    padding: 10px;
+    background: $bg;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .info{
+        margin-top: 12px;
+        padding: 5px 10px;
+        background: $boxBg;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: space-between;
+
+        .infoLeft{
+            display: flex;
+            min-width: 335px;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            .infoLeftEle{
+                margin-left: 10px;
+            }
+        }
+
+        .infoRight{            
+            position: relative;
+            padding-left: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &::before{
+                content: " ";
+                background-color: $iconHighlightColor;
+                width: 4px;
+                height: 50%;
+                position: absolute;
+                left: 0;
+                top: 25%;
+            }
+
+            &>div{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &>div{
+                    display: inline;
+                    margin-right: 20px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
+                    .infoRightName{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &>div:last-child{
+        margin-top: 12px;
+        flex: 1;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+
+        &>div{
+            width: calc(50% - 6px);
+            background: $boxBg;
+            height: 100%;
+            overflow: hidden;
+
+            &:last-child{
+                background: none;
+                display: flex;
+                flex-flow: column nowrap;
+
+                &>div{
+                    flex: 1;
+                    margin-top: 12px;
+                    height: 33%;
+                    overflow: hidden;
+
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
